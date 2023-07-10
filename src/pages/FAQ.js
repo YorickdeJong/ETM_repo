@@ -1,28 +1,9 @@
 
-'use client'
 import NavBar from '@/components/Utilities/NavBar';
 import { FaAndroid, FaKey, FaRedoAlt, FaCheckDouble, FaChartLine, FaDollarSign, FaToolbox, FaImages, FaPlusSquare, FaHourglassHalf } from 'react-icons/fa';
-import { useGlobalAuthContext }from '@/Context/password';
-import {  useEffect } from "react";
 
 
 export default function FAQ() {
-    // const {auth, setAuthHandler} = useGlobalAuthContext();
-   
-
-    // useEffect(() => {
-    //     if (!auth) {
-    //         console.log('Auth context when prompt is displayed:', auth);
-    //         const password = prompt("Please enter the password");
-    //         if (password === "check") {
-    //             setAuthHandler(true);
-    //         } else {
-    //             alert('Incorrect password');
-    //             window.location.href = '/'; // or direct the user to any other page
-    //         }
-    //     }
-    // }, []); // Only re-run if local show state changes
-
 
     const iconStyle = {
         fontSize: 50, // change to the size you want

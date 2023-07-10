@@ -93,7 +93,8 @@ const buttonStyleStroke2 = {
     {
       children: (
         <div style={{ position: 'absolute',  width: '100vw', height: '104vh',}}>
-            <Image src={imageUrls[0]} 
+            <Image 
+            src={imageUrls[0]} 
             fill
             alt="cityDay4"  
             />
@@ -119,7 +120,11 @@ const buttonStyleStroke2 = {
     {
       children: (
         <div style={{ position: 'absolute',  width: '100vw', height: '104vh', }}>
-            <Image src={imageUrls[2]} fill/>
+            <Image 
+            src={imageUrls[2]} 
+            fill
+              alt="cityDay3"
+            />
         </div>
       ),
       translateY: [14.7, 130],
@@ -220,7 +225,11 @@ const buttonStyleStroke2 = {
       children: (
         <div style={{ position: 'absolute',  width: '100vw', height: '100vh'}}>
 
-          <Image src={imageUrls[6]} fill/>
+          <Image 
+          src={imageUrls[6]} 
+          fill
+          alt="cityNightMoon"
+          />
         </div>
       ),
       translateY: [70, 20],

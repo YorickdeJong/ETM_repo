@@ -183,6 +183,7 @@ export default function Process() {
                             image={text.image}
                             isImageRight={i % 2 === 0} // Alternates the placement of the image
                             index={i} 
+                            key={i}
                         />
                     ))}
             <ScrollIndicator />

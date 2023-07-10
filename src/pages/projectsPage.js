@@ -61,6 +61,7 @@ export default function projectPage() {
                             src = '/projects/classroom.png'
                             fill
                             layout = 'fill'
+                            alt = 'classroom'
                         />
                     </div>
                     <div style = {{width: '100%', height: '30%', marginTop: '60.5%', backgroundColor: '#084652'}}>
