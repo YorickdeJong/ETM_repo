@@ -57,8 +57,8 @@ const buttonStyleStroke = {
   borderRadius: 20,
   marginRight: 30,
   zIndex: 1000,
-  marginLeft: '10%',
-  marginRight: '10%',
+  position: 'absolute',
+  top: '83%',
 };
 
 const buttonStyleStroke2 = {

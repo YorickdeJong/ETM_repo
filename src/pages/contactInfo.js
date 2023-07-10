@@ -1,8 +1,29 @@
 
+'use client'
 import { FaUserAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 import NavBar from '@/components/Utilities/NavBar';
+import { useGlobalAuthContext }from '@/Context/password';
+import {  useEffect } from "react";
 
 export default function Contact() {
+    // const {auth, setAuthHandler} = useGlobalAuthContext();
+   
+
+    // useEffect(() => {
+    //     if (!auth) {
+    //         console.log('Auth context when prompt is displayed:', auth);
+    //         const password = prompt("Please enter the password");
+    //         if (password === "check") {
+    //             setAuthHandler(true);
+    //         } else {
+    //             alert('Incorrect password');
+    //             window.location.href = '/'; // or direct the user to any other page
+    //         }
+    //     }
+    // }, []); // Only re-run if local show state changes
+
+
+
     return (
         <main style = {{height: '100vh', width: '100vw', position: 'absolute', backgroundColor: 'white'}}>
             <NavBar />

@@ -1,12 +1,26 @@
-
-import NavBar from '@/components/Utilities/NavBar';
+import NavBar from "@/components/Utilities/NavBar"
 import Image from 'next/image';
-
+import { useGlobalAuthContext } from '@/Context/password';
+import React, { useState, useEffect, useContext } from 'react';
 
 export default function projectPage() {
+    // const {auth, setAuthHandler} = useGlobalAuthContext();
+   
+
+    // useEffect(() => {
+    //     if (!auth) {
+    //         console.log('Auth context when prompt is displayed:', auth);
+    //         const password = prompt("Please enter the password");
+    //         if (password === "check") {
+    //             setAuthHandler(true);
+    //         } else {
+    //             alert('Incorrect password');
+    //             window.location.href = '/'; // or direct the user to any other page
+    //         }
+    //     }
+    // }, []); // Only re-run if local show state changes
 
     const header = {
-        paddingTop: '2vh',
         margin: '0', // added this
         width: '80%',
         marginLeft: '10%',
@@ -31,7 +45,7 @@ export default function projectPage() {
 
 
     return (
-        <main >
+        <main>
         <NavBar />
             <div style = {{position: 'absolute', top: '13vh', width: '100vw'}}>
                 <h1 style = {{

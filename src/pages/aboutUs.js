@@ -1,9 +1,26 @@
+'use client'
 import Image from "next/image";
 import NavBar from '@/components/Utilities/NavBar';
-
-
+import { useGlobalAuthContext }from '@/Context/password';
+import {  useEffect } from "react";
 
 function AboutUs() {
+    // const {auth, setAuthHandler} = useGlobalAuthContext();
+   
+    // useEffect(() => {
+    //     if (!auth) {
+    //         const password = prompt("Please enter the password");
+    //         if (password === "check") {
+    //             setAuthHandler(true);
+    //         } else {
+    //             alert('Incorrect password');
+    //             window.location.href = '/'; // or direct the user to any other page
+    //         }
+    //     }
+    // }, [auth]); // Only re-run if auth state changes
+
+
+
     const header = {
         fontSize: 40,
         fontWeight: '500', 

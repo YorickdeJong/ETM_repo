@@ -1,15 +1,34 @@
 
 
 
-
+'use client'
 import Image from 'next/image';
 import NavBar from '@/components/Utilities/NavBar';
 import Tile from '@/components/Utilities/Tile';
 import Link from 'next/link'
 
 import CostsCard from '@/components/Utilities/CostsCard'
+import { useGlobalAuthContext }from '@/Context/password';
+import {  useEffect } from "react";
 
 function Services() {
+    // const {auth, setAuthHandler} = useGlobalAuthContext();
+   
+
+    // useEffect(() => {
+    //     if (!auth) {
+    //         console.log('Auth context when prompt is displayed:', auth);
+    //         const password = prompt("Please enter the password");
+    //         if (password === "check") {
+    //             setAuthHandler(true);
+    //         } else {
+    //             alert('Incorrect password');
+    //             window.location.href = '/'; // or direct the user to any other page
+    //         }
+    //     }
+    // }, []); // Only re-run if local show state changes
+
+
     const header = {
         position: 'absolute',
         top: '14%',
