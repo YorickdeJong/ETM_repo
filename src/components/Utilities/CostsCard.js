@@ -43,7 +43,11 @@ export default function CostsCard({title, texts, marginTop, stars, starsMarginLe
             <p style = {{color: '#2D94A7', fontSize: 24, marginLeft: '2vw'}}>v.a. €{price}</p>
             <hr style={{width: '85%', margin: '20px auto', color: "#D2D1D1", height: '0.08vh'}} />
             <ul style={{marginLeft: '0.8vw', marginTop: '4vh' }}>
-                {texts}
+            {
+                texts.map((text, index) => (
+                    <li key={index}>{text}</li>
+                ))
+            }
             </ul>
             <hr style={{width: '85%', margin: '20px auto', marginTop: marginTop, color: "#D2D1D1", height: '0.08vh'}} /> 
             <div style={{ ...buttonStylePackage, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>

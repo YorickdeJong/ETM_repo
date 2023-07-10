@@ -185,6 +185,7 @@ function Services() {
                    />
                     {/* Content of the second column second row goes here */}
                 </div>
+                
                 <div style={{gridColumn: '3 / span 1', gridRow: '1 / span 1', backgroundColor: 'rgba(255, 246, 240, 1)', width: '90%', height: '97.5%', borderRadius: 20,  marginLeft: '15%',
                 boxShadow: '1px 5px 7px rgba(0, 0, 0, 0.3)'}}>
                     <Tile 
