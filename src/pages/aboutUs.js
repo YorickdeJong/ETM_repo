@@ -252,7 +252,7 @@ function AboutUs() {
             <h1 style={headerRectangleRight}>Waarom zijn wij ons bedrijf begonnen?</h1>
             <p style={paragraphRectangleRight}>Would law blood eyes beaded follow potter other. Sorcerer's us hunt kiss yew spider me forbidden tweak. Mischief glory patronum beaded 
             I knitted treacle train whomping. Squashy hagrid hippogriffs snivellus downfall weasley shrieking ollivanders clean shrieking. Our emporium grindylows alohamora bag letters better us fire.
-            Locket roaring red 9¾ many fell 50 transfiguration crookshanks sound. Alohamora daisies sorcerer's dagger tap-dancing voices locomotor portkey godric’s. 
+            Locket roaring red 9¾ many fell 50 transfiguration crookshanks sound. Alohamora daisies sorcerer's dagger tap-dancing voices locomotor portkey godric's. 
             Honeydukes padma flying snape brass jinxes tart. Potter beaters to half-moon-glasses sirius got inches. Must turns lily norwegian nitwit are phoenix quidditch answer.</p>
             </div> 
             </div>
