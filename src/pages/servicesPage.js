@@ -162,6 +162,7 @@ function Services() {
                         <Image 
                             src = '/services/deal.png'
                             fill
+                            alt = 'deal'
                         />
                         <div style = {{width: '100%', height: '80.5vh', backgroundColor: '#0F1C37', position: 'absolute', opacity: 0.5}}/>
                         <h2 style = {header}>Welke optie is het beste voor jou?</h2>

@@ -93,7 +93,10 @@ const buttonStyleStroke2 = {
     {
       children: (
         <div style={{ position: 'absolute',  width: '100vw', height: '104vh',}}>
-            <Image src={imageUrls[0]} fill/>
+            <Image src={imageUrls[0]} 
+            fill
+            alt="cityDay4"  
+            />
         </div>
       ),
       translateY: [19.35, 91.8],
@@ -103,7 +106,10 @@ const buttonStyleStroke2 = {
     {
       children: (
         <div style={{ position: 'absolute',  width: '100vw', height: '104vh', }}>
-            <Image src={imageUrls[1]} fill/>
+            <Image src={imageUrls[1]} 
+            fill
+            alt="cityDay5"
+            />
         </div>
       ),
       translateX: [60, -100],
@@ -122,7 +128,11 @@ const buttonStyleStroke2 = {
     {
       children: (
         <div style={{ position: 'absolute',  width: '100vw', height: '104vh',}}>
-            <Image src={imageUrls[3]} fill/>
+            <Image 
+            src={imageUrls[3]} 
+            fill
+            alt="cityDay2"
+            />
         </div>
       ),
       translateY: [14.7, 130],
@@ -131,7 +141,11 @@ const buttonStyleStroke2 = {
     {
       children: (
         <div style={{ position: 'absolute',  width: '100vw', height: '104vh'}}>
-            <Image src={imageUrls[4]} fill/>
+            <Image 
+            src={imageUrls[4]} 
+            fill
+            alt="cityDay1"
+            />
         </div>
       ),
       
@@ -191,7 +205,11 @@ const buttonStyleStroke2 = {
       children: (
         <div style={{ position: 'absolute',  width: '100vw', height: '100vh'}}>
 
-          <Image src={imageUrls[5]} fill/>
+          <Image 
+          src={imageUrls[5]} 
+          fill
+          alt="cityNight3"
+          />
         </div>
       ),
       translateY: [19, 90],
@@ -212,7 +230,11 @@ const buttonStyleStroke2 = {
       children: (
         <div style={{ position: 'absolute',  width: '100vw', height: '100vh'}}>
 
-          <Image src={imageUrls[7]} fill/>
+          <Image 
+          src={imageUrls[7]} 
+          fill
+          alt="cityNightCloud"
+          />
         </div>
       ),
       translateX: [120, 30],
@@ -221,7 +243,11 @@ const buttonStyleStroke2 = {
     {
       children: (
         <div style={{ position: 'absolute', width: '100vw', height: '100vh'}}>
-          <Image src={imageUrls[8]} fill/>
+          <Image 
+          src={imageUrls[8]} 
+          fill
+          alt="cityNight2"
+          />
         </div>
       ),
       translateY: scrollThresholdReached ? [50, 50] : [90, -5.5],
@@ -230,7 +256,11 @@ const buttonStyleStroke2 = {
       children: (
         <div style={{ position: 'absolute', width: '100vw', height: '104vh'}}>
 
-          <Image src={imageUrls[9]} fill/>
+          <Image 
+          src={imageUrls[9]} 
+          fill
+          alt="cityNight1"
+          />
         </div>
       ),
       translateY: scrollThresholdReached ? [49, 49] : [39.5, 61],
@@ -247,7 +277,11 @@ const buttonStyleStroke2 = {
       children: (
           <div>
               <div style = {{width: '40vw', height: '40vh', position: 'absolute', left: '-45vw', top: '0vh'}}>
-                <Image src={'/homepage/meeting.png'} fill/>
+                <Image 
+                src={'/homepage/meeting.png'} 
+                fill
+                alt="meeting"
+                />
               </div>
             <div style={{ position: 'absolute', width: '36vw', height: '100vh'}}>
                   <div>

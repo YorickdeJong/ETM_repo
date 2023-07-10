@@ -162,6 +162,7 @@ function AboutUs() {
                         layout='responsive'
                         width={3}  // ratio's width
                         height={4}
+                        alt = 'Yorick'
                     />
                     </div>
                     <h3 style = {header}>Olivier</h3>
@@ -182,6 +183,7 @@ function AboutUs() {
                         layout='responsive'
                         width={3}  // ratio's width
                         height={4}
+                        alt="Yorick"
                     />
                     </div>
                     <h3 style = {header}>Yorick</h3>
@@ -202,6 +204,7 @@ function AboutUs() {
                         layout='responsive'
                         width={3}  // ratio's width
                         height={4}
+                        alt="Yorick"
                     />
                     </div>
                     <h3 style = {header}>Arthike</h3>
@@ -222,6 +225,7 @@ function AboutUs() {
                         layout='responsive'
                         width={3}  // ratio's width
                         height={4}
+                        alt="Yorick"
                     />
                     </div>
                     <h3 style = {header}>Nick</h3>

@@ -1,24 +1,9 @@
-import NavBar from "@/components/Utilities/NavBar"
+
+import NavBar from '@/components/Utilities/NavBar';
 import Image from 'next/image';
-import { useGlobalAuthContext } from '@/Context/password';
-import React, { useState, useEffect, useContext } from 'react';
+
 
 export default function projectPage() {
-    // const {auth, setAuthHandler} = useGlobalAuthContext();
-   
-
-    // useEffect(() => {
-    //     if (!auth) {
-    //         console.log('Auth context when prompt is displayed:', auth);
-    //         const password = prompt("Please enter the password");
-    //         if (password === "check") {
-    //             setAuthHandler(true);
-    //         } else {
-    //             alert('Incorrect password');
-    //             window.location.href = '/'; // or direct the user to any other page
-    //         }
-    //     }
-    // }, []); // Only re-run if local show state changes
 
     const header = {
         margin: '0', // added this
@@ -45,7 +30,7 @@ export default function projectPage() {
 
 
     return (
-        <main>
+        <main >
         <NavBar />
             <div style = {{position: 'absolute', top: '13vh', width: '100vw'}}>
                 <h1 style = {{
@@ -75,6 +60,7 @@ export default function projectPage() {
                         <Image 
                             src = '/projects/classroom.png'
                             fill
+                            layout = 'fill'
                         />
                     </div>
                     <div style = {{width: '100%', height: '30%', marginTop: '60.5%', backgroundColor: '#084652'}}>
@@ -89,6 +75,7 @@ export default function projectPage() {
                         <Image 
                             src = '/projects/cityBlueDark.png'
                             fill
+                            alt = 'city'
                         />
                     </div>
                     <div style = {{width: '100%', height: '30%', marginTop: '60.5%', backgroundColor: '#084652'}}>
@@ -103,6 +90,7 @@ export default function projectPage() {
                         <Image 
                             src = '/projects/spark.png'
                             fill
+                            alt = 'spark'
                         />
                     </div>
                     <div style = {{width: '100%', height: '30%', marginTop: '60.5%', backgroundColor: '#084652'}}>
@@ -128,6 +116,7 @@ export default function projectPage() {
                         <Image 
                             src = '/projects/universe.png'
                             fill
+                            alt = 'universe'
                         />
                     </div>
                     <div style = {{width: '100%', height: '30%', marginTop: '60.5%', backgroundColor: '#084652'}}>
@@ -142,6 +131,7 @@ export default function projectPage() {
                         <Image 
                             src = '/projects/trains.png'
                             fill
+                            alt = 'trains'
                         />
                     </div>
                     <div style = {{width: '100%', height: '30%', marginTop: '60.5%', backgroundColor: '#084652'}}>
@@ -156,6 +146,7 @@ export default function projectPage() {
                         <Image 
                             src = '/projects/database.png'
                             fill
+                            alt = 'database'
                         />
                     </div>
                     <div style = {{width: '100%', height: '30%', marginTop: '60.5%', backgroundColor: '#084652'}}>
