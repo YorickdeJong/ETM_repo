@@ -153,6 +153,7 @@ export default function  Parallax(){
               fill
               quality={50}
               alt="cityDay4"  
+              priority={true}
               />
           </div>
         ),
@@ -166,6 +167,7 @@ export default function  Parallax(){
               <Image src={imageUrls[1]} 
               fill
               alt="cityDay5"
+              priority={true}
               quality={50}
               />
           </div>
@@ -181,6 +183,7 @@ export default function  Parallax(){
               src={imageUrls[2]} 
               fill
                 alt="cityDay3"
+                priority={true}
                 quality={50}
               />
           </div>
@@ -195,6 +198,7 @@ export default function  Parallax(){
               src={imageUrls[3]} 
               fill
               alt="cityDay2"
+              priority={true}
               quality={50}
               />
           </div>
@@ -209,6 +213,7 @@ export default function  Parallax(){
               src={imageUrls[4]} 
               fill
               alt="cityDay1"
+              priority={true}
               quality={50}
               />
           </div>

@@ -65,7 +65,7 @@ function ValueProp() {
         textAlign: 'center', 
         color: '#F4FDFF'
     };
-    
+
     const cards = [
         { title: 'Begrip', text: 'Een bedrijf is een collectief van mensen, om het beste product aan jullie te leveren, streven wij er eerst om jullie volledig te begrijpen en te leren kennen', left: '10vw' },
         { title: 'Gemak', text: 'Als opdrachtgever zit u niet op hoofdpijn te wachten tijdens het proces waarin uw website wordt gemaakt.', left: '38vw' },
@@ -85,6 +85,7 @@ function ValueProp() {
                     fill
                     style = {{opacity: 0.7}}
                     alt='underground'
+                    quality={50}
                 />
             </div>
 
