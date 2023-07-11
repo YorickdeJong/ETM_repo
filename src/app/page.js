@@ -6,29 +6,29 @@ const HorizontalCityGallary = dynamic(() => import('../components/Utilities/Hori
 import { useGlobalAuthContext } from '@/Context/password';
 
 export default function Home() {
-    const {auth, setAuthHandler} = useGlobalAuthContext();
+    // const {auth, setAuthHandler} = useGlobalAuthContext();
    
 
-    useEffect(() => {
-        if (!auth) {
-            console.log('Auth context when prompt is displayed:', auth);
-            const password = prompt("Please enter the password");
-            if (password === "check") {
-                setAuthHandler(true);
-            } else {
-                alert('Incorrect password');
-                window.location.href = '/'; // or direct the user to any other page
-            }
-        }
-    }, [auth, setAuthHandler]); // Only re-run if local show state changes
+    // useEffect(() => {
+    //     if (!auth) {
+    //         console.log('Auth context when prompt is displayed:', auth);
+    //         const password = prompt("Please enter the password");
+    //         if (password === "check") {
+    //             setAuthHandler(true);
+    //         } else {
+    //             alert('Incorrect password');
+    //             window.location.href = '/'; // or direct the user to any other page
+    //         }
+    //     }
+    // }, [auth, setAuthHandler]); // Only re-run if local show state changes
 
     return (
-        auth ?
-        (
+        // auth ?
+        // (
             <main>
                 <NavBar pathname='/' />
                 <HorizontalCityGallary />
             </main>
-        ) : null
+        // ) : null
     );
 }
