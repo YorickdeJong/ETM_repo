@@ -7,37 +7,37 @@ export default function projectPage() {
 
     const projects = [
         {
-            imageSrc: '/projects/classroom.png',
+            imageSrc: '/projects/classroom.jpg',
             altText: 'classroom',
             title: 'School klaar - ondersteuning voor jouw school',
             subtitle: 'Bekijk ons proces'
         },
         {
-            imageSrc: '/projects/cityBlueDark.png',
+            imageSrc: '/projects/cityBlueDark.jpg',
             altText: 'city',
             title: 'Learning Bot - bouw, codeer en bereken',
             subtitle: 'Bekijk ons proces'
         },
         {
-            imageSrc: '/projects/spark.png',
+            imageSrc: '/projects/spark.jpg',
             altText: 'spark',
             title: 'Spark - vind jouw doel',
             subtitle: 'Bekijk ons proces'
         },
         {
-            imageSrc: '/projects/universe.png',
+            imageSrc: '/projects/universe.jpg',
             altText: 'universe',
             title: 'Universals - Ontdek jouw mogelijkheden',
             subtitle: 'Bekijk ons proces'
         },
         {
-            imageSrc: '/projects/trains.png',
+            imageSrc: '/projects/trains.jpg',
             altText: 'trains',
             title: 'Future trains - reis met gemak',
             subtitle: 'Bekijk ons proces'
         },
         {
-            imageSrc: '/projects/database.png',
+            imageSrc: '/projects/database.jpg',
             altText: 'database',
             title: 'Data storage - Beveilig je data',
             subtitle: 'Bekijk ons proces'

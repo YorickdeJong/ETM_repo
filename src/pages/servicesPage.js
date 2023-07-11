@@ -245,7 +245,7 @@ function Services() {
                     {/* Content of the first column goes here */}
                     <div style = {imageContainerStyle}>
                         <Image 
-                            src = '/services/deal.png'
+                            src = '/services/deal.jpg'
                             fill
                             alt = 'deal'
                         />

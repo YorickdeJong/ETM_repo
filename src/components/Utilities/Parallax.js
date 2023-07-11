@@ -73,12 +73,12 @@ export default function  Parallax(){
   };
   
     const imageUrls = [
-      '/homepage/cityDay4-2.png',
+      '/homepage/cityDay4-2.jpg',
       '/homepage/cityDay5.png',
       '/homepage/cityDay3-2.png',
       '/homepage/cityDay2-2.png',
       '/homepage/cityDay1-2.png',
-      '/homepage/cityNight3-3.png',
+      '/homepage/cityNight3-3.jpg',
       '/homepage/cityNightCloud.png',
       '/homepage/cityNightMoon.png',
       '/homepage/cityNight2-2-2.png',
@@ -144,6 +144,8 @@ export default function  Parallax(){
     const buttonContainer = { position: 'absolute', width: '30vw', height: '104vh' };
     const video = {width: '40vw', height: '40vh', position: 'absolute', left: '-45vw', top: '0vh'}
     const videoText = { position: 'absolute', width: '36vw', height: '100vh'}
+
+    
     const animationOne = [
       {
         children: (
@@ -151,9 +153,7 @@ export default function  Parallax(){
               <Image 
               src={imageUrls[0]} 
               fill
-              quality={50}
               alt="cityDay4"  
-              priority={true}
               />
           </div>
         ),
@@ -167,8 +167,6 @@ export default function  Parallax(){
               <Image src={imageUrls[1]} 
               fill
               alt="cityDay5"
-              priority={true}
-              quality={50}
               />
           </div>
         ),
@@ -183,8 +181,6 @@ export default function  Parallax(){
               src={imageUrls[2]} 
               fill
                 alt="cityDay3"
-                priority={true}
-                quality={50}
               />
           </div>
         ),
@@ -198,8 +194,6 @@ export default function  Parallax(){
               src={imageUrls[3]} 
               fill
               alt="cityDay2"
-              priority={true}
-              quality={50}
               />
           </div>
         ),
@@ -213,8 +207,6 @@ export default function  Parallax(){
               src={imageUrls[4]} 
               fill
               alt="cityDay1"
-              priority={true}
-              quality={50}
               />
           </div>
         ),
@@ -260,7 +252,6 @@ export default function  Parallax(){
             <Image 
             src={imageUrls[5]} 
             fill
-            quality={50}
             alt="cityNight3"
             />
           </div>
@@ -277,7 +268,6 @@ export default function  Parallax(){
             src={imageUrls[6]} 
             fill
             alt="cityNightMoon"
-            quality={50}
             />
           </div>
         ),
@@ -292,7 +282,6 @@ export default function  Parallax(){
             src={imageUrls[7]} 
             fill
             alt="cityNightCloud"
-            quality={50}
             />
           </div>
         ),
@@ -306,7 +295,6 @@ export default function  Parallax(){
             src={imageUrls[8]} 
             fill
             alt="cityNight2"
-            quality={50}
             />
           </div>
         ),
@@ -320,7 +308,6 @@ export default function  Parallax(){
             src={imageUrls[9]} 
             fill
             alt="cityNight1"
-            quality={50}
             />
           </div>
         ),
@@ -339,7 +326,7 @@ export default function  Parallax(){
             <div>
                 <div style = {video}>
                   <Image 
-                  src={'/homepage/meeting.png'} 
+                  src={'/homepage/meeting.jpg'} 
                   fill
                   alt="meeting"
                   />

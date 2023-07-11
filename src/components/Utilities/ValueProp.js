@@ -81,7 +81,7 @@ function ValueProp() {
             
             <div>
                 <Image 
-                    src = '/ValueProp/underground.png'
+                    src = '/ValueProp/underground.jpg'
                     fill
                     style = {{opacity: 0.7}}
                     alt='underground'
