@@ -183,7 +183,7 @@ const ImageThreeD = () => {
     return () => {
       window.removeEventListener('wheel', handleScroll);
     };
-  }, []);
+  }, [images.length]);
   
   useEffect(() => {
     window.scrollTo({ top: currentSection * window.innerHeight, behavior: 'smooth' });

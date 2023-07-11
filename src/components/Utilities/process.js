@@ -1,7 +1,7 @@
 
 'use client'
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import './process.css';
 
 const containerTextImage = {
@@ -106,7 +106,7 @@ const ScrollIndicator = () => {
         );
     };
   
-    const calculateScroll = () => {
+    const calculateScroll = useCallback(() => {
         const scrollTop = window.scrollY;
         const winHeight = window.innerHeight;
         const docHeight = getDocHeight()  - 4 * winHeight; // Adjusting for the 200vh offset where component starts
@@ -121,7 +121,7 @@ const ScrollIndicator = () => {
             const scrollPosition = Math.floor(((scrollTop - 2.8 * winHeight) / totalDocScrollLength) * 100);
     
             setScroll(Math.max(0, scrollPosition)); // To ensure the scroll% doesn't go below 0
-    };
+    }, [getDocHeight, setScroll, window.innerHeight, window.scrollY, window.innerHeight]);
   
     useEffect(() => {
         window.addEventListener("scroll", calculateScroll);

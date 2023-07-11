@@ -67,60 +67,41 @@ function Services() {
     }
     
     const textOne = [
-        <li style = {list}>Vast scherp tarief</li>,
-        <li style = {list}>Levertijd: 5 weken</li>,
-        <li style = {list}>Webdesign geheel op maat</li>,
-        <li style = {list}>5 Pagina ontwerpen</li>,
-        <li style = {list}>5 pagina's gevuld</li>,
-        <li style = {list}>10 professionele foto's</li>,
-        <li style = {list}>Umbraco CMS</li>,
-        <li style = {list}>Vele functionaliteiten (modules)</li>,
-        <li style = {list}>Inclusief SEO module</li>,
-        <li style = {list}>3 Correctierondes</li>,
-        <li style = {list}>Sitespeed: Bloedsnel</li>
-    ]
-
+        <li key="textOne1" style={list}>Vast scherp tarief</li>,
+        <li key="textOne2" style={list}>Levertijd: 5 weken</li>,
+        <li key="textOne3" style={list}>3D ontwerp</li>,
+        <li key="textOne4" style={list}>Kleur- en materialadvies</li>,
+        <li key="textOne5" style={list}>Lichtadvies</li>,
+        <li key="textOne6" style={list}>Aankoopbegeleiding</li>,
+    ];
+    
     const textTwo = [
-        <li style={list}>Levertijd: 3 - 5 mnd</li>,
-        <li style={list}>Intakesessie</li>,
-        <li style={list}>Strategisch plan compact</li>,
-        <li style={list}>Wireframe ontwerp</li>,
-        <li style={list}>Grafisch ontwerp</li>,
-        <li style={list}>10 - 15 pagina's</li>,
-        <li style={list}>Professionele foto's</li>,
-        <li style={list}>100% maatwerk</li>,
-        <li style={list}>PRFT® werkwijze</li>,
-        <li style={list}>Umbraco CMS</li>,
-        <li style={list}>Maatwerk functionaliteiten</li>,
-        <li style={list}>Maatwerk modules</li>,
-        <li style={list}>Maatwerk widgets</li>,
-        <li style={list}>Inclusief SEO tool</li>,
-        <li style={list}>Meerdere correctierondes</li>,
-        <li style={list}>Sitespeed: Bloedsnel!</li>
+        <li key="textTwo1" style={list}>Levertijd: 3 - 5 mnd</li>,
+        <li key="textTwo2" style={list}>Intakesessie</li>,
+        <li key="textTwo3" style={list}>Moodboard</li>,
+        <li key="textTwo4" style={list}>3D ontwerp</li>,
+        <li key="textTwo5" style={list}>Kleur- en materialadvies</li>,
+        <li key="textTwo6" style={list}>Lichtadvies</li>,
+        <li key="textTwo7" style={list}>Indelingsadvies</li>,
+        <li key="textTwo8" style={list}>Aankoopbegeleiding</li>,
+        <li key="textTwo9" style={list}>Projectbegeleiding</li>,
     ];
     
     const textThree = [
-        <li style={list}>Levertijd: {'>'} 4 mnd</li>,
-        <li style={list}>Brainstorm sessie</li>,
-        <li style={list}>Strategisch plan</li>,
-        <li style={list}>Persona's</li>,
-        <li style={list}>Userstories</li>,
-        <li style={list}>Customer Journey</li>,
-        <li style={list}>Wireframe ontwerp</li>,
-        <li style={list}>Grafisch ontwerp</li>,
-        <li style={list}>15 - 25 pagina's</li>,
-        <li style={list}>Professionele foto's</li>,
-        <li style={list}>100% maatwerk</li>,
-        <li style={list}>PRFT® werkwijze</li>,
-        <li style={list}>Umbraco CMS</li>,
-        <li style={list}>Maatwerk functionaliteiten</li>,
-        <li style={list}>Maatwerk modules</li>,
-        <li style={list}>Maatwerk widgets</li>,
-        <li style={list}>Inclusief SEO tool</li>,
-        <li style={list}>Meerdere correctierondes</li>,
-        <li style={list}>Sitespeed: Bloedsnel!</li>
+        <li key="textThree1" style={list}>Levertijd: {'>'} 4 mnd</li>,
+        <li key="textThree2" style={list}>Brainstorm sessie</li>,
+        <li key="textThree3" style={list}>Moodboard</li>,
+        <li key="textThree4" style={list}>3D ontwerp</li>,
+        <li key="textThree5" style={list}>Kleur- en materialadvies</li>,
+        <li key="textThree6" style={list}>Lichtadvies</li>,
+        <li key="textThree7" style={list}>Indelingsadvies</li>,
+        <li key="textThree8" style={list}>Aankoopbegeleiding</li>,
+        <li key="textThree9" style={list}>Projectbegeleiding</li>,
+        <li key="textThree10" style={list}>Stylingadvies</li>,
+        <li key="textThree11" style={list}>Verlichtingsplan</li>,
+        <li key="textThree12" style={list}>Maatwerk</li>,
+        <li key="textThree13" style={list}>Projectmanagement</li>,
     ];
-
     return (
         <main style = {{height: '230vh',  position: 'relative',  backgroundColor: 'white'}}>
             <div style = {{position: 'absolute', left: '-0.39vw', top: '-0.68vh'}}>

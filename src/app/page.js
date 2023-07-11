@@ -20,7 +20,7 @@ export default function Home() {
                 window.location.href = '/'; // or direct the user to any other page
             }
         }
-    }, []); // Only re-run if local show state changes
+    }, [auth, setAuthHandler]); // Only re-run if local show state changes
 
     return (
         auth ?
