@@ -15,7 +15,7 @@ const getInitialAuth = () => {
 
 
 export const AuthProvider = ({ children }) => {
-  const [auth, setAuth] = useState(getInitialAuth);
+  const [auth, setAuth] = useState(() => getInitialAuth());
 
   useEffect(() => {
     const initialAuth = getInitialAuth();
