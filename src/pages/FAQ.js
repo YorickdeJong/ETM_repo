@@ -64,65 +64,106 @@ export default function FAQ() {
         }
     ]
 
+
+    const styles = {
+        main: {
+            height: '90vh',
+        },
+        titleContainer: {
+            position: 'absolute',
+            top: '13vh',
+            width: '100vw',
+            marginLeft: '6vw',
+        },
+        title: {
+            fontSize: 55, 
+            color: '#0F1C37', 
+            fontWeight: '500', 
+        },
+        subtitle: {
+            marginTop: '-2vh', 
+            fontSize: 30, 
+            color: '#8A8889', 
+            width: '60vw', 
+            lineHeight: '130%',
+        },
+        grid: {
+            display: 'grid',
+            gridTemplateColumns: 'repeat(2, 1fr)', // Create two columns
+            gridTemplateRows: 'repeat(5, 1fr)', // Create five rows
+            height: '70vh',
+            width: '88vw',
+            gap: '10px', // Optional gap between grid items
+            marginTop: '38vh',
+            marginLeft: '5vw',
+        },
+        item: {
+            display: 'flex',
+            flexDirection: 'row',
+        },
+        iconContainer: {
+            position: 'relative', 
+            width: '4vw', 
+            height: '4vw', 
+            backgroundColor: '#92CDC6', 
+            borderRadius: 10, 
+            top: '2.3vh', 
+            left: '1vw', 
+            justifyContent: 'center', 
+            alignItems: 'center', 
+            display: 'flex'
+        },
+        contentContainer: {
+            display: 'flex', 
+            flexDirection: 'column'
+        },
+        itemTitle: {
+            width: '30vw', 
+            fontSize: 25, 
+            color: '#8A8889', 
+            lineHeight: '130%', 
+            margin: 0, 
+            marginTop: '2.5vh', 
+            marginLeft: '4vw',
+        },
+        itemText: {
+            width: '30vw', 
+            fontSize: 20, 
+            color: '#8A8889', 
+            lineHeight: '130%', 
+            margin: 0, 
+            marginLeft: '4vw', 
+            marginTop: '1vh'
+        }
+    };
+    
     return (
-        <main style = {{height: '90vh'}}>
+        <main style={styles.main}>
             <NavBar />
-            <div style = {{position: 'absolute', top: '13vh', width: '100vw', marginLeft: '6vw'}}>
-                <h1 style = {{
-                    fontSize: 55, 
-                    color: '#0F1C37', 
-                    fontWeight: '500', 
-                }}>Frequently Asked Questions</h1>
-                <p style = {{marginTop: '-2vh', fontSize: 30, color: '#8A8889', width: '60vw', lineHeight: '130%'}}>
+            <div style={styles.titleContainer}>
+                <h1 style={styles.title}>Frequently Asked Questions</h1>
+                <p style={styles.subtitle}>
                 Bent u er nog niet helemaal uit of heeft u een brandende vraag? Geen zorgen! Op deze pagina beantwoorden we vragen die vaak worden gesteld
                 </p>
             </div> 
-            <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(2, 1fr)', // Create two columns
-                gridTemplateRows: 'repeat(5, 1fr)', // Create five rows
-                height: '70vh',
-                width: '88vw',
-                gap: '10px', // Optional gap between grid items
-                marginTop: '38vh',
-                marginLeft: '5vw',
-                }}>
+            <div style={styles.grid}>
                 {faqs.map((faq, i) => (
-                <div 
-                    key={i} 
-                    style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                    }}
-                >
-                    <div style = {{
-                        position: 'relative', width: '4vw', height: '4vw', 
-                        backgroundColor: '#92CDC6', borderRadius: 10, 
-                        top: '2.3vh', left: '1vw', justifyContent: 'center', 
-                        alignItems: 'center', display: 'flex'
-                    }}>
-                        {faq.icon}
+                    <div key={i} style={styles.item}>
+                        <div style={styles.iconContainer}>
+                            {faq.icon}
+                        </div>
+                        <div style={styles.contentContainer}>
+                            <h2 style={styles.itemTitle}>
+                                {faq.title} 
+                            </h2>
+                            <p style={styles.itemText}>
+                                {faq.text}
+                            </p>
+                        </div>
                     </div>
-                    <div style = {{display: 'flex', flexDirection: 'column'}}>
-                        <h2 style = {{
-                            width: '30vw', fontSize: 25, color: '#8A8889', 
-                            lineHeight: '130%', margin: 0, marginTop: '2.5vh', 
-                            marginLeft: '4vw',
-                        }}>
-                            {faq.title} 
-                        </h2>
-                        <p style = {{
-                            width: '30vw', fontSize: 20, color: '#8A8889', 
-                            lineHeight: '130%', margin: 0, marginLeft: '4vw', 
-                            marginTop: '1vh'
-                        }}>
-                            {faq.text}
-                        </p>
-                    </div>
-                </div>
-            ))}
+                ))}
             </div>
-
         </main>
-    )
-}
+    );
+};
+

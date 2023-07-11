@@ -5,159 +5,167 @@ import Image from 'next/image';
 
 export default function projectPage() {
 
-    const header = {
-        margin: '0', // added this
-        width: '80%',
-        marginLeft: '10%',
-        color: 'white',
-        fontSize: '1vw',
-        zIndex: 100,
-        paddingTop: '2.5vh'
-    }
+    const projects = [
+        {
+            imageSrc: '/projects/classroom.png',
+            altText: 'classroom',
+            title: 'School klaar - ondersteuning voor jouw school',
+            subtitle: 'Bekijk ons proces'
+        },
+        {
+            imageSrc: '/projects/cityBlueDark.png',
+            altText: 'city',
+            title: 'Learning Bot - bouw, codeer en bereken',
+            subtitle: 'Bekijk ons proces'
+        },
+        {
+            imageSrc: '/projects/spark.png',
+            altText: 'spark',
+            title: 'Spark - vind jouw doel',
+            subtitle: 'Bekijk ons proces'
+        },
+        {
+            imageSrc: '/projects/universe.png',
+            altText: 'universe',
+            title: 'Universals - Ontdek jouw mogelijkheden',
+            subtitle: 'Bekijk ons proces'
+        },
+        {
+            imageSrc: '/projects/trains.png',
+            altText: 'trains',
+            title: 'Future trains - reis met gemak',
+            subtitle: 'Bekijk ons proces'
+        },
+        {
+            imageSrc: '/projects/database.png',
+            altText: 'database',
+            title: 'Data storage - Beveilig je data',
+            subtitle: 'Bekijk ons proces'
+        }
+    ];
+
+
+    const styles = {
+        container1: {
+            position: 'absolute',
+            top: '13vh',
+            width: '100vw'
+        },
+        heading1: {
+            fontSize: 55,
+            color: '#0F1C37',
+            textAlign: 'center',
+            fontWeight: '500'
+        },
+        paragraph1: {
+            marginTop: '-2vh',
+            textAlign: 'center',
+            fontSize: 35,
+            color: '#8A8889',
+            width: '60vw',
+            marginLeft: '20vw'
+        },
+        divBackground: {
+            backgroundColor: '#0F1C37',
+            width: '101vw',
+            height: '50vh',
+            top: '60vh',
+            position: 'absolute',
+            left: '-1%',
+            zIndex: -1
+        },
+        grid1: {
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr 1fr',
+            height: '40vh',
+            width: '90vw',
+            marginLeft: '6.5vw',
+            paddingTop: '40vh'
+        },
+        grid2: {
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr 1fr',
+            height: '45vh',
+            width: '90vw',
+            paddingTop: '10vh',
+            marginLeft: '6.5vw',
+        },
+        gridColumn: {
+            width: '25vw',
+            height: '38vh',
+            backgroundColor: 'black',
+            boxShadow: '4px 6px 8px rgba(0, 0, 0, 0.4)'
+        },
+        imageContainer: {
+            width: '25vw',
+            height: '27vh',
+            backgroundColor: 'gray',
+            position: 'absolute'
+        },
+        textContainer: {
+            width: '100%',
+            height: '30%',
+            marginTop: '60.5%',
+            backgroundColor: '#084652'
+        },
+        header: {
+            margin: '0', // added this
+            width: '80%',
+            marginLeft: '10%',
+            color: 'white',
+            fontSize: '1vw',
+            zIndex: 100,
+            paddingTop: '2.5vh'
+        },
+        paragraph: {
+            margin: '0', // added this
+            width: '80%',
+            marginLeft: '10%',
+            color: 'white',
+            fontSize: '1vw',
+            zIndex: 100,
+            paddingTop: '2.5vh'
+        }
+    };
     
-    const paragraph = {
-        margin: '0', // added this
-        marginTop: '1.5vh',
-        width: '80%',
-        marginLeft: '10%',
-        fontWeight: '400',
-        color: '#D6D6D6',
-        fontSize: '0.9vw',
-        zIndex: 100,
-        lineHeight: '1.5vw',
-    }
-
-
-
     return (
-        <main >
-        <NavBar />
-            <div style = {{position: 'absolute', top: '13vh', width: '100vw'}}>
-                <h1 style = {{
-                    fontSize: 55, 
-                    color: '#0F1C37', 
-                    textAlign: 'center',
-                    fontWeight: '500', 
-                }}>Bekijk enkele van onze projecten</h1>
-                <p style = {{marginTop: '-2vh', textAlign: 'center', fontSize: 35, color: '#8A8889', width: '60vw', marginLeft: '20vw'}}>
-                Wat hebben we gemaakt en wat de zijn problemen die we hebben opgelost?
-                </p>
-            </div>
-            
-            <div style = {{backgroundColor: '#0F1C37', width: '101vw', height: '50vh', top: '60vh', position: 'absolute', left: '-1%', zIndex: -1}}/>
-            
-            <div style={{
-                display: 'grid', 
-                gridTemplateColumns: '1fr 1fr 1fr', 
-                height: '40vh', 
-                width: '90vw',
-                marginLeft: '6.5vw',
-                paddingTop: '40vh',  // Reduce paddingTop here
-            }}>
-                <div style = {{gridColumn: '1 / span 1', width: '25vw', height: '38vh', backgroundColor: 'black',
-                 boxShadow: '4px 6px 8px rgba(0, 0, 0, 0.4)'}}>
-                    <div style = {{width: '25vw', height: '27vh', backgroundColor: 'gray', position: 'absolute'}}>
-                        <Image 
-                            src = '/projects/classroom.png'
-                            fill
-                            layout = 'fill'
-                            alt = 'classroom'
-                        />
-                    </div>
-                    <div style = {{width: '100%', height: '30%', marginTop: '60.5%', backgroundColor: '#084652'}}>
-                        <h2 style = {header}>School klaar - ondersteuning voor jouw school</h2>
-                        <h4 style = {paragraph}>Bekijk ons proces</h4>
-                    </div>
+            <div>
+                <NavBar />
+                <div style={styles.container1}>
+                    <h1 style={styles.heading1}>Bekijk enkele van onze projecten</h1>
+                    <p style={styles.paragraph1}>Wat hebben we gemaakt en wat de zijn problemen die we hebben opgelost?</p>
                 </div>
-
-                <div style = {{gridColumn: '2 / span 1', width: '25vw', height: '38vh', backgroundColor: 'black',
-                 boxShadow: '4px 6px 8px rgba(0, 0, 0, 0.4)'}}>
-                    <div style = {{width: '25vw', height: '27vh', backgroundColor: 'gray', position: 'absolute'}}>
-                        <Image 
-                            src = '/projects/cityBlueDark.png'
-                            fill
-                            alt = 'city'
-                        />
-                    </div>
-                    <div style = {{width: '100%', height: '30%', marginTop: '60.5%', backgroundColor: '#084652'}}>
-                        <h2 style = {header}>Learning Bot - bouw, codeer en bereken</h2>
-                        <h4 style = {paragraph}>Bekijk ons proces</h4>
-                    </div>
+    
+                <div style={styles.divBackground} />
+    
+                <div style={styles.grid1}>
+                    {projects.slice(0,3).map((project, index) => (
+                        <div style={styles.gridColumn} key={index}>
+                            <div style={styles.imageContainer}>
+                                <Image src={project.imageSrc} fill alt={project.altText} />
+                            </div>
+                            <div style={styles.textContainer}>
+                                <h2 style={styles.header}>{project.title}</h2>
+                                <h4 style={styles.paragraph}>{project.subtitle}</h4>
+                            </div>
+                        </div>
+                    ))}
                 </div>
-
-                <div style = {{gridColumn: '3 / span 1', width: '25vw', height: '38vh', backgroundColor: 'black',
-                 boxShadow: '4px 6px 8px rgba(0, 0, 0, 0.4)'}}>
-                    <div style = {{width: '25vw', height: '27vh', backgroundColor: 'gray', position: 'absolute'}}>
-                        <Image 
-                            src = '/projects/spark.png'
-                            fill
-                            alt = 'spark'
-                        />
-                    </div>
-                    <div style = {{width: '100%', height: '30%', marginTop: '60.5%', backgroundColor: '#084652'}}>
-                        <h2 style = {header}>Spark - vind jouw doel</h2>
-                        <h4 style = {paragraph}>Bekijk ons proces</h4>
-                    </div>
+    
+                <div style={styles.grid2}>
+                    {projects.slice(3,6).map((project, index) => (
+                        <div style={styles.gridColumn} key={index}>
+                            <div style={styles.imageContainer}>
+                                <Image src={project.imageSrc} fill alt={project.altText} />
+                            </div>
+                            <div style={styles.textContainer}>
+                                <h2 style={styles.header}>{project.title}</h2>
+                                <h4 style={styles.paragraph}>{project.subtitle}</h4>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
-
-
-            <div style={{
-                display: 'grid', 
-                gridTemplateColumns: '1fr 1fr 1fr', 
-                height: '45vh', 
-                width: '90vw',
-                paddingTop: '10vh',  // Reduce paddingTop here
-                marginLeft: '6.5vw',
-            }}>
-                <div style = {{gridColumn: '1 / span 1', width: '25vw', height: '38vh', backgroundColor: 'black',
-                boxShadow: '4px 6px 8px rgba(0, 0, 0, 0.4)'
-                }}>
-                    <div style = {{width: '25vw', height: '27vh', backgroundColor: 'gray', position: 'absolute'}}>
-                        <Image 
-                            src = '/projects/universe.png'
-                            fill
-                            alt = 'universe'
-                        />
-                    </div>
-                    <div style = {{width: '100%', height: '30%', marginTop: '60.5%', backgroundColor: '#084652'}}>
-                        <h2 style = {header}>Universals - Ontdek jouw mogelijkheden</h2>
-                        <h4 style = {paragraph}>Bekijk ons proces</h4>
-                    </div>
-                </div>
-
-                <div style = {{gridColumn: '2 / span 1',  width: '25vw', height: '38vh', backgroundColor: 'black',
-                 boxShadow: '4px 6px 8px rgba(0, 0, 0, 0.4)'}}>
-                    <div style = {{width: '25vw', height: '27vh', backgroundColor: 'gray', position: 'absolute'}}>
-                        <Image 
-                            src = '/projects/trains.png'
-                            fill
-                            alt = 'trains'
-                        />
-                    </div>
-                    <div style = {{width: '100%', height: '30%', marginTop: '60.5%', backgroundColor: '#084652'}}>
-                        <h2 style = {header}>Future trains - reis met gemak</h2>
-                        <h4 style = {paragraph}>Bekijk ons proces</h4>
-                    </div>
-                </div>
-
-                <div style = {{gridColumn: '3 / span 1', width: '25vw', height: '38vh', backgroundColor: 'black',
-                 boxShadow: '4px 6px 8px rgba(0, 0, 0, 0.4)'}}>
-                    <div style = {{width: '25vw', height: '27vh', backgroundColor: 'gray', position: 'absolute'}}>
-                        <Image 
-                            src = '/projects/database.png'
-                            fill
-                            alt = 'database'
-                        />
-                    </div>
-                    <div style = {{width: '100%', height: '30%', marginTop: '60.5%', backgroundColor: '#084652'}}>
-                        <h2 style = {header}>Data storage - Beveilig je data</h2>
-                        <h4 style = {paragraph}>Bekijk ons proces</h4>
-                    </div>
-                </div>
-            </div>
-
-        </main>
-    )
-
-}
+        );
+};
+    

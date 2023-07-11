@@ -46,6 +46,19 @@ const scrollIndicator = {
     backgroundColor: 'rgba(0, 255, 255, 1)',//'#FFECDF',
     zIndex: 1000,  // So it stays on top of other content
 }
+
+const titleContainerStyle = {
+    display: 'flex', flexDirection: 'column', marginTop: 40
+}
+
+const titleContainer = {  width: '23.5vw', height: 70, backgroundColor: 'rgba(0, 201,201,1)', borderRadius: 20, }
+
+const titleStyle = {fontSize: 26, textAlign: 'center', marginTop: 16}
+
+const paragraphContainer = { width: '23.5vw', height: 70, borderColor: 'rgba(0, 222,222,1)', borderWidth: 2, borderRadius: 20, marginTop: 20}
+
+const paragraphTitle = {fontSize: 26, textAlign: 'center', marginTop: 16, color: 'rgba(0, 222,222,1)', fontWeight: '500'}
+
 // TextBlock component 
 const TextBlock = ({ text, title, image, isImageRight, index }) => (
     <>
@@ -55,12 +68,12 @@ const TextBlock = ({ text, title, image, isImageRight, index }) => (
                         <h2 style={titleText}>{title}</h2>
                         <p style={paragraph}>{text}</p>
                         {index === 0 && 
-                            <div style = {{display: 'flex', flexDirection: 'column', marginTop: 40}}>
-                                <div style={{  width: '23.5vw', height: 70, backgroundColor: 'rgba(0, 201,201,1)', borderRadius: 20,}}>    
-                                    <h2 style = {{fontSize: 26, textAlign: 'center', marginTop: 16}}>Maak een gratis afspraak</h2>
+                            <div style = {titleContainerStyle}>
+                                <div style={titleContainer}>    
+                                    <h2 style = {titleStyle}>Maak een gratis afspraak</h2>
                                 </div>
-                                <div style={{ width: '23.5vw', height: 70, borderColor: 'rgba(0, 222,222,1)', borderWidth: 2, borderRadius: 20, marginTop: 20}}>    
-                                    <h2 style = {{fontSize: 26, textAlign: 'center', marginTop: 16, color: 'rgba(0, 222,222,1)', fontWeight: '500'}}>Maak de online Quiz  {' >'}</h2>
+                                <div style={paragraphContainer}>    
+                                    <h2 style = {paragraphTitle}>Maak de online Quiz  {' >'}</h2>
                                 </div>
                             </div>
                         }

@@ -28,6 +28,7 @@ export default function Home() {
             <main>
                 <NavBar pathname='/' />
                 <HorizontalCityGallary />
+                
             </main>
         // ) : null
     );
