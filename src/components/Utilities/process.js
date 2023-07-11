@@ -121,7 +121,7 @@ const ScrollIndicator = () => {
             const scrollPosition = Math.floor(((scrollTop - 2.8 * winHeight) / totalDocScrollLength) * 100);
     
             setScroll(Math.max(0, scrollPosition)); // To ensure the scroll% doesn't go below 0
-    }, [getDocHeight, setScroll, window.innerHeight, window.scrollY, window.innerHeight]);
+    }, [getDocHeight, setScroll]);
   
     useEffect(() => {
         window.addEventListener("scroll", calculateScroll);

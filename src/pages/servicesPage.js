@@ -130,7 +130,7 @@ function Services() {
                         <h2 style = {header}>Welke optie is het beste voor jou?</h2>
                         <p style = {paragraph}>Order norwegian dragon-scale tap-dancing fanged wizard grindylows werewolf wool. Head petrificus ministry-of-magic polyjuice knew. 
                         Chalice stroke remembrall hunt fat phials mudbloods unwilling banges. Shack yer in restricted charm treats crush who. 
-                        Glory impedimenta parvati dervish dirigible dead dirt stairs. Out downfall wingardium you robes keeper sorcerer's spleens feast.</p>
+                        Glory impedimenta parvati dervish dirigible dead dirt stairs. Out downfall wingardium you robes keeper sorcerer&apos;s spleens feast.</p>
 
                         <div    
                             style={buttonStyleFilled} 
