@@ -325,7 +325,7 @@ export default function  Parallax(){
             <div>
                 <div style = {video}>
                   <Image 
-                  src={'/homepage/meeting.jpg'} 
+                  src={'/homepage/meeting-1.jpg'} 
                   fill
                   alt="meeting"
                   />
