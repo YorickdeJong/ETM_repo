@@ -94,11 +94,11 @@ export default function CostsCard({title, texts, marginTop, stars, starsMarginLe
             </div>
             <footer style={styles.bottomContainer}>
                 <hr style={styles.line} />
-                <div style={styles.buttonStylePackage}>
+                <section style={styles.buttonStylePackage}>
                     <Link href="/contact" style={{ display: 'block', height: '100%', color: 'white', textDecoration: 'none' }}>
                         <h2 style={{fontSize: 28, textAlign: 'center'}}>Maak een gratis afspraak</h2>
                     </Link>
-                </div>
+                </section>
             </footer>
         </section>
     );

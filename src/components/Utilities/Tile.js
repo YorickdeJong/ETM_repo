@@ -20,7 +20,7 @@ export default function Tile({image, text, imageWidth}) {
             <Image 
                     src = {image}
                     fill
-                    alt="Picture of the author"
+                    alt="Picture of the founder of ETM"
             />
             </div>
             {/* Content of the second column first row goes here */}
