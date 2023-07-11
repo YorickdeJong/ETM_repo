@@ -143,7 +143,7 @@ export default function projectPage() {
                         <div style={styles.gridColumn} key={index}>
                             <div style={styles.imageContainer}>
                                 <Image src={project.imageSrc} fill alt={project.altText} 
-                                    quality={10}
+                                    quality={3}
                                 />
                             </div>
                             <div style={styles.textContainer}>
@@ -159,7 +159,7 @@ export default function projectPage() {
                         <div style={styles.gridColumn} key={index}>
                             <div style={styles.imageContainer}>
                                 <Image src={project.imageSrc} fill alt={project.altText} 
-                                    quality={15}
+                                    quality={3}
                                 />
                             </div>
                             <div style={styles.textContainer}>

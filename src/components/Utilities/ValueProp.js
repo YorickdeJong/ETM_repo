@@ -85,7 +85,7 @@ function ValueProp() {
                     fill
                     style = {{opacity: 0.7}}
                     alt='underground'
-                    quality={50}
+                    quality={3}
                 />
             </div>
 

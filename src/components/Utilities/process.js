@@ -83,6 +83,7 @@ const TextBlock = ({ text, title, image, isImageRight, index }) => (
                             width = '400'
                             height = '200'
                             alt='image'
+                            quality={50}
                         />
                     </div>
 
@@ -94,6 +95,7 @@ const TextBlock = ({ text, title, image, isImageRight, index }) => (
                     width = '400'
                     height = '200'
                     alt='image'
+                    quality={50}
                 />
                 <div style={textSectionRight}>
                     <h2 style={titleText}>{title}</h2>

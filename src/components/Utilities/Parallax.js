@@ -154,7 +154,7 @@ export default function  Parallax(){
               src={imageUrls[0]} 
               fill
               alt="cityDay4"  
-              quality={50}
+              quality={1}
               priority={true}
               />
           </div>
@@ -169,7 +169,7 @@ export default function  Parallax(){
               <Image src={imageUrls[1]} 
               fill
               alt="cityDay5"
-              quality={50}
+              quality={1}
               priority={true}
               />
           </div>
@@ -198,7 +198,7 @@ export default function  Parallax(){
           <div style={{...narrowContainerStyle, height: '49vh', top: '23vh'}}>
               <Image 
               src={imageUrls[3]} 
-              quality={50}
+              quality={4}
               fill
               alt="cityDay2"  
               priority={true}
@@ -216,6 +216,7 @@ export default function  Parallax(){
               fill
               alt="cityDay1"
               priority={true}
+              quality={50}
               />
           </div>
         ),
@@ -262,7 +263,7 @@ export default function  Parallax(){
             src={imageUrls[5]} 
             fill
             alt="cityNight3"
-            quality={50}
+            quality={1}
             />
           </div>
         ),
@@ -274,7 +275,7 @@ export default function  Parallax(){
           <div style={{...blackContainerStyle, width: '5vw', height: '3vh', top: '-50%'}}>
             <Image 
             src={imageUrls[6]} 
-            quality={10}
+            quality={1}
             fill
             alt="cityNightMoon"
             />
@@ -291,7 +292,7 @@ export default function  Parallax(){
             src={imageUrls[7]} 
             fill
             alt="cityNightCloud"
-            quality={50}
+            quality={1}
             />
           </div>
         ),
@@ -303,7 +304,7 @@ export default function  Parallax(){
           <div style={{...blackContainerStyle, height: '90vh', top: '-1vh'}}>
             <Image 
             src={imageUrls[8]} 
-            quality={10}
+            quality={1}
             fill
             alt="cityNight2"
             
@@ -320,6 +321,7 @@ export default function  Parallax(){
             src={imageUrls[9]} 
             fill
             alt="cityNight1"
+            quality={10}
             />
           </div>
         ),
@@ -341,6 +343,7 @@ export default function  Parallax(){
                   src={'/homepage/meeting-1.jpg'} 
                   fill
                   alt="meeting"
+                  quality={10}
                   />
                 </div>
               <div style={videoText}>

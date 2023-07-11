@@ -248,7 +248,7 @@ function Services() {
                             src = '/services/deal.jpg'
                             fill
                             alt = 'deal'
-                            quality={10}
+                            quality={4}
                         />
                         <div style = {overlayStyle}/>
                         <h2 style = {header}>Welke optie is het beste voor jou?</h2>
