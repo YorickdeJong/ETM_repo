@@ -11,7 +11,7 @@ function preloadImage(url) {
     img.src = url;
   }
   
-export default function Parallax(){
+export default function  Parallax(){
     const gallaryRef = useRef(null); // Create a ref
     const [scrollThresholdReached, setScrollThresholdReached] = useState(false);
     const [gallaryHeight, setGallaryHeight] = useState(0);
@@ -151,6 +151,7 @@ export default function Parallax(){
               <Image 
               src={imageUrls[0]} 
               fill
+              quality={50}
               alt="cityDay4"  
               />
           </div>
@@ -165,6 +166,7 @@ export default function Parallax(){
               <Image src={imageUrls[1]} 
               fill
               alt="cityDay5"
+              quality={50}
               />
           </div>
         ),
@@ -179,6 +181,7 @@ export default function Parallax(){
               src={imageUrls[2]} 
               fill
                 alt="cityDay3"
+                quality={50}
               />
           </div>
         ),
@@ -192,6 +195,7 @@ export default function Parallax(){
               src={imageUrls[3]} 
               fill
               alt="cityDay2"
+              quality={50}
               />
           </div>
         ),
@@ -205,6 +209,7 @@ export default function Parallax(){
               src={imageUrls[4]} 
               fill
               alt="cityDay1"
+              quality={50}
               />
           </div>
         ),
@@ -250,6 +255,7 @@ export default function Parallax(){
             <Image 
             src={imageUrls[5]} 
             fill
+            quality={50}
             alt="cityNight3"
             />
           </div>
@@ -266,6 +272,7 @@ export default function Parallax(){
             src={imageUrls[6]} 
             fill
             alt="cityNightMoon"
+            quality={50}
             />
           </div>
         ),
@@ -280,6 +287,7 @@ export default function Parallax(){
             src={imageUrls[7]} 
             fill
             alt="cityNightCloud"
+            quality={50}
             />
           </div>
         ),
@@ -293,6 +301,7 @@ export default function Parallax(){
             src={imageUrls[8]} 
             fill
             alt="cityNight2"
+            quality={50}
             />
           </div>
         ),
@@ -306,6 +315,7 @@ export default function Parallax(){
             src={imageUrls[9]} 
             fill
             alt="cityNight1"
+            quality={50}
             />
           </div>
         ),
