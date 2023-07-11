@@ -7,29 +7,39 @@ export const AuthContext = createContext({
 });
 
 const getInitialAuth = () => {
-  const auth = localStorage.getItem('auth');
-  return auth ? JSON.parse(auth) : false;
+  if (typeof window !== 'undefined') {
+    const auth = localStorage.getItem('auth');
+    return auth ? JSON.parse(auth) : false; // JSON.parse will convert 'true'/'false' to boolean true/false
+  }
+  return false;
 };
 
 
 
-
 export const AuthProvider = ({ children }) => {
-  const [auth, setAuth] = useState(() => getInitialAuth());
+  // Initializing state only when in a browser environment
+  const [auth, setAuth] = useState(() => typeof window !== 'undefined' ? getInitialAuth() : false);
 
   useEffect(() => {
-    const initialAuth = getInitialAuth();
-    setAuth(initialAuth);
+    // Don't run this effect server-side, as localStorage isn't available there
+    if (typeof window !== 'undefined') {
+      const initialAuth = getInitialAuth();
+      setAuth(initialAuth);
+    }
   }, []);
   
   useEffect(() => {
-    localStorage.setItem('auth', auth);
+    // Don't run this effect server-side, as localStorage isn't available there
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('auth', JSON.stringify(auth));
+    }
   }, [auth]);
 
   function setAuthHandler(){
     setAuth(true);
-    localStorage.setItem('auth', true);
-    //save in local storage here
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('auth', 'true');
+    }
   }
 
   return <AuthContext.Provider value={{auth, setAuthHandler}}>{children}</AuthContext.Provider>;
