@@ -126,7 +126,7 @@ const ScrollIndicator = () => {
     useEffect(() => {
         window.addEventListener("scroll", calculateScroll);
         return () => window.removeEventListener("scroll", calculateScroll);
-    }, []);
+    }, [calculateScroll]);
   
     return (
         <div style={{ ...scrollIndicator, height: `${scroll}%` }} />
