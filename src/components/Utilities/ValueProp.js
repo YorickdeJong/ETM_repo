@@ -73,11 +73,11 @@ function ValueProp() {
     ];
 
     return (
-        <div style={containerStyle}>
-            <div style={titleContainerStyle}>
+        <section style={containerStyle}>
+            <section style={titleContainerStyle}>
                 <h1 style={titleStyle}>
                     WAAROM KIEZEN VOOR ETM?</h1>
-            </div>
+            </section>
             
             <div>
                 <Image 
@@ -89,16 +89,16 @@ function ValueProp() {
             </div>
 
             {cards.map((card, index) => (
-                <div key={index} style={{ ...cardStyle, left: card.left }}>
-                    <div style={cardTitleContainerStyle}>
+                <section key={index} style={{ ...cardStyle, left: card.left }}>
+                    <section style={cardTitleContainerStyle}>
                         <h1 style={cardTitleStyle}>{card.title}</h1>
-                    </div>
-                    <div style={cardContentContainerStyle}>
+                    </section>
+                    <section style={cardContentContainerStyle}>
                         <p style={cardContentStyle}>{card.text}</p>
-                    </div>
-                </div>
+                    </section>
+                </section>
             ))}
-        </div>
+        </section>
     );
 }
 
