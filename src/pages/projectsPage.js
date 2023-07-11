@@ -98,7 +98,7 @@ export default function projectPage() {
         },
         imageContainer: {
             width: '25vw',
-            height: '27vh',
+            height: '29vh',
             backgroundColor: 'gray',
             position: 'absolute'
         },
@@ -142,7 +142,9 @@ export default function projectPage() {
                     {projects.slice(0,3).map((project, index) => (
                         <div style={styles.gridColumn} key={index}>
                             <div style={styles.imageContainer}>
-                                <Image src={project.imageSrc} fill alt={project.altText} />
+                                <Image src={project.imageSrc} fill alt={project.altText} 
+                                    quality={10}
+                                />
                             </div>
                             <div style={styles.textContainer}>
                                 <h2 style={styles.header}>{project.title}</h2>
@@ -156,7 +158,9 @@ export default function projectPage() {
                     {projects.slice(3,6).map((project, index) => (
                         <div style={styles.gridColumn} key={index}>
                             <div style={styles.imageContainer}>
-                                <Image src={project.imageSrc} fill alt={project.altText} />
+                                <Image src={project.imageSrc} fill alt={project.altText} 
+                                    quality={15}
+                                />
                             </div>
                             <div style={styles.textContainer}>
                                 <h2 style={styles.header}>{project.title}</h2>

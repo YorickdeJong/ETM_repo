@@ -21,6 +21,7 @@ export default function Tile({image, text, imageWidth}) {
                     src = {image}
                     fill
                     alt="Picture of the author"
+                    quality={10}
             />
             </div>
             {/* Content of the second column first row goes here */}

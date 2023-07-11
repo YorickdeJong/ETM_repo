@@ -154,7 +154,8 @@ export default function  Parallax(){
               src={imageUrls[0]} 
               fill
               alt="cityDay4"  
-              opacity={0.5}
+              quality={50}
+              priority={true}
               />
           </div>
         ),
@@ -168,7 +169,8 @@ export default function  Parallax(){
               <Image src={imageUrls[1]} 
               fill
               alt="cityDay5"
-              opacity={0.5}
+              quality={50}
+              priority={true}
               />
           </div>
         ),
@@ -183,7 +185,8 @@ export default function  Parallax(){
               src={imageUrls[2]} 
               fill
                 alt="cityDay3" 
-                opacity={0.5}      
+                quality={60}    
+                priority={true}  
               />
           </div>
         ),
@@ -195,9 +198,10 @@ export default function  Parallax(){
           <div style={{...narrowContainerStyle, height: '49vh', top: '23vh'}}>
               <Image 
               src={imageUrls[3]} 
-              opacity={0.5}
+              quality={50}
               fill
               alt="cityDay2"  
+              priority={true}
               />
           </div>
         ),
@@ -211,6 +215,7 @@ export default function  Parallax(){
               src={imageUrls[4]} 
               fill
               alt="cityDay1"
+              priority={true}
               />
           </div>
         ),
@@ -257,7 +262,7 @@ export default function  Parallax(){
             src={imageUrls[5]} 
             fill
             alt="cityNight3"
-            opacity={0.5}
+            quality={50}
             />
           </div>
         ),
@@ -269,7 +274,7 @@ export default function  Parallax(){
           <div style={{...blackContainerStyle, width: '5vw', height: '3vh', top: '-50%'}}>
             <Image 
             src={imageUrls[6]} 
-            opacity={0.5}
+            quality={10}
             fill
             alt="cityNightMoon"
             />
@@ -286,7 +291,7 @@ export default function  Parallax(){
             src={imageUrls[7]} 
             fill
             alt="cityNightCloud"
-            opacity={0.5}
+            quality={50}
             />
           </div>
         ),
@@ -298,9 +303,10 @@ export default function  Parallax(){
           <div style={{...blackContainerStyle, height: '90vh', top: '-1vh'}}>
             <Image 
             src={imageUrls[8]} 
+            quality={10}
             fill
             alt="cityNight2"
-            opacity={0.5}
+            
             />
           </div>
         ),
