@@ -73,16 +73,16 @@ export default function  Parallax(){
   };
   
     const imageUrls = [
-      '/homepage/cityDay4-2.jpg',
-      '/homepage/cityDay5.png',
-      '/homepage/cityDay3-2.png',
-      '/homepage/cityDay2-2.png',
-      '/homepage/cityDay1-2.png',
-      '/homepage/cityNight3-3.jpg',
-      '/homepage/cityNightCloud.png',
-      '/homepage/cityNightMoon.png',
-      '/homepage/cityNight2-2-2.png',
-      '/homepage/cityNight1-2.png'
+      '/homepage/cityDay4-3.jpg',
+      '/homepage/cityDay5-1.png',
+      '/homepage/cityDay3-3.png',
+      '/homepage/cityDay2-3.png',
+      '/homepage/cityDay1-3.png',
+      '/homepage/cityNight3-4.jpg',
+      '/homepage/cityNightCloud-1.png',
+      '/homepage/cityNightMoon-1.png',
+      '/homepage/cityNight2-2-3.png',
+      '/homepage/cityNight1-3.png'
     ];
     
     imageUrls.forEach(preloadImage);
@@ -163,7 +163,7 @@ export default function  Parallax(){
       },
       {
         children: (
-          <div style={narrowContainerStyle}>
+          <div style={{position: 'absolute', width: '8vw', height: '8vw', top: '13vh', left: '12vw'}}>
               <Image src={imageUrls[1]} 
               fill
               alt="cityDay5"
@@ -176,7 +176,7 @@ export default function  Parallax(){
       },
       {
         children: (
-          <div style={narrowContainerStyle}>
+          <div style={{...narrowContainerStyle, right: '13vw', height: '75vh', top: '6vh', width: '90vw'}}>
               <Image 
               src={imageUrls[2]} 
               fill
@@ -189,7 +189,7 @@ export default function  Parallax(){
       },
       {
         children: (
-          <div style={narrowContainerStyle}>
+          <div style={{...narrowContainerStyle, height: '49vh', top: '23vh'}}>
               <Image 
               src={imageUrls[3]} 
               fill
@@ -202,7 +202,7 @@ export default function  Parallax(){
       },
       {
         children: (
-          <div style={narrowContainerStyle}>
+          <div style={{...narrowContainerStyle, top: '27.1vh', height: '77vh'}}>
               <Image 
               src={imageUrls[4]} 
               fill
@@ -262,8 +262,7 @@ export default function  Parallax(){
       },
       {
         children: (
-          <div style={blackContainerStyle}>
-  
+          <div style={{...blackContainerStyle, width: '5vw', height: '3vh', top: '-50%'}}>
             <Image 
             src={imageUrls[6]} 
             fill
@@ -271,12 +270,12 @@ export default function  Parallax(){
             />
           </div>
         ),
-        translateY: [70, 20],
+        translateY: [70, 30],
         translateX: [120, -130],
       },
       {
         children: (
-          <div style={blackContainerStyle}>
+          <div style={{...blackContainerStyle, width: '10vw', height: '8vh', top: '-0.3%'}}>
   
             <Image 
             src={imageUrls[7]} 
@@ -290,7 +289,7 @@ export default function  Parallax(){
       },
       {
         children: (
-          <div style={blackContainerStyle}>
+          <div style={{...blackContainerStyle, height: '90vh', top: '-1vh'}}>
             <Image 
             src={imageUrls[8]} 
             fill
@@ -302,7 +301,7 @@ export default function  Parallax(){
       },
       {
         children: (
-          <div style={narrowContainerStyle}>
+          <div style={{...narrowContainerStyle, height: '75vh', top: '25vh'}}>
   
             <Image 
             src={imageUrls[9]} 
@@ -311,7 +310,7 @@ export default function  Parallax(){
             />
           </div>
         ),
-        translateY: scrollThresholdReached ? [49, 49] : [39.5, 61],
+        translateY: scrollThresholdReached ? [50, 50] : [41.5, 60.8],
       },
       {
         children: (
