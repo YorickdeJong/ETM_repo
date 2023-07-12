@@ -104,29 +104,31 @@ export default function projectPage() {
         },
         textContainer: {
             width: '100%',
-            height: '30%',
-            marginTop: '60.5%',
+            height: '10vh',
+            marginTop: '28.5vh',
             backgroundColor: '#084652'
         },
         header: {
-            margin: '0', // added this
+            margin: '0',
             width: '80%',
             marginLeft: '10%',
             color: 'white',
-            fontSize: '1vw',
+            fontSize: 'calc(0.6vw + 0.6vh)',  // use calc to combine vw and em for better scaling
             zIndex: 100,
             paddingTop: '2.5vh'
         },
         paragraph: {
-            margin: '0', // added this
+            margin: '0',
             width: '80%',
             marginLeft: '10%',
-            color: 'white',
-            fontSize: '1vw',
+            color: 'rgba(244, 255, 255, 1)',
+            fontSize: 'calc(0.55vw + 0.55vh)',  // use calc to combine vw and em for better scaling
+            fontWeight: '400',
             zIndex: 100,
-            paddingTop: '2.5vh'
+            paddingTop: '1.5vh'
         }
     };
+    
     
     return (
             <div>
