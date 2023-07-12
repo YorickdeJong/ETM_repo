@@ -52,7 +52,7 @@ export default function projectPage() {
             width: '100vw'
         },
         heading1: {
-            fontSize: 55,
+            fontSize: 'calc(1.5vw + 1.5vh)',
             color: '#0F1C37',
             textAlign: 'center',
             fontWeight: '500'
@@ -60,7 +60,7 @@ export default function projectPage() {
         paragraph1: {
             marginTop: '-2vh',
             textAlign: 'center',
-            fontSize: 35,
+            fontSize: 'calc(1.05vw + 1.05vh)',
             color: '#8A8889',
             width: '60vw',
             marginLeft: '20vw'

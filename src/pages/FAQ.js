@@ -76,13 +76,13 @@ export default function FAQ() {
             marginLeft: '6vw',
         },
         title: {
-            fontSize: 55, 
+            fontSize: 'calc(1.65vw + 1.65vh)',
             color: '#0F1C37', 
             fontWeight: '500', 
         },
         subtitle: {
             marginTop: '-2vh', 
-            fontSize: 30, 
+            fontSize: 'calc(0.95vw + 0.95vh)',
             color: '#8A8889', 
             width: '60vw', 
             lineHeight: '130%',

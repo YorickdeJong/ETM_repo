@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Tile({image, text, imageWidth}) {
     const header = {
         fontWeight: '600', 
-        fontSize: 30, 
+        fontSize: 'calc(0.9vw + 0.9vh)',
         marginLeft: '2vw',
         marginTop: '3vh',
         color: '#084652'
@@ -11,7 +11,7 @@ export default function Tile({image, text, imageWidth}) {
 
     const paragraph = {
         textAlign: 'center', 
-        fontSize: 20,
+        fontSize: 'calc(0.6vw + 0.6vh)',
         color: 'black',
     }
     return (

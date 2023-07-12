@@ -21,10 +21,9 @@ const NavBarLink = ({ href, children, pathnames }) => {
         }`}
     >
       <h4 style={{
-        // fontFamily: "'Lora'", 
         fontStyle: 'normal', 
         fontWeight: 500, 
-        fontSize: children === 'ETM' ? 60 : 32, 
+        fontSize: children === 'ETM' ? 'calc(1.9vw + 1.9vh)' :'calc(1.1vw + 1.1vh)',
         lineHeight: '125%',
         display: 'flex',
         alignItems: 'center',
@@ -39,10 +38,10 @@ const NavBarButton = ({ pathnames, children, href }) => {
     <Link href={href}>
       <button style={{
         backgroundColor: pathnames ?  '#FF8449' : '#1A5D6A',
-        height: 55,
-        padding: '0 20px',  // horizontal padding
+        height: '4.5vh',
+        padding: '0 1vw',  // horizontal padding
         color: 'white',
-        fontSize: 22,
+        fontSize: 'calc(0.7vw + 0.7vh)',
         borderRadius: 20,  // optional, to make the button's corners rounded
         border: 'none',
         cursor: 'pointer'

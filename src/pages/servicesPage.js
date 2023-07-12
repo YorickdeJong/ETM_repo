@@ -23,7 +23,7 @@ function Services() {
         marginLeft: '10%',
         textAlign: 'center',
         color: 'white',
-        fontSize: '2vw',
+        fontSize: 'calc(1.3vw + 1.3vh)',
         zIndex: 100,
         lineHeight: '2.5vw',
     };
@@ -34,7 +34,7 @@ function Services() {
         marginLeft: '10%',
         textAlign: 'center',
         color: 'white',
-        fontSize: '1vw',
+        fontSize: 'calc(0.63vw + 0.63vh)',
         zIndex: 100,
         position: 'absolute',
         top: '33%',
@@ -43,7 +43,7 @@ function Services() {
 
     const buttonStyleFilled = {
         width: '80%',
-        height: 70,
+        height: '6.25vh',
         backgroundColor: '#1A5D6A',
         borderRadius: 20,
         marginRight: 30,
@@ -55,7 +55,7 @@ function Services() {
 
     const buttonStyleStroke = {
         width: '80%',
-        height: 70,
+        height: '6.25vh',
         backgroundColor: 'white',
         borderRadius: 20,
         marginRight: 30,
@@ -157,7 +157,7 @@ function Services() {
     const headerDiv = {position: 'relative', top: '14vh', left: '8vw', width: '100vw', zIndex: 2,}
 
     const headerSecond = {
-        fontSize: 45, 
+        fontSize: 'calc(1.5vw + 1.5vh)',
         color: '#084652',
         fontWeight: '600', 
     }
@@ -184,13 +184,13 @@ function Services() {
     };
     
     const textStyle = {
-        fontSize: 28, 
+        fontSize: 'calc(0.88vw + 0.88vh)', 
         textAlign: 'center', 
         marginTop: '1.6vh'
     };
     
     const textStyleStroke = {
-        fontSize: 28, 
+        fontSize: 'calc(0.88vw + 0.88vh)', 
         textAlign: 'center', 
         marginTop: '1.6vh', 
         color: '#1A5D6A'

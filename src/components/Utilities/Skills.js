@@ -11,7 +11,7 @@ function Skills() {
             </div>
             <div style = {{position: 'relative', top: '15vh', alignSelf: 'center', width: '100vw', zIndex: 2,}}>
                 <h1 style = {{
-                    fontSize: 80, 
+                    fontSize: 'calc(2.4vw + 2.4vh)', 
                     color: 'white',// '#FF6800', 
                     fontWeight: 'bold', 
                     textAlign: 'center',
@@ -19,34 +19,34 @@ function Skills() {
                     ONZE KWALITEITEN</h1>
                 </div>
             <div style={{ position: 'absolute', top: '35%', left: '4%', width: '25%', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <FaBoxes color="rgba(0,236,249, 1)" size={80}/>
-                <h1 style={{ color: 'rgba(0,236,249, 1)', fontSize: 40, marginTop: 10 }}>COMPLETE PAKKET</h1>
-                <p style={{ color: 'rgba(200,200,200, 1)', wordWrap: 'break-word', marginTop: 15, fontSize: 22  }}>Wij begeleiden u van start tot finish, tot dat u tevreden bent</p>
+                <FaBoxes color="rgba(0,236,249, 1)" size={'calc(2.3vw + 2.3vh)'}/>
+                <h1 style={{ color: 'rgba(0,236,249, 1)', fontSize: 'calc(1.25vw + 1.25vh)', marginTop: 10 }}>COMPLETE PAKKET</h1>
+                <p style={{ color: 'rgba(200,200,200, 1)', wordWrap: 'break-word', marginTop: 15, fontSize: 'calc(0.7vw + 0.7vh)'  }}>Wij begeleiden u van start tot finish, tot dat u tevreden bent</p>
             </div>
             <div style={{ position: 'absolute', top: '35%', left: '38%', width: '25%', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <FaLaptopCode color="rgba(0,236,249, 1)" size={80} />
-                <h1 style={{ color: 'rgba(0,236,249, 1)', fontSize: 40, marginTop: 10 }}>TECHNOLOGIE</h1>
-                <p style={{ color: 'rgba(200,200,200, 1)', wordWrap: 'break-word', marginTop: 15, fontSize: 22 }}>uw team bestaat uitsluitend uit engineers, opgeleid op de TU Delft. Zij helpen jou met de beste technische oplossing voor jouw probleem</p>
+                <FaLaptopCode color="rgba(0,236,249, 1)" size={'calc(2.3vw + 2.3vh)'} />
+                <h1 style={{ color: 'rgba(0,236,249, 1)', fontSize: 'calc(1.25vw + 1.25vh)', marginTop: 10 }}>TECHNOLOGIE</h1>
+                <p style={{ color: 'rgba(200,200,200, 1)', wordWrap: 'break-word', marginTop: 15, fontSize: 'calc(0.7vw + 0.7vh)' }}>uw team bestaat uitsluitend uit engineers, opgeleid op de TU Delft. Zij helpen jou met de beste technische oplossing voor jouw probleem</p>
             </div>
             <div style={{ position: 'absolute', top: '35%', left: '73%', width: '25%', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <FaRunning color="rgba(0,236,249, 1)" size={80} />
-                <h1 style={{ color: 'rgba(0,236,249, 1)', fontSize: 40, marginTop: 10 }}>EERSTE IN DE RIJ</h1>
-                <p style={{ color: 'rgba(200,200,200, 1)', wordWrap: 'break-word', marginTop: 15, fontSize: 22  }}>Ook na one samenwerking staan wij altijd voor u klaar</p>
+                <FaRunning color="rgba(0,236,249, 1)" size={'calc(2.3vw + 2.3vh)'} />
+                <h1 style={{ color: 'rgba(0,236,249, 1)', fontSize: 'calc(1.25vw + 1.25vh)', marginTop: 10 }}>EERSTE IN DE RIJ</h1>
+                <p style={{ color: 'rgba(200,200,200, 1)', wordWrap: 'break-word', marginTop: 15, fontSize: 'calc(0.7vw + 0.7vh)'}}>Ook na one samenwerking staan wij altijd voor u klaar</p>
             </div>
             <div style={{ position: 'absolute', top: '70%', left: '4%', width: '25%', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <FaBuilding color="rgba(0,236,249, 1)" size={80} />
-                <h1 style={{ color: 'rgba(0,236,249, 1)', fontSize: 40, marginTop: 10 }}>BUSINESS</h1>
-                <p style={{ color: 'rgba(200,200,200, 1)', wordWrap: 'break-word', marginTop: 15, fontSize: 22  }}>Alle teamgenoten hebben ervaring met bedrijven opzetten en kunnen u helpen met uw strategie</p>
+                <FaBuilding color="rgba(0,236,249, 1)" size={'calc(2.3vw + 2.3vh)'} />
+                <h1 style={{ color: 'rgba(0,236,249, 1)', fontSize: 'calc(1.25vw + 1.25vh)', marginTop: 10 }}>BUSINESS</h1>
+                <p style={{ color: 'rgba(200,200,200, 1)', wordWrap: 'break-word', marginTop: 15, fontSize: 'calc(0.7vw + 0.7vh)'  }}>Alle teamgenoten hebben ervaring met bedrijven opzetten en kunnen u helpen met uw strategie</p>
             </div>
             <div style={{ position: 'absolute', top: '70%', left: '38%', width: '25%', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <FaChartLine color="rgba(0,236,249, 1)" size={80} />
-                <h1 style={{ color: 'rgba(0,236,249, 1)', fontSize: 40, marginTop: 10 }}>MARKETING</h1>
-                <p style={{ color: 'rgba(200,200,200, 1)', wordWrap: 'break-word', marginTop: 15, fontSize: 22 }}>Het team heeft verstand van digitale marketing, om uw app/website in de spotlights te werpen op het web</p>
+                <FaChartLine color="rgba(0,236,249, 1)" size={'calc(2.3vw + 2.3vh)'} />
+                <h1 style={{ color: 'rgba(0,236,249, 1)', fontSize: 'calc(1.25vw + 1.25vh)', marginTop: 10 }}>MARKETING</h1>
+                <p style={{ color: 'rgba(200,200,200, 1)', wordWrap: 'break-word', marginTop: 15, fontSize: 'calc(0.7vw + 0.7vh)' }}>Het team heeft verstand van digitale marketing, om uw app/website in de spotlights te werpen op het web</p>
             </div>
             <div style={{ position: 'absolute', top: '70%', left: '73%', width: '25%', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <FaHandshake color="rgba(0,236,249, 1)" size={80} />
-                <h1 style={{ color: 'rgba(0,236,249, 1)', fontSize: 40, marginTop: 10 }}>PARTNER</h1>
-                <p style={{ color: 'rgba(200,200,200, 1)', wordWrap: 'break-word', marginTop: 15, fontSize: 22  }}>Wij zien u als meer dan een klant, u ben onze partner</p>
+                <FaHandshake color="rgba(0,236,249, 1)" size={'calc(2.3vw + 2.3vh)'} />
+                <h1 style={{ color: 'rgba(0,236,249, 1)', fontSize: 'calc(1.25vw + 1.25vh)', marginTop: 10 }}>PARTNER</h1>
+                <p style={{ color: 'rgba(200,200,200, 1)', wordWrap: 'break-word', marginTop: 15, fontSize: 'calc(0.7vw + 0.7vh)'  }}>Wij zien u als meer dan een klant, u ben onze partner</p>
             </div>
         </div>
     )

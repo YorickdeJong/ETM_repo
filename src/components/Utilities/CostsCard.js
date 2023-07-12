@@ -16,7 +16,7 @@ export default function CostsCard({title, texts, marginTop, stars, starsMarginLe
             marginTop: '2vh'
         },
         header: {
-            fontSize: '2.5vw',
+            fontSize: 'calc(1.6vw + 1.6vh)',
             fontWeight: '500',
             marginLeft: '2vw',
             color: '#1A5D6A',
@@ -25,7 +25,7 @@ export default function CostsCard({title, texts, marginTop, stars, starsMarginLe
             marginLeft: '2vw', 
             color: '#1A5D6A', 
             marginTop: '-1vh', 
-            fontSize: 20, 
+            fontSize:  'calc(0.65vw + 0.65vh)',
             width: '85%'
         },
         price: {
@@ -39,7 +39,7 @@ export default function CostsCard({title, texts, marginTop, stars, starsMarginLe
             flexDirection: 'row'
         },
         star: {
-            fontSize: 30,
+            fontSize: 'calc(0.95vw + 0.95vh)',
             alignSelf: 'center',
             color: '#F0D95D',
         },
@@ -49,11 +49,11 @@ export default function CostsCard({title, texts, marginTop, stars, starsMarginLe
         },
         list: {
             color: '#3A8594', 
-            fontSize: 22
+            fontSize:  'calc(0.7vw + 0.7vh)',
         },
         buttonStylePackage: {
             width: '80%',
-            height: 80,
+            height: '6.5vh',
             backgroundColor: '#1A5D6A',
             borderRadius: 40,
             zIndex: 1000,
@@ -96,7 +96,7 @@ export default function CostsCard({title, texts, marginTop, stars, starsMarginLe
                 <hr style={styles.line} />
                 <div style={styles.buttonStylePackage}>
                     <Link href="/contact" style={{ display: 'block', height: '100%', color: 'white', textDecoration: 'none' }}>
-                        <h2 style={{fontSize: 28, textAlign: 'center'}}>Maak een gratis afspraak</h2>
+                        <h2 style={{fontSize: 'calc(0.9vw + 0.9vh)', textAlign: 'center'}}>Maak een gratis afspraak</h2>
                     </Link>
                 </div>
             </footer>

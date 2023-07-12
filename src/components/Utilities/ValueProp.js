@@ -42,7 +42,7 @@ function ValueProp() {
     };
     
     const cardTitleStyle = {
-        fontSize: 40, 
+        fontSize: 'calc(1.35vw + 1.35vh)',
         color: '#FFFFFF', 
         fontWeight: 'bold', 
         textAlign: 'center',
@@ -60,7 +60,7 @@ function ValueProp() {
         marginLeft: '10%', 
         width: '80%', 
         lineHeight: '150%', 
-        fontSize: 20, 
+        fontSize: 'calc(0.65vw + 0.65vh)',
         fontWeight: '303', 
         textAlign: 'center', 
         color: '#F4FDFF'

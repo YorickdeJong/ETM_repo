@@ -22,7 +22,7 @@ export default function  Parallax(){
       alignItems: 'center',
       justifyContent: 'center',
       width: '80%',
-      height: 70,
+      height: '5.5vh',
       backgroundColor: '#FF9449', // change color on hover
       borderRadius: 20,
       marginRight: 30,
@@ -37,7 +37,7 @@ export default function  Parallax(){
     alignItems: 'center',
     justifyContent: 'center',
     width: '80%',
-    height: 65,
+    height: '5.5vh',
     backgroundColor: '#FF9449', // change color on hover
     borderRadius: 20,
     marginRight: 30,
@@ -51,7 +51,7 @@ export default function  Parallax(){
     alignItems: 'center',
     justifyContent: 'center',
     width: '80%',
-    height: 70,
+    height: '5.5vh',
     borderColor: '#FF9449', // change color on hover
     borderWidth: 2,
     borderRadius: 20,
@@ -66,7 +66,7 @@ export default function  Parallax(){
     alignItems: 'center',
     justifyContent: 'center',
     width: '80%',
-    height: 65,
+    height: '5.5vh',
     borderColor: '#FF9449', // change color on hover
     borderWidth: 2,
     borderRadius: 20,
@@ -89,7 +89,7 @@ export default function  Parallax(){
     imageUrls.forEach(preloadImage);
   
     const headerStyle = {
-        fontSize: 50, 
+        fontSize: 'calc(1.6vw + 1.6vh)',
         fontWeight: 'bold', 
         lineHeight: 1.2,
         zIndex: 1, 
@@ -100,7 +100,7 @@ export default function  Parallax(){
         textShadow: '3px 3px 6px rgba(0, 0, 0, 0.3)'
     };
     const paragraphStyle = {
-        fontSize: 30, 
+        fontSize: 'calc(0.95vw + 0.95vh)',
         fontWeight: 'bold', 
         zIndex: 1, 
         position: 'absolute', 
@@ -110,9 +110,10 @@ export default function  Parallax(){
         textShadow: '3px 3px 6px rgba(0, 0, 0, 0.3)'
     };
     const linkStyle = { display: 'block', height: '100%', color: 'white', textDecoration: 'none', marginTop: '1.7vh' };
-    const headingStyle = {fontSize: 28, textAlign: 'center'};
+    const headingStyle = {fontSize: 'calc(0.95vw + 0.95vh)', textAlign: 'center'};
+
     const secondHeaderStyle = {
-        fontSize: 40, 
+        fontSize: 'calc(1.2vw + 1.4vh)', 
         fontWeight: 'bold', 
         lineHeight: 1.2,
         zIndex: 1, 
@@ -123,7 +124,7 @@ export default function  Parallax(){
         textShadow: '3px 3px 6px rgba(0, 0, 0, 0.3)'
     };
     const secondParagraphStyle = {
-        fontSize: 22, 
+        fontSize: 'calc(0.8vw + 0.8vh)', 
         fontWeight: '400', 
         zIndex: 1, 
         position: 'absolute', 
@@ -248,7 +249,7 @@ export default function  Parallax(){
               </Link>
           </div>
           <div style={buttonStyleStroke}>    
-              <h2 style = {{fontSize: 28, textAlign: 'center', color: '#FF9449'}}>Maak de online Quiz</h2>
+              <h2 style = {{fontSize: 'calc(0.95vw + 0.95vh)', textAlign: 'center', color: '#FF9449'}}>Maak de online Quiz</h2>
           </div>      
       </div>
         ),
@@ -351,11 +352,11 @@ export default function  Parallax(){
             loadOtherComponents && (
                 <div>
                     <div style = {video}>
-                    <Image 
-                    src={'/homepage/meeting.jpg'} 
-                    fill
-                    alt="meeting"
-                    quality={10}
+                        <Image 
+                        src={'/homepage/meeting.jpg'} 
+                        fill
+                        alt="meeting"
+                        quality={10}
                     />
                     </div>
                 <div style={videoText}>
@@ -370,11 +371,11 @@ export default function  Parallax(){
                         <div style={endContainerStyle}>
                             <div style={buttonStyleFilled2}>
                                 <Link href="/contact" style={buttonFilled2Link}>
-                                    <h2 style = {{fontSize: 25, textAlign: 'center'}}>Maak een gratis afspraak</h2>
+                                    <h2 style = {{fontSize: 'calc(0.85vw + 0.85vh)', textAlign: 'center'}}>Maak een gratis afspraak</h2>
                                 </Link>
                                 </div>
                             <div style={buttonStyleStroke2}>    
-                                <h2 style = {{fontSize: 25, textAlign: 'center', color: '#FF9449'}}>Maak de online Quiz</h2>
+                                <h2 style = {{fontSize: 'calc(0.85vw + 0.85vh)', textAlign: 'center', color: '#FF9449'}}>Maak de online Quiz</h2>
                             </div>     
                         </div>
                 </div>

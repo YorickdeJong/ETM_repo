@@ -25,14 +25,14 @@ const textSectionRight = {
 }
 
 const titleText= {
-    fontSize: 40,
+    fontSize: 'calc(1.25vw + 1.25vh)',
     fontWeight: 'bold',
     color: 'rgba(0, 200, 200, 1)',
     marginBottom: 35
 }
 
 const paragraph = {
-    fontSize: 28,
+    fontSize: 'calc(0.9vw + 0.9vh)',
     fontWeight: '300',
     color: 'rgba(0, 180, 180, 1)'  
 }
@@ -51,15 +51,26 @@ const titleContainerStyle = {
     display: 'flex', flexDirection: 'column', marginTop: 40
 }
 
-const titleContainer = {  width: '23.5vw', height: 70, backgroundColor: 'rgba(0, 201,201,1)', borderRadius: 20, }
+const titleContainer = {  width: '23.5vw', height: '5.5vh', backgroundColor: 'rgba(0, 201,201,1)', borderRadius: 20, }
 
-const titleStyle = {fontSize: 26, textAlign: 'center', marginTop: 16}
+const titleStyle = {fontSize: 'calc(0.9vw + 0.9vh)', textAlign: 'center', marginTop: '1vh'}
 
-const paragraphContainer = { width: '23.5vw', height: 70, borderColor: 'rgba(0, 222,222,1)', borderWidth: 2, borderRadius: 20, marginTop: 20}
+const paragraphContainer = { width: '23.5vw', height: '5.5vh', borderColor: 'rgba(0, 222,222,1)', borderWidth: 2, borderRadius: 20, marginTop: 20}
 
-const paragraphTitle = {fontSize: 26, textAlign: 'center', marginTop: 16, color: 'rgba(0, 222,222,1)', fontWeight: '500'}
+const paragraphTitle = {fontSize: 'calc(0.9vw + 0.9vh)', textAlign: 'center', marginTop: '1vh', color: 'rgba(0, 222,222,1)', fontWeight: '500'}
 
+const rightImageContainer = {
+    marginLeft: '19vw', 
+    width: '18vw',
+    height: '30vh', 
+    position: 'relative'
+}
 
+const leftImageContainer = {
+    width: '18vw',
+    height: '30vh', 
+    position: 'relative'
+}
 
 // TextBlock component 
 const TextBlock = ({ text, title, image, isImageRight, index }) => (
@@ -80,10 +91,9 @@ const TextBlock = ({ text, title, image, isImageRight, index }) => (
                             </div>
                         }
                     </div>
-                    <div style = {{marginLeft: '17vw'}}>
+                    <div style = {rightImageContainer}>
                         <Image src={image}    
-                            width = '400'
-                            height = '200'
+                            fill
                             alt='image'
                             quality={50}
                             loading="lazy"
@@ -94,13 +104,14 @@ const TextBlock = ({ text, title, image, isImageRight, index }) => (
             :
             <div style={containerTextImage}>
                 
+            <div style = {leftImageContainer}>
                 <Image src={image} 
-                    width = '400'
-                    height = '200'
+                    fill
                     alt='image'
                     quality={50}
                     loading="lazy"
                 />
+            </div>
                 <div style={textSectionRight}>
                     <h2 style={titleText}>{title}</h2>
                     <p style={paragraph}>{text}</p>
