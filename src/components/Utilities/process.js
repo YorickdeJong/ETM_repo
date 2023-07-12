@@ -59,6 +59,8 @@ const paragraphContainer = { width: '23.5vw', height: 70, borderColor: 'rgba(0, 
 
 const paragraphTitle = {fontSize: 26, textAlign: 'center', marginTop: 16, color: 'rgba(0, 222,222,1)', fontWeight: '500'}
 
+
+
 // TextBlock component 
 const TextBlock = ({ text, title, image, isImageRight, index }) => (
     <>
@@ -107,49 +109,62 @@ const TextBlock = ({ text, title, image, isImageRight, index }) => (
 );
 
   
-const ScrollIndicator = () => {
-    const [scroll, setScroll] = useState(0);
-     // Define your maximum scroll height here
-  
-    const getDocHeight = () => {
-        return Math.max(
-            document.body.scrollHeight,
-            document.body.offsetHeight,
-            document.documentElement.clientHeight,
-            document.documentElement.scrollHeight,
-            document.documentElement.offsetHeight
-        );
-    };
-  
-    const calculateScroll = useCallback(() => {
-        const scrollTop = window.scrollY;
-        const winHeight = window.innerHeight;
-        const docHeight = getDocHeight()  - 4 * winHeight; // Adjusting for the 200vh offset where component starts
-        const totalDocScrollLength = docHeight;
-        const maxScrollTop = 1.8 * docHeight 
-    
+
+
+export default function Process() {
+    const [loadOtherComponents, setLoadOtherComponents] = useState(false);
+
+    const ScrollIndicator = () => {
+        const [scroll, setScroll] = useState(0);
+         // Define your maximum scroll height here
+      
+        const getDocHeight = () => {
+            return Math.max(
+                document.body.scrollHeight,
+                document.body.offsetHeight,
+                document.documentElement.clientHeight,
+                document.documentElement.scrollHeight,
+                document.documentElement.offsetHeight
+            );
+        };
+      
+        const calculateScroll = useCallback(() => {
+            const scrollTop = window.scrollY;
+            const winHeight = window.innerHeight;
+            const docHeight = getDocHeight()  - 4 * winHeight; // Adjusting for the 200vh offset where component starts
+            const totalDocScrollLength = docHeight;
+            const maxScrollTop = 1.8 * docHeight 
+        
             if (scrollTop > maxScrollTop) {
                 // If the current scroll position is beyond the max, we do not update the scroll state
                 return;
             }
-    
+        
             const scrollPosition = Math.floor(((scrollTop - 2.8 * winHeight) / totalDocScrollLength) * 100);
-    
+        
+            const thresholdLoading = totalDocScrollLength * 0.3; // Set the threshold for loading to 30%
+                
+            console.log(scrollPosition)
+            // Load component threshold        
+            if (scrollPosition >= thresholdLoading && !loadOtherComponents) {
+                setLoadOtherComponents(true);
+            } else if (scrollPosition < thresholdLoading && loadOtherComponents) {
+                setLoadOtherComponents(false);
+            }
+            
             setScroll(Math.max(0, scrollPosition)); // To ensure the scroll% doesn't go below 0
-    }, [getDocHeight, setScroll]);
-  
-    useEffect(() => {
-        window.addEventListener("scroll", calculateScroll);
-        return () => window.removeEventListener("scroll", calculateScroll);
-    }, [calculateScroll]);
-  
-    return (
-        <div style={{ ...scrollIndicator, height: `${scroll}%` }} />
-    );
-  };
-
-
-export default function Process() {
+        }, [getDocHeight, setScroll]);
+      
+        useEffect(() => {
+            window.addEventListener("scroll", calculateScroll);
+            return () => window.removeEventListener("scroll", calculateScroll);
+        }, [calculateScroll]);
+      
+        return (
+            <div style={{ ...scrollIndicator, height: `${scroll}%` }} />
+        );
+      };
+    
     const texts = [
         {
             text: `Wij helpen jou gratis opweg met jouw project. We zullen je tips geven over jouw idee en adviseren Wat voor jou de beste keuze is.`,
@@ -176,34 +191,36 @@ export default function Process() {
       ];
 
     return (
-        <div style = {{height: '250vh', width: '100vw', backgroundColor: 'white', position: 'relative', paddingTop: 200, backgroundColor: 'rgba(15, 28, 55, 1)'}}>
-                <div class="custom-shape-divider-top-1687345889" style = {{top: '-1%'}}>
-                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" fill= '#080A11'></path>
-                    </svg>
-                </div>
-                <div style = {{position: 'relative', top: '1%', alignSelf: 'center', width: '100vw', zIndex: 2,}}>
-                <h1 style = {{
-                    fontSize: 60, 
-                    color: 'rgba(0, 255, 255, 1)',// '#FF6800', 
-                    fontWeight: 'bold', 
-                    textAlign: 'center',
-                    textShadow: '4px 4px 8px rgba(0, 0, 0, 0.1)'}}>
-                    HOE ZIET JOUW PROCESS ERUIT?</h1>
-                </div>
-                    {texts.map((text, i) => (
-                        <TextBlock 
-                            text={text.text}
-                            title={text.title} 
-                            image={text.image}
-                            isImageRight={i % 2 === 0} // Alternates the placement of the image
-                            index={i} 
-                            key={i}
-                        />
-                    ))}
-            <ScrollIndicator />
-            <div style = {{position: 'absolute', top: '35vh', left: '47.85vw', width: '1.7vw', height: '1.7vw', borderRadius: 20, backgroundColor: 'rgba(0, 215, 225, 1)', zIndex:1000}}/>
-      </div> 
+        (
+            <div style = {{height: '250vh', width: '100vw', backgroundColor: 'white', position: 'relative', paddingTop: 200, backgroundColor: 'rgba(15, 28, 55, 1)'}}>
+                    <div class="custom-shape-divider-top-1687345889" style = {{top: '-1%'}}>
+                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" fill= '#080A11'></path>
+                        </svg>
+                    </div>
+                    <div style = {{position: 'relative', top: '1%', alignSelf: 'center', width: '100vw', zIndex: 2,}}>
+                    <h1 style = {{
+                        fontSize: 60, 
+                        color: 'rgba(0, 255, 255, 1)',// '#FF6800', 
+                        fontWeight: 'bold', 
+                        textAlign: 'center',
+                        textShadow: '4px 4px 8px rgba(0, 0, 0, 0.1)'}}>
+                        HOE ZIET JOUW PROCESS ERUIT?</h1>
+                    </div>
+                        {texts.map((text, i) => (
+                            <TextBlock 
+                                text={text.text}
+                                title={text.title} 
+                                image={text.image}
+                                isImageRight={i % 2 === 0} // Alternates the placement of the image
+                                index={i} 
+                                key={i}
+                            />
+                        ))}
+                <ScrollIndicator />
+                <div style = {{position: 'absolute', top: '35vh', left: '47.85vw', width: '1.7vw', height: '1.7vw', borderRadius: 20, backgroundColor: 'rgba(0, 215, 225, 1)', zIndex:1000}}/>
+        </div> 
+        )
     )
 }
 
