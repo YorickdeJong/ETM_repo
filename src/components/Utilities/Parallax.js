@@ -73,16 +73,16 @@ export default function  Parallax(){
   };
   
     const imageUrls = [
-      '/homepage/cityDay4-3.jpg',
-      '/homepage/cityDay5-1.png',
-      '/homepage/cityDay3-3.png',
-      '/homepage/cityDay2-3.png',
-      '/homepage/cityDay1-3.png',
-      '/homepage/cityNight3-4.jpg',
-      '/homepage/cityNightCloud-1.png',
-      '/homepage/cityNightMoon-1.png',
-      '/homepage/cityNight2-2-3.png',
-      '/homepage/cityNight1-3.png'
+      '/homepage/cityDay4-2.jpg',
+      '/homepage/cityDay5.png',
+      '/homepage/cityDay3-2.png',
+      '/homepage/cityDay2-2.png',
+      '/homepage/cityDay1-2.png',
+      '/homepage/cityNight3-3.jpg',
+      '/homepage/cityNightCloud.png',
+      '/homepage/cityNightMoon.png',
+      '/homepage/cityNight2-2-2.png',
+      '/homepage/cityNight1-2.png'
     ];
     
     imageUrls.forEach(preloadImage);
