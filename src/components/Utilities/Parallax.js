@@ -15,7 +15,8 @@ export default function  Parallax(){
     const gallaryRef = useRef(null); // Create a ref
     const [scrollThresholdReached, setScrollThresholdReached] = useState(false);
     const [gallaryHeight, setGallaryHeight] = useState(0);
-  
+    const [loadOtherComponents, setLoadOtherComponents] = useState(false);
+
     const buttonStyleFilled = {
       display: 'flex',
       alignItems: 'center',
@@ -272,35 +273,40 @@ export default function  Parallax(){
       },
       {
         children: (
-          <div style={{...blackContainerStyle, width: '5vw', height: '3vh', top: '-50%'}}>
-            <Image 
-            src={imageUrls[6]} 
-            quality={1}
-            fill
-            alt="cityNightMoon"
-            />
-          </div>
+            loadOtherComponents && (
+                <div style={{...blackContainerStyle, width: '5vw', height: '3vh', top: '-50%'}}>
+                    <Image 
+                    src={imageUrls[6]} 
+                    quality={1}
+                    fill
+                    alt="cityNightMoon"
+                    />
+                </div>
+            )
         ),
         translateY: [70, 30],
         translateX: [120, -130],
       },
       {
         children: (
-          <div style={{...blackContainerStyle, width: '10vw', height: '8vh', top: '-0.3%'}}>
-  
-            <Image 
-            src={imageUrls[7]} 
-            fill
-            alt="cityNightCloud"
-            quality={1}
-            />
-          </div>
+            loadOtherComponents && (
+                <div style={{...blackContainerStyle, width: '10vw', height: '8vh', top: '-0.3%'}}>
+        
+                    <Image 
+                    src={imageUrls[7]} 
+                    fill
+                    alt="cityNightCloud"
+                    quality={1}
+                    />
+                </div>
+            )
         ),
         translateX: [120, 30],
         translateY: [70, 16]
       },
       {
         children: (
+            loadOtherComponents && (
           <div style={{...blackContainerStyle, height: '90vh', top: '-1vh'}}>
             <Image 
             src={imageUrls[8]} 
@@ -310,6 +316,7 @@ export default function  Parallax(){
             
             />
           </div>
+        )
         ),
         translateY: scrollThresholdReached ? [50, 50] : [90, -5.5],
       },
@@ -337,59 +344,75 @@ export default function  Parallax(){
       },
       {
         children: (
-            <div>
-                <div style = {video}>
-                  <Image 
-                  src={'/homepage/meeting-1.jpg'} 
-                  fill
-                  alt="meeting"
-                  quality={10}
-                  />
+            loadOtherComponents && (
+                <div>
+                    <div style = {video}>
+                    <Image 
+                    src={'/homepage/meeting.jpg'} 
+                    fill
+                    alt="meeting"
+                    quality={10}
+                    />
+                    </div>
+                <div style={videoText}>
+                        <div>
+                            <h2 style  = {secondHeaderStyle}>Wie zijn we en wat kunnen we voor jou betekenen?</h2>
+                            <p style  = {secondParagraphStyle}>
+                            Charm out quills tonight or mellow diadem teacup diddykins letters. Chess vanishing 
+                            armchairs potter lady motorcycle orbs spleens. P
+                            eg-leg newt cakes quaffle minister bean. Nearly-headless parseltongue eeylops petrified with 
+                            I his plums. Hunt portrait swiveling granger hearing tonight bertie shrieking quidditch.</p>
+                        </div>
+                        <div style={endContainerStyle}>
+                            <div style={buttonStyleFilled2}>
+                                <Link href="/contact" style={buttonFilled2Link}>
+                                    <h2 style = {{fontSize: 25, textAlign: 'center'}}>Maak een gratis afspraak</h2>
+                                </Link>
+                                </div>
+                            <div style={buttonStyleStroke2}>    
+                                <h2 style = {{fontSize: 25, textAlign: 'center', color: '#FF9449'}}>Maak de online Quiz</h2>
+                            </div>     
+                        </div>
                 </div>
-              <div style={videoText}>
-                    <div>
-                        <h2 style  = {secondHeaderStyle}>Wie zijn we en wat kunnen we voor jou betekenen?</h2>
-                          <p style  = {secondParagraphStyle}>
-                          Charm out quills tonight or mellow diadem teacup diddykins letters. Chess vanishing 
-                          armchairs potter lady motorcycle orbs spleens. P
-                          eg-leg newt cakes quaffle minister bean. Nearly-headless parseltongue eeylops petrified with 
-                          I his plums. Hunt portrait swiveling granger hearing tonight bertie shrieking quidditch.</p>
-                    </div>
-                    <div style={endContainerStyle}>
-                          <div style={buttonStyleFilled2}>
-                              <Link href="/contact" style={buttonFilled2Link}>
-                                  <h2 style = {{fontSize: 25, textAlign: 'center'}}>Maak een gratis afspraak</h2>
-                              </Link>
-                            </div>
-                          <div style={buttonStyleStroke2}>    
-                              <h2 style = {{fontSize: 25, textAlign: 'center', color: '#FF9449'}}>Maak de online Quiz</h2>
-                          </div>     
-                    </div>
-              </div>
-            </div>
+                </div>
+            )
         ),
         translateY: [90, 12.5],
         translateX: [100, 35]
       },
     ]
   
-    const handleResize = useCallback(debounce(() => {
+    const handleResize = useCallback(() => {
         if (gallaryRef.current) {
           setGallaryHeight(gallaryRef.current.offsetHeight);
         }
-      }, 300), []);
+      }, []);
     
-      const onScroll = useCallback(debounce(() => {
+    const onScroll = useCallback(() => {
         const percentageThreshold = 47;
+        const loadThreshhold = 1;
+
         const threshold = gallaryHeight * (percentageThreshold / 100);
+        const thresholdLoading = gallaryHeight * (loadThreshhold / 100);
+
         const currentScrollPos = window.pageYOffset;
     
+
+        //Freeze components on position threshold
         if (currentScrollPos > threshold && !scrollThresholdReached) {
-          setScrollThresholdReached(true);
-        } else if (currentScrollPos <= threshold && scrollThresholdReached) {
-          setScrollThresholdReached(false);
+            setScrollThresholdReached(true);
+        } 
+        else if (currentScrollPos <= threshold && scrollThresholdReached) {
+            setScrollThresholdReached(false);
         }
-      }, 300), [scrollThresholdReached, gallaryHeight]);
+
+        // Load component threshold        
+        if (currentScrollPos > thresholdLoading && !loadOtherComponents) {
+            setLoadOtherComponents(true);
+        } else if (currentScrollPos <= thresholdLoading && loadOtherComponents) {
+            setLoadOtherComponents(false);
+        }
+      }, [scrollThresholdReached, loadOtherComponents, gallaryHeight]);
     
       useEffect(() => {
         if (gallaryRef.current) {
@@ -404,9 +427,9 @@ export default function  Parallax(){
         return () => {
           window.removeEventListener('scroll', onScroll);
         };
-      }, [onScroll]);
+    }, [onScroll]);
     
-      return (
+    return (
         <div ref={gallaryRef}>
           <ParallaxProvider>
             <ParallaxBanner layers={animationOne} style={{ height: '200vh' }} />
