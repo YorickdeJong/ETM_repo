@@ -181,7 +181,7 @@ export default function  Parallax(){
       },
       {
         children: (
-          <div style={{...narrowContainerStyle, right: '13vw', height: '75vh', top: '6vh', width: '90vw'}}>
+          <div style={{...narrowContainerStyle, right: '13vw', height: '80vh', top: '6vh', width: '85vw'}}>
               <Image 
               src={imageUrls[2]} 
               fill
