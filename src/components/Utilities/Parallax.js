@@ -155,7 +155,7 @@ export default function  Parallax(){
               src={imageUrls[0]} 
               fill
               alt="cityDay4"  
-              quality={1}
+              quality={40}
               priority={true}
               />
           </div>
@@ -217,7 +217,7 @@ export default function  Parallax(){
               fill
               alt="cityDay1"
               priority={true}
-              quality={50}
+              quality={60}
               />
           </div>
         ),
@@ -269,7 +269,7 @@ export default function  Parallax(){
           </div>
         ),
         translateY: [19, 90],
-        opacity: [-1.7, 2.6]
+        opacity: [-2.3, 2.6]
       },
       {
         children: (
@@ -279,6 +279,7 @@ export default function  Parallax(){
                     src={imageUrls[6]} 
                     quality={1}
                     fill
+                    loading="lazy"
                     alt="cityNightMoon"
                     />
                 </div>
@@ -297,6 +298,7 @@ export default function  Parallax(){
                     fill
                     alt="cityNightCloud"
                     quality={1}
+                    loading="lazy"
                     />
                 </div>
             )
@@ -311,6 +313,7 @@ export default function  Parallax(){
             <Image 
             src={imageUrls[8]} 
             quality={1}
+            loading="lazy"
             fill
             alt="cityNight2"
             
@@ -329,6 +332,7 @@ export default function  Parallax(){
             fill
             alt="cityNight1"
             quality={10}
+            loading="lazy"
             />
           </div>
         ),
@@ -339,8 +343,8 @@ export default function  Parallax(){
           <div style={{...blackContainerStyle, backgroundColor: 'black'}}
           />
         ),
-        opacity: scrollThresholdReached ? [0.5, 0.5] : [0, 0],
-        translateY:  [49, 49],
+        opacity:  [-0.4, 1.1],
+        translateY: [19, 91],
       },
       {
         children: (

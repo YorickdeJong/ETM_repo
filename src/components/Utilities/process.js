@@ -86,6 +86,7 @@ const TextBlock = ({ text, title, image, isImageRight, index }) => (
                             height = '200'
                             alt='image'
                             quality={50}
+                            loading="lazy"
                         />
                     </div>
 
@@ -98,6 +99,7 @@ const TextBlock = ({ text, title, image, isImageRight, index }) => (
                     height = '200'
                     alt='image'
                     quality={50}
+                    loading="lazy"
                 />
                 <div style={textSectionRight}>
                     <h2 style={titleText}>{title}</h2>
