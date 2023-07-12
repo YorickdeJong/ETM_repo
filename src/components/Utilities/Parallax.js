@@ -175,13 +175,13 @@ export default function  Parallax(){
               />
           </div>
         ),
-        translateX: [60, -100],
+        translateX: [80, -100],
         translateY: [19.35, 91.8],
         opacity: [2.4, -2.25],
       },
       {
         children: (
-          <div style={{...narrowContainerStyle, right: '13vw', height: '80vh', top: '6vh', width: '85vw'}}>
+          <div style={{...narrowContainerStyle, right: '16vw', height: '80vh', top: '8vh', width: '85vw'}}>
               <Image 
               src={imageUrls[2]} 
               fill
@@ -196,7 +196,7 @@ export default function  Parallax(){
       },
       {
         children: (
-          <div style={{...narrowContainerStyle, height: '49vh', top: '23vh'}}>
+          <div style={{...narrowContainerStyle, height: '46vh', top: '28.7vh'}}>
               <Image 
               src={imageUrls[3]} 
               quality={4}
@@ -211,7 +211,7 @@ export default function  Parallax(){
       },
       {
         children: (
-          <div style={{...narrowContainerStyle, top: '27.1vh', height: '77vh'}}>
+          <div style={{...narrowContainerStyle, top: '32.55vh', height: '72.4vh'}}>
               <Image 
               src={imageUrls[4]} 
               fill
@@ -343,7 +343,7 @@ export default function  Parallax(){
           <div style={{...blackContainerStyle, backgroundColor: 'black'}}
           />
         ),
-        opacity:  [-0.4, 1.1],
+        opacity:  [-0.7, 1.1],
         translateY: [19, 91],
       },
       {
