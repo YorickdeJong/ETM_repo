@@ -1,12 +1,15 @@
 
 import NavBar from '@/components/Utilities/NavBar';
 import { FaAndroid, FaKey, FaRedoAlt, FaCheckDouble, FaChartLine, FaDollarSign, FaToolbox, FaImages, FaPlusSquare, FaHourglassHalf } from 'react-icons/fa';
+import { useMediaQuery } from 'react-responsive';
 
 
 export default function FAQ() {
+    const isSmallScreen = useMediaQuery({ maxWidth: 1650 });
+
 
     const iconStyle = {
-        fontSize: 50, // change to the size you want
+        fontSize: isSmallScreen? '4.5vw' : '2.5vw', // change to the size you want
         alignSelf: 'center', // aligns the star in the middle along the vertical axis in the flex container
         color: '#CBEBE7'
     }
@@ -76,20 +79,20 @@ export default function FAQ() {
             marginLeft: '6vw',
         },
         title: {
-            fontSize: 'calc(1.65vw + 1.65vh)',
+            fontSize: isSmallScreen ? 'calc(2vw + 2vh)' : 'calc(1.65vw + 1.65vh)',
             color: '#0F1C37', 
             fontWeight: '500', 
         },
         subtitle: {
-            marginTop: '-2vh', 
-            fontSize: 'calc(0.95vw + 0.95vh)',
+            marginTop: isSmallScreen ? '0vh' : '-2vh', 
+            fontSize: isSmallScreen ? 'calc(1.25vw + 1.25vh)' :  'calc(0.95vw + 0.95vh)',
             color: '#8A8889', 
             width: '60vw', 
             lineHeight: '130%',
         },
         grid: {
             display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)', // Create two columns
+            gridTemplateColumns: isSmallScreen ? 'repeat(1, 1fr)' : 'repeat(2, 1fr)', // Create two columns
             gridTemplateRows: 'repeat(5, 1fr)', // Create five rows
             height: '70vh',
             width: '88vw',
@@ -100,14 +103,16 @@ export default function FAQ() {
         item: {
             display: 'flex',
             flexDirection: 'row',
+            height: isSmallScreen ? '8vh' : '4vh',
+            marginBottom: isSmallScreen  && '2vh',
         },
         iconContainer: {
             position: 'relative', 
-            width: '4vw', 
-            height: '4vw', 
+            width: isSmallScreen ? '7vw' : '4vw', 
+            height: isSmallScreen ? '7vw' : '4vw', 
             backgroundColor: '#92CDC6', 
             borderRadius: 10, 
-            top: '2.3vh', 
+            top: isSmallScreen ? '3vj' : '2.3vh', 
             left: '1vw', 
             justifyContent: 'center', 
             alignItems: 'center', 
@@ -118,8 +123,8 @@ export default function FAQ() {
             flexDirection: 'column'
         },
         itemTitle: {
-            width: '30vw', 
-            fontSize: 25, 
+            width: isSmallScreen ? '60vw' : '30vw', 
+            fontSize: isSmallScreen ? '2.35vw' : 28, 
             color: '#8A8889', 
             lineHeight: '130%', 
             margin: 0, 
@@ -127,8 +132,8 @@ export default function FAQ() {
             marginLeft: '4vw',
         },
         itemText: {
-            width: '30vw', 
-            fontSize: 20, 
+            width: isSmallScreen ? '60vw' : '30vw', 
+            fontSize: isSmallScreen ? '2.05vw' : 24, 
             color: '#8A8889', 
             lineHeight: '130%', 
             margin: 0, 

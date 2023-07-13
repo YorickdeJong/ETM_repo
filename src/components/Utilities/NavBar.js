@@ -60,8 +60,7 @@ const NavBar = ({pathname}) => {
       style={{ 
         position: 'absolute', 
         height: 47, 
-        left: 128, 
-        right: 96,
+        left: '6.5vw', 
         width: '85vw',
         top: '1vh',
         zIndex: 100, 

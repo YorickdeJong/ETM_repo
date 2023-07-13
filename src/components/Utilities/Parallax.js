@@ -74,7 +74,7 @@ export default function  Parallax(){
   };
   
     const imageUrls = [
-      '/homepage/cityDay4-2.jpg',
+      '/homepage/cityDay4-4.jpg',
       '/homepage/cityDay5.png',
       '/homepage/cityDay3-2.png',
       '/homepage/cityDay2-2.png',
@@ -143,7 +143,7 @@ export default function  Parallax(){
     };
     const narrowContainerStyle = { position: 'absolute', width: '100vw', height: '104vh' };
     const blackContainerStyle = { position: 'absolute', width: '100vw', height: '100vh'};
-    const buttonContainer = { position: 'absolute', width: '30vw', height: '104vh' };
+    const buttonContainer = { position: 'absolute', width: '30vw', height: '104vh', left: '-1vw' };
     const video = {width: '40vw', height: '40vh', position: 'absolute', left: '-45vw', top: '0vh'}
     const videoText = { position: 'absolute', width: '36vw', height: '100vh'}
 
@@ -171,7 +171,7 @@ export default function  Parallax(){
               <Image src={imageUrls[1]} 
               fill
               alt="cityDay5"
-              quality={1}
+              quality={4}
               priority={true}
               />
           </div>
@@ -218,7 +218,7 @@ export default function  Parallax(){
               fill
               alt="cityDay1"
               priority={true}
-              quality={60}
+              quality={70}
               />
           </div>
         ),
@@ -229,11 +229,9 @@ export default function  Parallax(){
       {
         children: (
           <div style={buttonContainer}>
-                <div>
-                    <h2 style  = {headerStyle}>
-                    Wij bouwen jouw online presence met passie</h2>
-                      <p style  = {paragraphStyle}>ETM helpt jou met webdeisng, marketing en zorgt ervoor dat jouw ambities online te zien zijn</p>
-                </div>
+            <h2 style  = {headerStyle}>
+            Wij bouwen jouw online presence met passie</h2>
+                <p style  = {paragraphStyle}>ETM helpt jou met webdeisng, marketing en zorgt ervoor dat jouw ambities online te zien zijn</p>
           </div>
         ),
         
