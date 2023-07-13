@@ -6,9 +6,13 @@ import Tile from '@/components/Utilities/Tile';
 import Link from 'next/link'
 
 import CostsCard from '@/components/Utilities/CostsCard'
+import { useMediaQuery } from 'react-responsive';
 
 
 function Services() {
+    const isMediumScreen = useMediaQuery({ query: '(max-width: 1400px)' });
+    const isSmallScreen = useMediaQuery({ maxWidth: 1000 });
+
 
     const main = {
         height: '230vh',  position: 'relative',  backgroundColor: 'white'
@@ -64,6 +68,21 @@ function Services() {
         top: '78%',
         marginLeft: '10%',
     };
+
+
+    const gridCard = {
+
+        display: 'grid', 
+        gridTemplateColumns: isSmallScreen ? '1fr' : isMediumScreen ? '1fr 1fr' : '1fr 1fr 1fr', 
+        // gridTemplateRows: isSmallScreen ? 'auto' : isMediumScreen ? 'auto auto' : 'auto auto auto', 
+        height: '90vh', 
+        width: '80vw',
+        marginLeft: '8vw',
+        paddingTop: '14vh',
+
+
+    }
+
     const columnStyleOne = {
         gridColumn: '1 / span 1', 
         gridRow: '1 / span 2', 
@@ -116,43 +135,45 @@ function Services() {
         boxShadow: '1px 5px 7px rgba(0, 0, 0, 0.3)'
     }
 
-    const gridCostCardStyle = {
-        display: 'grid', 
-        gridTemplateColumns: '1fr 1fr 1fr', 
-        gridTemplateRows: 'auto auto', 
-        height: '80vh', 
-        width: '80vw',
-        marginLeft: '8vw',
-        paddingTop: '14vh',
-    };
 
+    const gridCostCardStyle = {
+        display: 'grid',
+        gridTemplateColumns: isSmallScreen ? '1fr' : isMediumScreen ? '1fr 1fr' : '1fr 1fr 1fr', 
+        gridTemplateRows: isMediumScreen ? 'auto auto auto' : 'auto auto',
+        height: isMediumScreen ? '180vh' : '90vh',
+        width: isSmallScreen ? '60vw' : '81.3vw',
+        marginLeft: isSmallScreen ? '8vw' : '8vw',
+        paddingTop: '17vh',
+        gap: '3vw'
+    };
+    
     const gridCostCardOne = {
         gridColumn: '1 / span 1', 
-        gridRow: '1 / span 2', 
+        gridRow: '1 / span 1', 
         backgroundColor: '#FFFBF9', 
-        width: '100%', 
+        width: isSmallScreen ? '90%' : '100%', 
         borderRadius: 12,
         boxShadow: '1px 5px 7px rgba(0, 0, 0, 0.3)'
     }
-
-    const gridCostCardTwo = {gridColumn: '2 / span 1', gridRow: '1 / span 2', backgroundColor: '#FFFBF9', width: '100%', borderRadius: 12, 
-        boxShadow: '1px 5px 7px rgba(0, 0, 0, 0.3)'
-    }
-
-    const gridCostCardThree = {gridColumn: '3 / span 1', gridRow: '1 / span 2', backgroundColor: '#FFFBF9', width: '100%', borderRadius: 12, 
+    
+    const gridCostCardTwo = {
+        gridColumn: isSmallScreen ? '1 / span 1' : isMediumScreen ? '2 / span 1' : '2 / span 1', 
+        gridRow: isSmallScreen ? '2 / span 1' : '1 / span 1', 
+        backgroundColor: '#FFFBF9', 
+        width: isSmallScreen ? '90%' :'100%', 
+        borderRadius: 12, 
         boxShadow: '1px 5px 7px rgba(0, 0, 0, 0.3)'
     }
     
-    const gridCard = {
-        display: 'grid',
-        gridTemplateColumns: '1fr 1fr 1fr',
-        gridTemplateRows: 'auto auto',
-        height: '90vh',
-        width: '81.3vw',
-        marginLeft: '8vw',
-        paddingTop: '17vh',
-        gap: '3vw'
+    const gridCostCardThree = {
+        gridColumn: isSmallScreen ? '1 / span 1' : isMediumScreen ? '1 / span 1' : '3 / span 1', 
+        gridRow: isSmallScreen ? '3 / span 1' : isMediumScreen ? '2 / span 1' : '1 / span 1', 
+        backgroundColor: '#FFFBF9', 
+        width: isSmallScreen ? '90%' :'100%', 
+        borderRadius: 12, 
+        boxShadow: '1px 5px 7px rgba(0, 0, 0, 0.3)'
     }
+
 
     const headerDiv = {position: 'relative', top: '14vh', left: '8vw', width: '100vw', zIndex: 2,}
 
@@ -239,7 +260,7 @@ function Services() {
                 <NavBar />
             </div>
 
-            <div style={gridCostCardStyle}>
+            <div style={gridCard}>
             
                 <div style={columnStyleOne}>
                     {/* Content of the first column goes here */}
@@ -309,7 +330,7 @@ function Services() {
                     Wij hebben jouw beste pakket</h1>
             </div> 
 
-            <div style={gridCard}>
+            <div style={gridCostCardStyle}>
                 <div style={gridCostCardOne}>
                     <CostsCard 
                         texts = {textOne}
