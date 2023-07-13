@@ -112,7 +112,7 @@ const TextBlock = ({ text, title, image, isImageRight, index }) => (
                     loading="lazy"
                 />
             </div>
-                <div style={textSectionRight}>
+                <section style={textSectionRight}>
                     <h2 style={titleText}>{title}</h2>
                     <p style={paragraph}>{text}</p>
                 </section>
