@@ -2,7 +2,7 @@ import NavBar from '@/components/Utilities/NavBar';
 import Image from 'next/image';
 import { useMediaQuery } from 'react-responsive';
 
-export default function projectPage() {
+export default function ProjectPage() {
     const isMediumScreen = useMediaQuery({ query: '(min-width: 1201px) and (max-width: 1800px)' });
     const isSmallScreen = useMediaQuery({ maxWidth: 1200 });
     
