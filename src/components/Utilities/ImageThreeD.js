@@ -246,41 +246,41 @@ const ImageThreeD = () => {
               }}
             >
               {i === 0 && 
-              <div className = 'p-10' style={{ zIndex: 10, top: '7.4%', left: '6%', position: 'absolute'}}>
+              <section className = 'p-10' style={{ zIndex: 10, top: '7.4%', left: '6%', position: 'absolute'}}>
                   <h2 style={{ fontSize: 70, color: 'white', fontWeight: 'bold' }}>Learning Bot</h2>
                   <p style={{ fontSize: 30 }}>Draait om jou</p>
-              </div>
+              </section>
               }
               {i === 1 && 
-              <div className = 'p-10' style={{ borderRadius: 20, zIndex: 10, top: '7.4%', left: '6%', position: 'absolute'}}>
+              <section className = 'p-10' style={{ borderRadius: 20, zIndex: 10, top: '7.4%', left: '6%', position: 'absolute'}}>
                 <h2 style={{ fontSize: 70, color: 'white', fontWeight: 'bold' }}>Interactief</h2>
                 <p style={{ fontSize: 30 }}>Bouw, Programeer en Onderzoek </p>
                 <p style={{ fontSize: 30 }}>Gebruik je wiskunde en natuurkunde kennis</p>
                 <p style={{ fontSize: 30 }}>om een op afstand bestuurbare robot </p>
                 <p style={{ fontSize: 30 }}>te bouwen en te programmeren</p>
-              </div>
+              </section>
               }
               {i === 2 && 
-              <div className = 'p-10' style={{ borderRadius: 20, zIndex: 10, top: '7.4%', left: '6%', position: 'absolute'}}>
+              <section className = 'p-10' style={{ borderRadius: 20, zIndex: 10, top: '7.4%', left: '6%', position: 'absolute'}}>
                 <h2 style={{ fontSize: 70, color: 'white', fontWeight: 'bold' }}>Upgrade Jouw Robot</h2>
                 <p style={{ fontSize: 30 }}>Met credits die je verdient kun je jouw robot verbeteren</p>
-              </div>
+              </section>
               }
               {i === 3 && 
-              <div className = 'p-10' style={{ borderRadius: 20, zIndex: 10, top: '7.4%', left: '6%', position: 'absolute'}}>
+              <section className = 'p-10' style={{ borderRadius: 20, zIndex: 10, top: '7.4%', left: '6%', position: 'absolute'}}>
                 <h2 style={{ fontSize: 70, color: 'white', fontWeight: 'bold' }}>Toepassing</h2>
                 <p style={{ fontSize: 30 }}>Kies uit verschillende opdrachten</p>
                 <p style={{ fontSize: 30 }}>over beweging, schakelingen,</p>
                 <p style={{ fontSize: 30 }}>vermogen en energie</p>
-              </div>
+              </section>
               }
               {i === 4 && 
-                <div className = 'p-10' style={{ borderRadius: 20, zIndex: 10, top: '7.4%', left: '6%', position: 'absolute'}}>
+                <section className = 'p-10' style={{ borderRadius: 20, zIndex: 10, top: '7.4%', left: '6%', position: 'absolute'}}>
                   <h2 style={{ fontSize: 70, color: 'white', fontWeight: 'bold' }}>Verzamel Data</h2>
                   <p style={{ fontSize: 30 }}>Bestuur de robot en verzamel</p>
                   <p style={{ fontSize: 30 }}>live data over zijn versnelling</p>
                   <p style={{ fontSize: 30 }}>snelheid en vermogen</p>
-                </div>
+                </section>
               }
               <Image
                 src={image}
