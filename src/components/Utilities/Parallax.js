@@ -230,9 +230,9 @@ export default function  Parallax(){
         children: (
           <section style={buttonContainer}>
                 <section>
-                    <h2 style  = {headerStyle}>
-                    Wij maken jouw website met passie</h2>
-                      <p style  = {paragraphStyle}>ETM helpt jou met webdesign, marketing en zorgt ervoor dat jouw ambities online te zien zijn</p>
+                    <h1 style  = {headerStyle}>
+                    Websites maken met passie</h1>
+                      <h2 style  = {paragraphStyle}>ETM helpt jou met webdesign, webmarketing en zorgt ervoor dat jouw ambities online te zien zijn</h2>
                 </section>
           </section>
         ),
@@ -245,11 +245,11 @@ export default function  Parallax(){
       <section style={buttonContainer}>
           <section style={buttonStyleFilled}>
               <Link href="/contact" style={linkStyle}>
-                  <h2 style = {headingStyle}>Maak een gratis afspraak</h2>
+                  <h6 style = {headingStyle}>Maak een gratis afspraak</h6>
               </Link>
           </section>
           <section style={buttonStyleStroke}>    
-              <h2 style = {{fontSize: 28, textAlign: 'center', color: '#FF9449'}}>Maak de online Quiz</h2>
+              <h6 style = {{fontSize: 28, textAlign: 'center', color: '#FF9449'}}>Maak de online Quiz</h6>
           </section>      
       </section>
         ),
@@ -359,9 +359,9 @@ export default function  Parallax(){
                 </div>
               <section style={videoText}>
                     <section>
-                        <h2 style  = {secondHeaderStyle}>Wie zijn we en wat kunnen we voor jou betekenen?</h2>
-                          <p style  = {secondParagraphStyle}>
-                         Een groep enthousiaste mensen die geloven in dat het maken van een aantrekekelijke website het verschil kan maken .</p>
+                        <h4 style  = {secondHeaderStyle}>Wie zijn we en wat kunnen we voor jou betekenen?</h4>
+                          <h5 style  = {secondParagraphStyle}>
+                         Een groep enthousiaste mensen die geloven in dat het maken van een aantrekekelijke website het verschil kunnen maken .</h5>
                     </section>
                     <section style={endContainerStyle}>
                           <section style={buttonStyleFilled2}>

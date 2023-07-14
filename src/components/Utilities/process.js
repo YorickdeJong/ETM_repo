@@ -78,15 +78,15 @@ const TextBlock = ({ text, title, image, isImageRight, index }) => (
         {isImageRight ?
             <div style={containerTextImage}>
                     <div style={textSection}>
-                        <h2 style={titleText}>{title}</h2>
-                        <p style={paragraph}>{text}</p>
+                        <h3 style={titleText}>{title}</h3>
+                        <h4 style={paragraph}>{text}</h4>
                         {index === 0 && 
                             <div style = {titleContainerStyle}>
                                 <div style={titleContainer}>    
-                                    <h2 style = {titleStyle}>Maak een gratis afspraak</h2>
+                                    <h6 style = {titleStyle}>Maak een gratis afspraak</h6>
                                 </div>
                                 <div style={paragraphContainer}>    
-                                    <h2 style = {paragraphTitle}>Maak de online Quiz  {' >'}</h2>
+                                    <h6 style = {paragraphTitle}>Maak de online Quiz  {' >'}</h6>
                                 </div>
                             </div>
                         }
@@ -113,7 +113,7 @@ const TextBlock = ({ text, title, image, isImageRight, index }) => (
                 />
             </div>
                 <section style={textSectionRight}>
-                    <h2 style={titleText}>{title}</h2>
+                    <h6 style={titleText}>{title}</h6>
                     <p style={paragraph}>{text}</p>
                 </section>
             </div>
@@ -212,13 +212,13 @@ export default function Process() {
                         </svg>
                     </div>
                     <div style = {{position: 'relative', top: '1%', alignSelf: 'center', width: '100vw', zIndex: 2,}}>
-                    <h1 style = {{
+                    <h2 style = {{
                         fontSize: 60, 
                         color: 'rgba(0, 255, 255, 1)',// '#FF6800', 
                         fontWeight: 'bold', 
                         textAlign: 'center',
                         textShadow: '4px 4px 8px rgba(0, 0, 0, 0.1)'}}>
-                        HOE ZIET JOUW PROCESS ERUIT?</h1>
+                        Hoe ontwerpen wij jouw website?</h2>
                     </div>
                         {texts.map((text, i) => (
                             <TextBlock 
