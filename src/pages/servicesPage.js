@@ -272,7 +272,7 @@ function Services() {
                             quality={4}
                         />
                         <div style = {overlayStyle}/>
-                        <h2 style = {header}>Welke optie is het beste voor jou?</h2>
+                        <h1 style = {header}>Voor iedereen een website op maat!</h1>
                         <p style = {paragraph}>Order norwegian dragon-scale tap-dancing fanged wizard grindylows werewolf wool. Head petrificus ministry-of-magic polyjuice knew. 
                         Chalice stroke remembrall hunt fat phials mudbloods unwilling banges. Shack yer in restricted charm treats crush who. 
                         Glory impedimenta parvati dervish dirigible dead dirt stairs. Out downfall wingardium you robes keeper sorcerer&apos;s spleens feast.</p>
@@ -281,11 +281,11 @@ function Services() {
                             style={buttonStyleFilled} 
                             >
                                 <Link href="/contact" style={linkStyle}>
-                                    <h2 style = {textStyle}>Maak een gratis afspraak</h2>
+                                    <h6 style = {textStyle}>Maak een gratis afspraak</h6>
                                 </Link>
                             </div>
                                 <div style={buttonStyleStroke}>    
-                                <h2 style = {textStyleStroke}>Maak de online Quiz</h2>
+                                <h6 style = {textStyleStroke}>Maak de online Quiz</h6>
                             </div>
                         </div>
                     </div>
@@ -327,7 +327,7 @@ function Services() {
                 
             <div style = {headerDiv}>
                 <h1 style = {headerSecond}>
-                    Wij hebben jouw beste pakket</h1>
+                    De beste pakketen op de markt</h1>
             </div> 
 
             <div style={gridCostCardStyle}>
@@ -338,7 +338,7 @@ function Services() {
                         stars = {[true, false, false]}
                         starsMarginLeft = '14vw'
                         title = 'Basis'
-                        price = '4000'
+                        price = '2250-3000'
                     />
                 </div>
 
@@ -349,7 +349,7 @@ function Services() {
                         stars = {[true, true, false]}
                         starsMarginLeft = '8vw'
                         title = 'Standaard'
-                        price = '8000'
+                        price = '6000-11000'
                     />      
                 </div>
 
@@ -360,7 +360,7 @@ function Services() {
                         stars = {[true, true, true]}
                         starsMarginLeft = '8.5vw'
                         title = 'Custom'
-                        price = '15000'
+                        price = '13000'
                     /> 
                 </div>
             </div>
