@@ -1,6 +1,12 @@
 import Image from 'next/image';
+import { useMediaQuery } from 'react-responsive';
 
 function ValueProp() {
+    const isMediumScreen = useMediaQuery({ query: '(max-width: 1600px)' });
+    const isSmallScreen = useMediaQuery({ maxWidth: 600 });
+
+    const image = isSmallScreen ? '/ValueProp/underground-small.jpg' : isMediumScreen ? '/ValueProp/underground-medium.jpg' :'/ValueProp/underground.jpg'
+
     const containerStyle = {
         height: '110vh', 
         width: '100vw', 
@@ -10,28 +16,37 @@ function ValueProp() {
     
     const titleContainerStyle = {
         position: 'absolute', 
-        top: '25vh', 
+        top: isSmallScreen ? '15vh' : '25vh', 
         alignSelf: 'center', 
         width: '100vw', 
         zIndex: 2
     };
     
     const titleStyle = {
-        fontSize: 60, 
+        fontSize: isSmallScreen ? 'calc(1.8vw + 1.8vh)' : isMediumScreen ? 'calc(2.1vw + 2.1vh)' : 'calc(2.3vw + 2.3vh)', 
         color: 'white', 
         fontWeight: 'bold', 
         textAlign: 'center',
         textShadow: '4px 4px 8px rgba(0, 0, 0, 1)'
     };
     
+    const cardContainerStyle = {
+        display: 'grid',
+        gridTemplateColumns: isSmallScreen  ? '1fr' : 'repeat(3, 1fr)',
+        gap: isSmallScreen ? '4vh' : '5vw',
+        position: 'absolute',
+        width: isSmallScreen ? '80vw' : '100vw',
+        marginLeft: isSmallScreen ? '10vw' : '0vw',
+        top: isSmallScreen ? '25vh' : '40vh',
+        paddingLeft: '5vw',
+        paddingRight: '5vw'
+    };
+    
     const cardStyle = {
-        width: '25vw', 
-        height: '22vh', 
+        height: isSmallScreen ? '19vh' : '22vh', 
         borderRadius: 30, 
         backgroundColor: '#1C545F', 
-        boxShadow: '5px 5px 9px rgba(0, 0, 0, 0.7)', 
-        position: 'absolute',
-        top: '40vh'
+        boxShadow: '5px 5px 9px rgba(0, 0, 0, 0.7)'
     };
     
     const cardTitleContainerStyle = {
@@ -42,7 +57,7 @@ function ValueProp() {
     };
     
     const cardTitleStyle = {
-        fontSize: 'calc(1.35vw + 1.35vh)',
+        fontSize: isSmallScreen ? 'calc(1.8vw + 1.8vh)' : isMediumScreen ? 'calc(1.5w + 1.5vh)' : 'calc(1.35vw + 1.35vh)',
         color: '#FFFFFF', 
         fontWeight: 'bold', 
         textAlign: 'center',
@@ -52,24 +67,24 @@ function ValueProp() {
     const cardContentContainerStyle = {
         height: '18vh', 
         borderRadius: 20,
-        marginTop: 20,
+        marginTop: isSmallScreen ? 15 : 20,
         alignItems: 'center'
     };
     
     const cardContentStyle = {
-        marginLeft: '10%', 
-        width: '80%', 
+        marginLeft: '6%', 
+        width: '88%', 
         lineHeight: '150%', 
-        fontSize: 'calc(0.65vw + 0.65vh)',
+        fontSize: isSmallScreen ? 'calc(1.05vw + 1.05vh)' : isMediumScreen ? 'calc(0.85w + 0.85vh)' : 'calc(0.65vw + 0.65vh)',
         fontWeight: '303', 
         textAlign: 'center', 
         color: '#F4FDFF'
     };
 
     const cards = [
-        { title: 'Begrip', text: 'Een bedrijf is een collectief van mensen, om het beste product aan jullie te leveren, streven wij er eerst om jullie volledig te begrijpen en te leren kennen', left: '10vw' },
-        { title: 'Gemak', text: 'Als opdrachtgever zit u niet op hoofdpijn te wachten tijdens het proces waarin uw website wordt gemaakt.', left: '38vw' },
-        { title: 'Assertiviteit', text: 'Een bedrijf is een collectief van mensen, om het beste product aan jullie te leveren, streven wij er eerst om jullie volledig te begrijpen en te leren kennen', left: '66vw' }
+        { title: 'Begrip', text: 'Een bedrijf is een collectief van mensen, om het beste product aan jullie te leveren, streven wij er eerst om jullie volledig te begrijpen en te leren kennen' },
+        { title: 'Gemak', text: 'Als opdrachtgever zit u niet op hoofdpijn te wachten tijdens het proces waarin uw website wordt gemaakt.' },
+        { title: 'Assertiviteit', text: 'Een bedrijf is een collectief van mensen, om het beste product aan jullie te leveren, streven wij er eerst om jullie volledig te begrijpen en te lernen kennen' }
     ];
 
     return (
@@ -81,7 +96,7 @@ function ValueProp() {
             
             <div>
                 <Image 
-                    src = '/ValueProp/underground.jpg'
+                    src = {image}
                     fill
                     style = {{opacity: 0.7}}
                     alt='underground'
@@ -90,16 +105,18 @@ function ValueProp() {
                 />
             </div>
 
-            {cards.map((card, index) => (
-                <div key={index} style={{ ...cardStyle, left: card.left }}>
-                    <div style={cardTitleContainerStyle}>
-                        <h1 style={cardTitleStyle}>{card.title}</h1>
+            <div style={cardContainerStyle}>
+                {cards.map((card, index) => (
+                    <div key={index} style={cardStyle}>
+                        <div style={cardTitleContainerStyle}>
+                            <h1 style={cardTitleStyle}>{card.title}</h1>
+                        </div>
+                        <div style={cardContentContainerStyle}>
+                            <p style={cardContentStyle}>{card.text}</p>
+                        </div>
                     </div>
-                    <div style={cardContentContainerStyle}>
-                        <p style={cardContentStyle}>{card.text}</p>
-                    </div>
-                </div>
-            ))}
+                ))}
+            </div>
         </div>
     );
 }

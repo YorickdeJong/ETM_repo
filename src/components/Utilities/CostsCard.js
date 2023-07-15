@@ -8,9 +8,10 @@ export default function CostsCard({title, texts, marginTop, stars, starsMarginLe
 
     const styles = {
         cardContainer: {
+            position: 'relative',
             display: 'flex',
             flexDirection: 'column',
-            height: '80vh'
+            height: '80vh',        
         },
         headerContainer: {
             display: 'flex',
@@ -52,17 +53,16 @@ export default function CostsCard({title, texts, marginTop, stars, starsMarginLe
         },
         list: {
             color: '#3A8594', 
-            fontSize:  isSmallScreen ?  'calc(1vw + 1vh)' : (isMediumScreen ?  'calc(0.85vw + 0.85vh)' : 'calc(0.7vw + 0.7vh)'), 
+            fontSize:  isSmallScreen ?  'calc(1.25vw + 1.25vh)' : (isMediumScreen ?  'calc(0.95vw + 0.95vh)' : 'calc(0.7vw + 0.7vh)'), 
         },
         buttonStylePackage: {
             width: '80%',
             height: isMediumScreen ? '6.5vh' : '6.5vh',
             backgroundColor: '#1A5D6A',
             borderRadius: 40,
-            marginTop: '1.5vh',
-            marginBottom: '1.5vh',
             zIndex: 1000,
             marginLeft: '10%',
+            marginTop: isSmallScreen ? '1.25vh' : (isMediumScreen ? '1.25vh' : '2.5vh'),
             display: 'flex', 
             justifyContent: 'center', 
             alignItems: 'center',
@@ -77,8 +77,8 @@ export default function CostsCard({title, texts, marginTop, stars, starsMarginLe
         bottomContainer: {
             width: '100%',
             height: '7vh',
-            position: 'relative',
-            marginTop: '7vh'
+            position: 'absolute',
+            bottom: '3vh'
         },
         line: {
             width: '85%', 
