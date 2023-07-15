@@ -143,7 +143,7 @@ export default function  Parallax(){
         zIndex: 1, 
         position: 'absolute', 
         width: isSmallScreen ? '90%' : '100%',
-        top: isSmallScreen ? (isSmallScreenHeight ? '10%' : '1.5%') : '8%', 
+        top: isSmallScreen ? (isSmallScreenHeight ? '11%' : '1.5%') : '8%', 
         left: 0,
         color: 'white', 
         textShadow: '3px 3px 6px rgba(0, 0, 0, 0.3)'
@@ -155,7 +155,7 @@ export default function  Parallax(){
         zIndex: 1, 
         position: 'absolute', 
         width: isSmallScreen ? '70%' : '75%',
-        top: isSmallScreen ? (isSmallScreenHeight ? '23%' : '12%') : '19%', 
+        top: isSmallScreen ? (isSmallScreenHeight ? '18%' : '12%') : '19%', 
         left: 0,
         color: 'white', 
         textShadow: '3px 3px 6px rgba(0, 0, 0, 0.3)'
