@@ -15,6 +15,7 @@ function preloadImage(url) {
 export default function  Parallax(){
     const isMediumScreen = useMediaQuery({ query: '(max-width: 1600px)' });
     const isSmallScreen = useMediaQuery({ maxWidth: 700 });
+    const isSmallScreenHeight = useMediaQuery({ maxHeight: 1000 });
 
     const gallaryRef = useRef(null); // Create a ref
     const [scrollThresholdReached, setScrollThresholdReached] = useState(false);
@@ -130,7 +131,7 @@ export default function  Parallax(){
     
     const buttonContainer = {
          position: 'absolute', 
-         width: isSmallScreen ? '50vw' : isMediumScreen ? '40vw' : '30vw', 
+         width: isSmallScreen ? '65vw' : isMediumScreen ? '40vw' : '30vw', 
          height: '104vh', 
          left: '-1vw' 
     };
@@ -141,7 +142,8 @@ export default function  Parallax(){
         lineHeight: 1.2,
         zIndex: 1, 
         position: 'absolute', 
-        top: '15%', 
+        width: isSmallScreen ? '90%' : '100%',
+        top: isSmallScreen ? '1.5%' : '8%', 
         left: 0,
         color: 'white', 
         textShadow: '3px 3px 6px rgba(0, 0, 0, 0.3)'
@@ -152,7 +154,8 @@ export default function  Parallax(){
         fontWeight: 'bold', 
         zIndex: 1, 
         position: 'absolute', 
-        top: '25%', 
+        width: isSmallScreen ? '70%' : '75%',
+        top: isSmallScreen ? '12%' : '19%', 
         left: 0,
         color: 'white', 
         textShadow: '3px 3px 6px rgba(0, 0, 0, 0.3)'
