@@ -10,15 +10,11 @@ import Parallax from './Parallax';
 
 const HorizontalCityGallary = () => {
 
-
-
-
-
   return (
     <main style={{ backgroundColor: 'rgba(10,10,30,1)' }} >
-      <Parallax/>
-       <ValueProp />
-      <Process />
+      <Parallax/> 
+        <ValueProp />
+        <Process />
       <Skills />
     </main>
   );

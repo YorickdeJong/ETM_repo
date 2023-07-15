@@ -10,7 +10,7 @@ import { useMediaQuery } from 'react-responsive';
 
 
 function Services() {
-    const isMediumScreen = useMediaQuery({ query: '(max-width: 1400px)' });
+    const isMediumScreen = useMediaQuery({ query: '(max-width: 1600px)' });
     const isSmallScreen = useMediaQuery({ maxWidth: 1000 });
 
 
@@ -18,16 +18,20 @@ function Services() {
         height: '230vh',  position: 'relative',  backgroundColor: 'white'
     }
 
-    const navbar = {position: 'absolute', left: '-0.39vw', top: '-0.68vh'}
+    const navbar = {
+        position: 'absolute', 
+        left: '-0.39vw', 
+        top: '-0.68vh'
+    }
 
     const header = {
-        position: 'absolute',
+        position: 'relative',
         top: '14%',
         width: '80%',
         marginLeft: '10%',
         textAlign: 'center',
         color: 'white',
-        fontSize: 'calc(1.3vw + 1.3vh)',
+        fontSize: isSmallScreen ? 'calc(2.3vw + 2.3vh)' : isMediumScreen ? 'calc(1.8vw + 1.8vh)' : 'calc(1.3vw + 1.3vh)',
         zIndex: 100,
         lineHeight: '2.5vw',
     };
@@ -38,11 +42,11 @@ function Services() {
         marginLeft: '10%',
         textAlign: 'center',
         color: 'white',
-        fontSize: 'calc(0.63vw + 0.63vh)',
+        fontSize:  isSmallScreen ? 'calc(1.1vw + 1.1vh)' : isMediumScreen ? 'calc(1.3vw + 0.9vh)' : 'calc(0.73vw + 0.73vh)',
         zIndex: 100,
         position: 'absolute',
         top: '33%',
-        lineHeight: '1.5vw',
+        lineHeight: isSmallScreen ? '2.5vw' : isMediumScreen ? '2vw' : '1.5vw',
     };
 
     const buttonStyleFilled = {
@@ -71,80 +75,83 @@ function Services() {
 
 
     const gridCard = {
-
         display: 'grid', 
         gridTemplateColumns: isSmallScreen ? '1fr' : isMediumScreen ? '1fr 1fr' : '1fr 1fr 1fr', 
-        // gridTemplateRows: isSmallScreen ? 'auto' : isMediumScreen ? 'auto auto' : 'auto auto auto', 
-        height: '90vh', 
-        width: '80vw',
-        marginLeft: '8vw',
+        gridTemplateRows: isSmallScreen ? '1fr 1fr 1fr 1fr 1fr 1fr 1fr' : isMediumScreen ? '1fr 1fr 1fr 1fr' : '1fr 1fr', 
+        height: isSmallScreen ? '200vh' : '90vh', 
+        width: isSmallScreen ? '75vw' : (isMediumScreen ? '85vw' : '80vw'),
+        marginLeft: isSmallScreen ? '15vw' : (isMediumScreen ? '4vw' : '8vw'),
         paddingTop: '14vh',
-
-
+        gap: isSmallScreen && '1%'
     }
-
+    
     const columnStyleOne = {
         gridColumn: '1 / span 1', 
-        gridRow: '1 / span 2', 
-        backgroundColor: '#6C7689', 
-        width: '110%'
+        gridRow: isSmallScreen ? '1 / span 3' : isMediumScreen ? '1 / span 4' : '1 / span 2', 
+        backgroundColor: '#0F1C37', 
+        width: isSmallScreen ? '90%' : '110%',
+        position: 'relative',
+        height: '100%', 
+        
     }
-
+    
     const columnStyleTwo = {
-        gridColumn: '2 / span 1', 
-        gridRow: '1 / span 1', 
-        backgroundColor: 'rgba(234, 245, 245, 1)', 
-        width: '90%', height: '97.5%', 
-        borderRadius: 20, 
-        marginLeft: '20%',
-        boxShadow: '1px 5px 7px rgba(0, 0, 0, 0.3)'
-    }
-
+        gridColumn: isSmallScreen ? '1 / span 1' : '2 / span 1',
+        gridRow: isSmallScreen ? '4 / span 1' : isMediumScreen ? '1 / span 1' : '1 / span 1',
+        backgroundColor: 'rgba(234, 245, 245, 1)',
+        width: '90%',
+        height: '97.5%',
+        borderRadius: 20,
+        marginTop: isMediumScreen ? '2.5%' : '0%',
+        marginLeft: isSmallScreen ? '0%' : '20%',
+        boxShadow: '1px 5px 7px rgba(0, 0, 0, 0.3)',
+    };
+    
     const columnStyleTwoTwo = {
-        gridColumn: '2 / span 1', 
-        gridRow: '2 / span 1', 
-        backgroundColor: 'rgba(255, 240, 243, 1)', 
-        width: '90%', 
-        height: '97.5%', 
-        marginTop: '2.5%', 
-        borderRadius: 20,  
-        marginLeft: '20%',
-        boxShadow: '1px 5px 7px rgba(0, 0, 0, 0.3)'
-    }
-
+        gridColumn: isSmallScreen ? '1 / span 1' : '2 / span 1',
+        gridRow: isSmallScreen ? '5 / span 1' : isMediumScreen ? '2 / span 1' : '2 / span 1',
+        backgroundColor: 'rgba(255, 240, 243, 1)',
+        width: '90%',
+        height: '97.5%',
+        marginTop: isMediumScreen ? '2.5%' : '2.5%',
+        borderRadius: 20,
+        marginLeft: isSmallScreen ? '0%' :'20%',
+        boxShadow: '1px 5px 7px rgba(0, 0, 0, 0.3)',
+    };
+    
     const columnStyleThreeOne = {
-        gridColumn: '3 / span 1', 
-        gridRow: '1 / span 1', 
-        backgroundColor: 'rgba(255, 246, 240, 1)', 
-        width: '90%', 
-        height: '97.5%', 
-        borderRadius: 20,  
-        marginLeft: '15%',
-        boxShadow: '1px 5px 7px rgba(0, 0, 0, 0.3)'
-    }
-
+        gridColumn: isSmallScreen ? '1 / span 1' : isMediumScreen ? '2 / span 1' : '3 / span 1',
+        gridRow: isSmallScreen ? '6 / span 1' : isMediumScreen ? '3 / span 1' : '1 / span 1',
+        backgroundColor: 'rgba(255, 246, 240, 1)',
+        width: '90%',
+        height: '97.5%',
+        borderRadius: 20,
+        marginTop: isMediumScreen ? '2.5%' : '0%',
+        marginLeft: isSmallScreen ? '0%' : isMediumScreen ? '20%' : '15%',
+        boxShadow: '1px 5px 7px rgba(0, 0, 0, 0.3)',
+    };
+    
     const columnStyleThreeTwo = {
-        gridColumn: '3 / span 1', 
-        gridRow: '2 / span 1', 
-        backgroundColor: 'rgba(230, 255, 253, 1)', 
-        width: '90%', 
-        height: '97.5%', 
-        marginTop: '2.5%', 
-        borderRadius: 20,  
-        marginLeft: '15%',
-        boxShadow: '1px 5px 7px rgba(0, 0, 0, 0.3)'
-    }
-
+        gridColumn: isSmallScreen ? '1 / span 1' : isMediumScreen ? '2 / span 1' : '3 / span 1',
+        gridRow: isSmallScreen ? '7 / span 1' : isMediumScreen ? '4 / span 1' : '2 / span 1',
+        backgroundColor: 'rgba(230, 255, 253, 1)',
+        width: '90%',
+        height: '97.5%',
+        marginTop: isMediumScreen ? '2.5%' : '2.5%',
+        borderRadius: 20,
+        marginLeft: isSmallScreen ? '0%' : isMediumScreen ? '20%' : '15%',
+        boxShadow: '1px 5px 7px rgba(0, 0, 0, 0.3)',
+    };
 
     const gridCostCardStyle = {
         display: 'grid',
         gridTemplateColumns: isSmallScreen ? '1fr' : isMediumScreen ? '1fr 1fr' : '1fr 1fr 1fr', 
         gridTemplateRows: isMediumScreen ? 'auto auto auto' : 'auto auto',
-        height: isMediumScreen ? '180vh' : '90vh',
-        width: isSmallScreen ? '60vw' : '81.3vw',
-        marginLeft: isSmallScreen ? '8vw' : '8vw',
-        paddingTop: '17vh',
-        gap: '3vw'
+        height: '90vh',
+        width: isSmallScreen ? '75vw' : (isMediumScreen ? '90vw' : '81.3vw'),
+        marginLeft: isSmallScreen ? '15vw' : (isMediumScreen ? '4vw' : '8vw'),
+        paddingTop: '8vh',
+        gap: isSmallScreen ? '3vh': '3vw'
     };
     
     const gridCostCardOne = {
@@ -175,19 +182,18 @@ function Services() {
     }
 
 
-    const headerDiv = {position: 'relative', top: '14vh', left: '8vw', width: '100vw', zIndex: 2,}
+    const headerDiv = {
+        marginTop: isSmallScreen ? '10vh' : isMediumScreen ? '40vh' : '17vh', 
+        marginLeft: isSmallScreen ? '15vw' : '8vw',
+        width: '100vw', 
+        zIndex: 2000,
+    }
 
     const headerSecond = {
-        fontSize: 'calc(1.5vw + 1.5vh)',
+        fontSize: isSmallScreen ? 'calc(2.3vw + 2.3vh)' : isMediumScreen ? 'calc(1.9vw + 1.9vh)' : 'calc(1.5vw + 1.5vh)',
         color: '#084652',
         fontWeight: '600', 
     }
-
-    const imageContainerStyle = {
-        width: '29.3vw', 
-        height: '80.5vh', 
-        position: 'absolute'
-    };
     
     const overlayStyle = {
         width: '100%', 
@@ -263,32 +269,30 @@ function Services() {
             <div style={gridCard}>
             
                 <div style={columnStyleOne}>
-                    {/* Content of the first column goes here */}
-                    <div style = {imageContainerStyle}>
                         <Image 
                             src = '/services/deal.jpg'
                             fill
                             alt = 'deal'
                             quality={4}
+                            style = {{opacity: 0.5}}
                         />
-                        <div style = {overlayStyle}/>
-                        <h1 style = {header}>Voor iedereen een website op maat!</h1>
+                        <h2 style = {header}>Welke optie is het beste voor jou?</h2>
                         <p style = {paragraph}>Order norwegian dragon-scale tap-dancing fanged wizard grindylows werewolf wool. Head petrificus ministry-of-magic polyjuice knew. 
                         Chalice stroke remembrall hunt fat phials mudbloods unwilling banges. Shack yer in restricted charm treats crush who. 
                         Glory impedimenta parvati dervish dirigible dead dirt stairs. Out downfall wingardium you robes keeper sorcerer&apos;s spleens feast.</p>
 
                         <div    
-                            style={buttonStyleFilled} 
-                            >
-                                <Link href="/contact" style={linkStyle}>
-                                    <h6 style = {textStyle}>Maak een gratis afspraak</h6>
-                                </Link>
-                            </div>
-                                <div style={buttonStyleStroke}>    
-                                <h6 style = {textStyleStroke}>Maak de online Quiz</h6>
-                            </div>
+                        style={buttonStyleFilled} 
+                        >
+                            <Link href="/contact" style={linkStyle}>
+                                <h2 style = {textStyle}>Maak een gratis afspraak</h2>
+                            </Link>
                         </div>
-                    </div>
+                            <div style={buttonStyleStroke}>    
+                            <h2 style = {textStyleStroke}>Maak de online Quiz</h2>
+                        </div>
+                </div>
+
 
                 
                 <div style={columnStyleTwo}>

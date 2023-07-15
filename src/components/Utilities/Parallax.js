@@ -5,6 +5,7 @@ import { ParallaxProvider,  ParallaxBanner, } from 'react-scroll-parallax';
 import { useEffect, useState, useRef, useCallback} from 'react';
 import Link from 'next/link'
 import debounce from 'lodash.debounce';
+import { useMediaQuery } from 'react-responsive';
 
 function preloadImage(url) {
     const img = new window.Image();
@@ -12,140 +13,232 @@ function preloadImage(url) {
   }
   
 export default function  Parallax(){
+    const isMediumScreen = useMediaQuery({ query: '(max-width: 1600px)' });
+    const isSmallScreen = useMediaQuery({ maxWidth: 700 });
+    const isSmallScreenHeight = useMediaQuery({ maxHeight: 1000 });
+
     const gallaryRef = useRef(null); // Create a ref
     const [scrollThresholdReached, setScrollThresholdReached] = useState(false);
     const [gallaryHeight, setGallaryHeight] = useState(0);
     const [loadOtherComponents, setLoadOtherComponents] = useState(false);
 
-    const buttonStyleFilled = {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      width: '80%',
-      height: '5.5vh',
-      backgroundColor: '#FF9449', // change color on hover
-      borderRadius: 20,
-      marginRight: 30,
-      zIndex: 1000,
-      position: 'absolute',
-      top: '75%',
+    const imageUrlsBig = [
+        '/homepage/cityDay4-4.jpg',
+        '/homepage/cityDay5.png',
+        '/homepage/cityDay3-2.png',
+        '/homepage/cityDay2-2.png',
+        '/homepage/cityDay1-2.png',
+        '/homepage/cityNight3-3.jpg',
+        '/homepage/cityNightCloud.png',
+        '/homepage/cityNightMoon.png',
+        '/homepage/cityNight2-2-2.png',
+        '/homepage/cityNight1-2.png'
+      ];
+      
   
-  };
-  
-  const buttonStyleFilled2 = {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '80%',
-    height: '5.5vh',
-    backgroundColor: '#FF9449', // change color on hover
-    borderRadius: 20,
-    marginRight: 30,
-    zIndex: 1000,
-  };
-  
-  const buttonFilled2Link = { display: 'block', height: '100%', color: 'white', textDecoration: 'none', marginTop: '2.4vh' }
-
-  const buttonStyleStroke = {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '80%',
-    height: '5.5vh',
-    borderColor: '#FF9449', // change color on hover
-    borderWidth: 2,
-    borderRadius: 20,
-    marginRight: 30,
-    zIndex: 1000,
-    position: 'absolute',
-    top: '83%',
-  };
-  
-  const buttonStyleStroke2 = {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '80%',
-    height: '5.5vh',
-    borderColor: '#FF9449', // change color on hover
-    borderWidth: 2,
-    borderRadius: 20,
-    zIndex: 1000,
-  };
-  
-    const imageUrls = [
-      '/homepage/cityDay4-4.jpg',
-      '/homepage/cityDay5.png',
-      '/homepage/cityDay3-2.png',
-      '/homepage/cityDay2-2.png',
-      '/homepage/cityDay1-2.png',
-      '/homepage/cityNight3-3.jpg',
-      '/homepage/cityNightCloud.png',
-      '/homepage/cityNightMoon.png',
-      '/homepage/cityNight2-2-2.png',
-      '/homepage/cityNight1-2.png'
+    const imageUrlsMedium = [
+        '/homepage/cityDay4-4.jpg',
+        '/homepage/cityDay5.png',
+        '/homepage/medium/cityDay3-2-medium.png',
+        '/homepage/medium/cityDay2-5-medium.png',
+        '/homepage/medium/cityDay1-3-medium.png',
+        '/homepage/cityNight3-3.jpg',
+        '/homepage/cityNightCloud.png',
+        '/homepage/cityNightMoon.png',
+        '/homepage/medium/cityNight2-2-3-medium.png',
+        '/homepage/medium/cityNight1-2-medium.png'
     ];
-    
+
+    const imageUrlsSmall = [
+        '/homepage/cityDay4-4.jpg',
+        '/homepage/cityDay5.png',
+        '/homepage/small/cityDay3-4-small.png',
+        '/homepage/small/cityDay2-8-small.png',
+        '/homepage/small/cityDay1-3-small.png',
+        '/homepage/cityNight3-3.jpg',
+        '/homepage/cityNightCloud.png',
+        '/homepage/cityNightMoon.png',
+        '/homepage/small/cityNight2-2-3-small.png',
+        '/homepage/small/cityNight1-2-small.png'
+    ];
+
+    const imageUrls = isSmallScreen ? imageUrlsSmall : (isMediumScreen ? imageUrlsMedium : imageUrlsBig);
     imageUrls.forEach(preloadImage);
-  
+      
+    const buttonStyleFilled = {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '80%',
+        height: '5.5vh',
+        backgroundColor: '#FF9449', // change color on hover
+        borderRadius: 20,
+        marginRight: 30,
+        zIndex: 1000,
+        position: 'absolute',
+        top: '75%',
+    
+    };
+    
+    const buttonStyleFilled2 = {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: isMediumScreen ? '90%' : '80%',
+        height: '5.5vh',
+        backgroundColor: '#FF9449', // change color on hover
+        borderRadius: 20,
+        marginRight: 30,
+        zIndex: 1000,
+    };
+    
+    const buttonFilled2Link = { 
+        display: 'block', 
+        justifyContent: 'center',
+        height: '100%', 
+        color: 'white', 
+        textDecoration: 'none', 
+        marginTop: isMediumScreen ? '2.6vh' : '2.4vh' 
+    }
+
+    const buttonStyleStroke = {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '80%',
+        height: '5.5vh',
+        borderColor: '#FF9449', // change color on hover
+        borderWidth: 2,
+        borderRadius: 20,
+        marginRight: 30,
+        zIndex: 1000,
+        position: 'absolute',
+        top: '83%',
+    };
+    
+    const buttonStyleStroke2 = {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: isMediumScreen ? '90%' : '80%',
+        height: '5.5vh',
+        borderColor: '#FF9449', // change color on hover
+        borderWidth: 2,
+        borderRadius: 20,
+        zIndex: 1000,
+        marginTop: isSmallScreen && 20
+    };
+    
+    const buttonContainer = {
+         position: 'absolute', 
+         width: isSmallScreen ? '65vw' : isMediumScreen ? '40vw' : '30vw', 
+         height: '104vh', 
+         left: '-1vw' 
+    };
+
     const headerStyle = {
-        fontSize: 'calc(1.6vw + 1.6vh)',
+        fontSize:  'calc(1.6vw + 1.6vh)',
         fontWeight: 'bold', 
         lineHeight: 1.2,
         zIndex: 1, 
         position: 'absolute', 
-        top: '12%', 
+        width: isSmallScreen ? '90%' : '100%',
+        top: isSmallScreen ? (isSmallScreenHeight ? '11%' : '1.5%') : '8%', 
         left: 0,
         color: 'white', 
         textShadow: '3px 3px 6px rgba(0, 0, 0, 0.3)'
     };
+
     const paragraphStyle = {
         fontSize: 'calc(0.95vw + 0.95vh)',
         fontWeight: 'bold', 
         zIndex: 1, 
         position: 'absolute', 
-        top: '25%', 
+        width: isSmallScreen ? '70%' : '75%',
+        top: isSmallScreen ? (isSmallScreenHeight ? '18%' : '12%') : '19%', 
         left: 0,
         color: 'white', 
         textShadow: '3px 3px 6px rgba(0, 0, 0, 0.3)'
     };
-    const linkStyle = { display: 'block', height: '100%', color: 'white', textDecoration: 'none', marginTop: '1.7vh' };
-    const headingStyle = {fontSize: 'calc(0.95vw + 0.95vh)', textAlign: 'center'};
+
+    const linkStyle = { 
+        display: 'block', 
+        height: '100%', 
+        color: 'white', 
+        textDecoration: 'none', 
+        marginTop: isSmallScreen ? '2.6vh' : '1.7vh' 
+    };
+
+    const headingStyle = {
+        fontSize: isSmallScreen ? 'calc(1.15vw + 1.15vh)': isMediumScreen ? 'calc(0.95vw + 0.95vh)': 'calc(0.95vw + 0.95vh)', 
+        textAlign: 'center'
+    };
+
+    const secondButtonText = {
+        fontSize: isSmallScreen ? 'calc(1.35vw + 1.35vh)' : isMediumScreen ? 'calc(0.75vw + 0.75vh)' : 'calc(0.85vw + 0.85vh)', 
+        textAlign: 'center'
+    }
 
     const secondHeaderStyle = {
-        fontSize: 'calc(1.2vw + 1.4vh)', 
+        fontSize: isSmallScreen ? 'calc(1.65vw + 1.65vh)' : 'calc(1.2vw + 1.4vh)', 
         fontWeight: 'bold', 
         lineHeight: 1.2,
         zIndex: 1, 
         position: 'absolute', 
-        top: '0vh', 
+        top: '3vh', 
         left: 0,
         color: '#F4FDFF', 
         textShadow: '3px 3px 6px rgba(0, 0, 0, 0.3)'
     };
+
     const secondParagraphStyle = {
-        fontSize: 'calc(0.8vw + 0.8vh)', 
+        fontSize: isSmallScreen ? 'calc(1.15vw + 1.15vh)' : 'calc(0.75vw + 0.75vh)', 
         fontWeight: '400', 
         zIndex: 1, 
         position: 'absolute', 
-        top: '13%', 
+        top: isSmallScreen ? '12vh' : '14vh', 
         left: 0,
         color: '#D0F6FD', 
         textShadow: '3px 3px 6px rgba(0, 0, 0, 0.3)'
     };
+
     const endContainerStyle = { 
         position: 'relative', 
-        width: '35vw', 
+        width: isSmallScreen ? '80vw' : isMediumScreen ? '40vw' : '35vw', 
         height: '104vh',
         display: 'flex',
-        flexDirection: 'row',
-        marginTop: '33vh',
+        flexDirection: isSmallScreen ? 'column' : 'row',
+        paddingTop: isSmallScreen && '33vh',
+        marginTop: !isSmallScreen && '33vh',
     };
-    const narrowContainerStyle = { position: 'absolute', width: '100vw', height: '104vh' };
-    const blackContainerStyle = { position: 'absolute', width: '100vw', height: '100vh'};
-    const buttonContainer = { position: 'absolute', width: '30vw', height: '104vh', left: '-1vw' };
-    const video = {width: '40vw', height: '40vh', position: 'absolute', left: '-45vw', top: '0vh'}
-    const videoText = { position: 'absolute', width: '36vw', height: '100vh'}
+
+    const narrowContainerStyle = {
+        position: 'absolute',
+        width: '100vw', 
+        height: '104vh' 
+    };
+
+    const blackContainerStyle = { 
+        position: 'absolute', 
+        width: '100vw', 
+        height: '100vh'
+    };
+
+    const video = {
+        width: isSmallScreen ? '80vw' : '40vw', 
+        height: isSmallScreen ? '30vh' : '43vh', 
+        position: 'absolute', 
+        left: '-45vw', 
+        top: 0
+    }
+
+    const videoText = { 
+        position: isSmallScreen ? 'relative': 'absolute',
+        width: isSmallScreen ? '80vw' : '36vw', 
+        left: isSmallScreen && '-45vw', 
+        height: '100vh',
+        top: isSmallScreen ? '32vh' : '0vh',
+    }
 
     
     const animationOne = [
@@ -167,7 +260,7 @@ export default function  Parallax(){
       },
       {
         children: (
-          <div style={{position: 'absolute', width: '8vw', height: '8vw', top: '13vh', left: '12vw'}}>
+          <div style={{position: 'absolute', width: isSmallScreen ? '14vw' : '8vw', height: isSmallScreen ? '14vw' : '8vw', top: '13vh', left: isSmallScreen ? '8vw' :'12vw'}}>
               <Image src={imageUrls[1]} 
               fill
               alt="cityDay5"
@@ -176,7 +269,7 @@ export default function  Parallax(){
               />
           </div>
         ),
-        translateX: [80, -100],
+        translateX: isMediumScreen ?[165, -100] : [80, -100],
         translateY: [19.35, 91.8],
         opacity: [2.4, -2.25],
       },
@@ -194,10 +287,11 @@ export default function  Parallax(){
         ),
         translateY: [14.7, 130],
         opacity: [1.75, -0.25],
+        translateX: isMediumScreen && [15, 40]
       },
       {
         children: (
-          <div style={{...narrowContainerStyle, height: '46vh', top: '28.7vh'}}>
+          <div style={{...narrowContainerStyle, height: '46vh', top: '28.7vh', width: isSmallScreen ? '60vw' : '100vw'}}>
               <Image 
               src={imageUrls[3]} 
               quality={4}
@@ -207,12 +301,13 @@ export default function  Parallax(){
               />
           </div>
         ),
-        translateY: [14.7, 130],
+        translateY: [16.2, 130],
         opacity: [1.75, -0.25],
+        translateX: isSmallScreen && [44,44]
       },
       {
         children: (
-          <div style={{...narrowContainerStyle, top: '32.55vh', height: '72.4vh'}}>
+          <div style={{...narrowContainerStyle, top: '32.55vh', height: '72.4vh', }}>
               <Image 
               src={imageUrls[4]} 
               fill
@@ -274,7 +369,7 @@ export default function  Parallax(){
       },
       {
         children: (
-            loadOtherComponents && (
+            loadOtherComponents && !isSmallScreen && (
                 <div style={{...blackContainerStyle, width: '5vw', height: '3vh', top: '-50%'}}>
                     <Image 
                     src={imageUrls[6]} 
@@ -291,7 +386,7 @@ export default function  Parallax(){
       },
       {
         children: (
-            loadOtherComponents && (
+            loadOtherComponents && !isSmallScreen && (
                 <div style={{...blackContainerStyle, width: '10vw', height: '8vh', top: '-0.3%'}}>
         
                     <Image 
@@ -317,16 +412,15 @@ export default function  Parallax(){
             loading="lazy"
             fill
             alt="cityNight2"
-            
             />
           </div>
         )
         ),
-        translateY: scrollThresholdReached ? [50, 50] : [90, -5.5],
+        translateY: scrollThresholdReached ? [50, 50] : [90, -5.5],  
       },
       {
         children: (
-          <div style={{...narrowContainerStyle, height: '75vh', top: '25vh'}}>
+          <div style={{...narrowContainerStyle, height: isSmallScreen ? '60vh' : '75vh', top: '25vh'}}>
   
             <Image 
             src={imageUrls[9]} 
@@ -337,7 +431,7 @@ export default function  Parallax(){
             />
           </div>
         ),
-        translateY: scrollThresholdReached ? [50, 50] : [41.5, 60.8],
+        translateY: scrollThresholdReached ? isSmallScreen ? [54, 54] : [50, 50] : isSmallScreen ? [41.5, 68.8] : [41.5, 60.8],
       },
       {
         children: (
@@ -376,7 +470,7 @@ export default function  Parallax(){
               </section>
             </section>
         ),
-        translateY: [90, 12.5],
+        translateY: isSmallScreen ? [90, 0] : [90, 12.5],
         translateX: [100, 35]
       },
     ]
