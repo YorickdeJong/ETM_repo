@@ -56,7 +56,7 @@ const NavBarButton = ({ pathnames, children, href, isMediumScreen, isSmallScreen
 const NavBar = ({pathname}) => {
   const pathnames = pathname === '/'
   const isMediumScreen = useMediaQuery({ query: '(max-width: 1600px)' });
-  const isSmallScreen = useMediaQuery({ maxWidth: 600 });
+  const isSmallScreen = useMediaQuery({ maxWidth: 700 });
 
   return (
     <nav 

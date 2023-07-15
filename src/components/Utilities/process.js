@@ -140,7 +140,7 @@ function TextBlock({ text, title, image, isImageRight, index, isMediumScreen, is
 
 export default function Process() {
     const isMediumScreen = useMediaQuery({ query: '(max-width: 1600px)' });
-    const isSmallScreen = useMediaQuery({ maxWidth: 600 });
+    const isSmallScreen = useMediaQuery({ maxWidth: 700 });
     const [loadOtherComponents, setLoadOtherComponents] = useState(false);
 
     const scrollIndicator = {

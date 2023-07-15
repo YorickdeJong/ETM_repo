@@ -14,7 +14,7 @@ function preloadImage(url) {
   
 export default function  Parallax(){
     const isMediumScreen = useMediaQuery({ query: '(max-width: 1600px)' });
-    const isSmallScreen = useMediaQuery({ maxWidth: 600 });
+    const isSmallScreen = useMediaQuery({ maxWidth: 700 });
 
     const gallaryRef = useRef(null); // Create a ref
     const [scrollThresholdReached, setScrollThresholdReached] = useState(false);
@@ -51,9 +51,9 @@ export default function  Parallax(){
     const imageUrlsSmall = [
         '/homepage/cityDay4-4.jpg',
         '/homepage/cityDay5.png',
-        '/homepage/small/cityDay3-2-small.png',
+        '/homepage/small/cityDay3-4-small.png',
         '/homepage/small/cityDay2-8-small.png',
-        '/homepage/small/cityDay1-2-small.png',
+        '/homepage/small/cityDay1-3-small.png',
         '/homepage/cityNight3-3.jpg',
         '/homepage/cityNightCloud.png',
         '/homepage/cityNightMoon.png',
@@ -130,7 +130,7 @@ export default function  Parallax(){
     
     const buttonContainer = {
          position: 'absolute', 
-         width: isSmallScreen ? '70vw' : isMediumScreen ? '40vw' : '30vw', 
+         width: isSmallScreen ? '50vw' : isMediumScreen ? '40vw' : '30vw', 
          height: '104vh', 
          left: '-1vw' 
     };
@@ -141,7 +141,7 @@ export default function  Parallax(){
         lineHeight: 1.2,
         zIndex: 1, 
         position: 'absolute', 
-        top: '12%', 
+        top: '15%', 
         left: 0,
         color: 'white', 
         textShadow: '3px 3px 6px rgba(0, 0, 0, 0.3)'
@@ -298,9 +298,9 @@ export default function  Parallax(){
               />
           </div>
         ),
-        translateY: [14.7, 130],
+        translateY: [16.2, 130],
         opacity: [1.75, -0.25],
-        translateX: isSmallScreen && [45,45]
+        translateX: isSmallScreen && [44,44]
       },
       {
         children: (
