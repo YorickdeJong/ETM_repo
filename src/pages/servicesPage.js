@@ -326,7 +326,7 @@ function Services() {
                 
             <div style = {headerDiv}>
                 <h1 style = {headerSecond}>
-                    Wij hebben jouw beste pakket</h1>
+                    De beste pakketen op de markt</h1>
             </div> 
 
             <div style={gridCostCardStyle}>
@@ -337,7 +337,7 @@ function Services() {
                         stars = {[true, false, false]}
                         starsMarginLeft = '14vw'
                         title = 'Basis'
-                        price = '4000'
+                        price = '2250-3000'
                     />
                 </div>
 
@@ -348,7 +348,7 @@ function Services() {
                         stars = {[true, true, false]}
                         starsMarginLeft = '8vw'
                         title = 'Standaard'
-                        price = '8000'
+                        price = '6000-11000'
                     />      
                 </div>
 
@@ -359,7 +359,7 @@ function Services() {
                         stars = {[true, true, true]}
                         starsMarginLeft = '8.5vw'
                         title = 'Custom'
-                        price = '15000'
+                        price = '13000'
                     /> 
                 </div>
             </div>

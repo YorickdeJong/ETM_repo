@@ -323,11 +323,13 @@ export default function  Parallax(){
       },
       {
         children: (
-          <div style={buttonContainer}>
-            <h2 style  = {headerStyle}>
-            Wij bouwen jouw online presence met passie</h2>
-                <p style  = {paragraphStyle}>ETM helpt jou met webdeisng, marketing en zorgt ervoor dat jouw ambities online te zien zijn</p>
-          </div>
+          <section style={buttonContainer}>
+                <section>
+                    <h1 style  = {headerStyle}>
+                    Websites maken met passie</h1>
+                      <h2 style  = {paragraphStyle}>ETM helpt jou met webdesign, webmarketing en zorgt ervoor dat jouw ambities online te zien zijn</h2>
+                </section>
+          </section>
         ),
         
         translateY: [18.4, 101.8],
@@ -335,16 +337,16 @@ export default function  Parallax(){
       },
       {
         children: (
-      <div style={buttonContainer}>
-          <div style={buttonStyleFilled}>
+      <section style={buttonContainer}>
+          <section style={buttonStyleFilled}>
               <Link href="/contact" style={linkStyle}>
-                  <h2 style = {headingStyle}>Maak een gratis afspraak</h2>
+                  <h6 style = {headingStyle}>Maak een gratis afspraak</h6>
               </Link>
-          </div>
-          <div style={buttonStyleStroke}>    
-              <h2 style = {{...headingStyle, color: '#FF9449'}}>Maak de online Quiz</h2>
-          </div>      
-      </div>
+          </section>
+          <section style={buttonStyleStroke}>    
+              <h6 style = {{fontSize: 28, textAlign: 'center', color: '#FF9449'}}>Maak de online Quiz</h6>
+          </section>      
+      </section>
         ),
         
         translateY: [18.4, 101.8],
@@ -441,38 +443,32 @@ export default function  Parallax(){
       },
       {
         children: (
-            loadOtherComponents && (
-                <div>
-                    <div style = {video}>
-                        <Image 
-                        src={isMediumScreen ? '/homepage/medium/meeting-medium.png' : '/homepage/meeting.jpg'} 
-                        fill
-                        alt="meeting"
-                        quality={10}
-                        style = {{borderRadius: 20}}
-                    />
-                    </div>
-                <div style={videoText}>
-                        <div>
-                            <h2 style  = {secondHeaderStyle}>Wie zijn we en wat kunnen we voor jou betekenen?</h2>
-                            <p style  = {secondParagraphStyle}>
-                            Charm out quills tonight or mellow diadem teacup diddykins letters. Chess vanishing 
-                            armchairs potter lady motorcycle orbs spleens. Peg-leg newt cakes quaffle minister bean. Nearly-headless parseltongue eeylops petrified with 
-                            I his plums. Hunt portrait swiveling granger hearing tonight bertie shrieking quidditch.</p>
-                        </div>
-                        <div style={endContainerStyle}>
-                            <div style={buttonStyleFilled2}>
-                                <Link href="/contact" style={buttonFilled2Link}>
-                                    <h2 style = {secondButtonText}>Maak een gratis afspraak</h2>
-                                </Link>
-                                </div>
-                            <div style={buttonStyleStroke2}>    
-                                <h2 style = {{...secondButtonText, color: '#FF9449'}}>Maak de online Quiz</h2>
-                            </div>     
-                        </div>
+            <section>
+                <div style = {video}>
+                  <Image 
+                  src={'/homepage/meeting.png'} 
+                  fill
+                  alt="meeting"
+                  />
                 </div>
-                </div>
-            )
+              <section style={videoText}>
+                    <section>
+                        <h4 style  = {secondHeaderStyle}>Wie zijn we en wat kunnen we voor jou betekenen?</h4>
+                          <h5 style  = {secondParagraphStyle}>
+                         Een groep enthousiaste mensen die geloven in dat het maken van een aantrekekelijke website het verschil kunnen maken .</h5>
+                    </section>
+                    <section style={endContainerStyle}>
+                          <section style={buttonStyleFilled2}>
+                              <Link href="/contact" style={buttonFilled2Link}>
+                                  <h2 style = {{fontSize: 25, textAlign: 'center'}}>Maak een gratis afspraak</h2>
+                              </Link>
+                            </section>
+                          <section style={buttonStyleStroke2}>    
+                              <h2 style = {{fontSize: 25, textAlign: 'center', color: '#FF9449'}}>Maak de online Quiz</h2>
+                          </section>     
+                    </section>
+              </section>
+            </section>
         ),
         translateY: isSmallScreen ? [90, 0] : [90, 12.5],
         translateX: [100, 35]

@@ -216,28 +216,28 @@ export default function Process() {
     
     const texts = [
         {
-            text: `Wij helpen jou gratis opweg met jouw project. We zullen je tips geven over jouw idee en adviseren Wat voor jou de beste keuze is.`,
-            title: "Gratis Gesprek",
+            text: `Bij ons krijg je gratis ondersteuning op het pad naar je eigen website. We geven advies over jouw concept en helpen je bij het maken van de best mogelijke keuze.`,
+            title: "Gratis Consultatie",
             image: '/process/free_consultation1.png'
         },
         {
-            text: "Mocht jij met ons verder willen als partner, Dan zullen we met jou een strategie verzinnen voor jouw idee. Dit houd in dat wij een markt analyse maken om voor jou de beste stappen te bedenken voor succes",
-            title: "Strategie",
+            text: "Besluit je met ons samen te werken? Dan ontwikkelen we een strategie die specifiek op jouw idee is afgestemd. Daarbij hoort een grondige marktanalyse, zodat we de meest effectieve stappen voor succes kunnen bepalen.",
+            title: "Strategieontwikkeling",
             image: '/process/strategy1.png'
         },
         {
-            text: "Nu de strategie bedacht is, gaan we beginnen aan het ontwerp. We geven jou op basis van onze markt analyse een paar opties omtrendt het design van de website. ",
-            title: "Design",
+            text: "Met de strategie op zak, stappen we over naar het ontwerpproces. We presenteren een reeks designopties, gebaseerd op de uitkomst van onze marktanalyse en jouw specifieke behoeften.",
+            title: "Ontwerp",
             image: '/process/design1.png'
         },
         {
-            text: "Het design zal worden omgezet in een functionele website die online te zien zal zijn. Verder zullen we jouw website optimaliseren met onze marketing, zodat deze hoog in de google ranking komt.",
+            text: "Zodra het ontwerp klaar is, transformeren we dat naar een volledig functionele website. We zorgen er ook voor dat jouw website goed geoptimaliseerd is, zodat hij hoog in de zoekresultaten van Google komt te staan.",
             title: "Implementatie",
             image: '/process/deploy1.png'
         }
-        
+
         // ...More text strings here...
-      ];
+    ];
 
     return (
         (
@@ -261,7 +261,7 @@ export default function Process() {
                         fontWeight: 'bold', 
                         textAlign: 'center',
                         textShadow: '4px 4px 8px rgba(0, 0, 0, 0.1)'}}>
-                        HOE ZIET JOUW PROCESS ERUIT?</h1>
+                        Hoe ontwerpen wij jouw website?</h2>
                     </div>
                         {texts.map((text, i) => (
                             <TextBlock 

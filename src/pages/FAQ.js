@@ -150,9 +150,9 @@ export default function FAQ() {
             <NavBar />
             <div style={styles.titleContainer}>
                 <h1 style={styles.title}>Frequently Asked Questions</h1>
-                <p style={styles.subtitle}>
+                <h2 style={styles.subtitle}>
                 Bent u er nog niet helemaal uit of heeft u een brandende vraag? Geen zorgen! Op deze pagina beantwoorden we vragen die vaak worden gesteld
-                </p>
+                </h2>
             </div> 
             <div style={styles.grid}>
                 {faqs.map((faq, i) => (
@@ -161,9 +161,9 @@ export default function FAQ() {
                             {faq.icon}
                         </div>
                         <div style={styles.contentContainer}>
-                            <h2 style={styles.itemTitle}>
+                            <h3 style={styles.itemTitle}>
                                 {faq.title} 
-                            </h2>
+                            </h3>
                             <p style={styles.itemText}>
                                 {faq.text}
                             </p>
