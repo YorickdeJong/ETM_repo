@@ -25,9 +25,9 @@ export default function  Parallax(){
     const imageUrlsBig = [
         '/homepage/cityDay4-4.jpg',
         '/homepage/cityDay5.png',
-        '/homepage/cityDay3-2.png',
-        '/homepage/cityDay2-2.png',
-        '/homepage/cityDay1-2.png',
+        '/homepage/cityDay3-6.png',
+        '/homepage/city-background-4-4.png',
+        '/homepage/city-foreground-5.png',
         '/homepage/cityNight3-3.jpg',
         '/homepage/cityNightCloud.png',
         '/homepage/cityNightMoon.png',
@@ -53,8 +53,10 @@ export default function  Parallax(){
         '/homepage/cityDay4-4.jpg',
         '/homepage/cityDay5.png',
         '/homepage/small/cityDay3-4-small.png',
-        '/homepage/small/cityDay2-8-small.png',
-        '/homepage/small/cityDay1-3-small.png',
+        '/homepage/small/city-background3.png',
+        '/homepage/small/city-foreground3.png',
+        // '/homepage/small/cityDay2-8-small.png',
+        // '/homepage/small/cityDay1-3-small.png',
         '/homepage/cityNight3-3.jpg',
         '/homepage/cityNightCloud.png',
         '/homepage/cityNightMoon.png',
@@ -133,7 +135,7 @@ export default function  Parallax(){
          position: 'absolute', 
          width: isSmallScreen ? '65vw' : isMediumScreen ? '40vw' : '30vw', 
          height: '104vh', 
-         left: isSmallScreen && isSmallScreenHeight ? '-3vw' : '-1vw' 
+         left: isSmallScreen && isSmallScreenHeight ? '-5vw' : '-1vw' 
     };
 
     const headerStyle = {
@@ -249,7 +251,7 @@ export default function  Parallax(){
               src={imageUrls[0]} 
               fill
               alt="cityDay4"  
-              quality={40}
+              quality={isSmallScreen ? 100 : 40}
               priority={true}
               />
           </div>
@@ -275,12 +277,12 @@ export default function  Parallax(){
       },
       {
         children: (
-          <div style={{...narrowContainerStyle, right: '16vw', height: '80vh', top: '8vh', width: '85vw'}}>
+          <div style={{...narrowContainerStyle, right: !isSmallScreen && !isMediumScreen ? '19.6vw' : '16vw', height:  '80vh', top: !isSmallScreen && !isMediumScreen ? '4vh' : '8vh', width: !isSmallScreen && !isMediumScreen ? '50vw' : '85vw'}}>
               <Image 
               src={imageUrls[2]} 
               fill
                 alt="cityDay3" 
-                quality={60}    
+                quality={isSmallScreen ? 100 : 70}    
                 priority={true}  
               />
           </div>
@@ -294,7 +296,7 @@ export default function  Parallax(){
           <div style={{...narrowContainerStyle, height: '46vh', top: '28.7vh', width: isSmallScreen ? '60vw' : '100vw'}}>
               <Image 
               src={imageUrls[3]} 
-              quality={4}
+              quality={isSmallScreen ? 100 : 10}
               fill
               alt="cityDay2"  
               priority={true}
@@ -313,7 +315,7 @@ export default function  Parallax(){
               fill
               alt="cityDay1"
               priority={true}
-              quality={70}
+              quality={isSmallScreen ? 100 : 80}
               />
           </div>
         ),

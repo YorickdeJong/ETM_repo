@@ -49,7 +49,7 @@ function TextBlock({ text, title, image, isImageRight, index, isMediumScreen, is
     }
     
     const titleContainer = {  
-        width: isSmallScreen ? '30vw' : '23.5vw', 
+        width: isSmallScreen ? '30vw' : '25vw', 
         height: '5.5vh', 
         backgroundColor: 'rgba(0, 201,201,1)', 
         borderRadius: 20, }
@@ -76,14 +76,15 @@ function TextBlock({ text, title, image, isImageRight, index, isMediumScreen, is
     const rightImageContainer = {
         marginLeft: '19vw', 
         width: isSmallScreen ? '32vw' : isMediumScreen ? '24vw' : '18vw',
-        height: isSmallScreen ? '22vh' : '30vh', 
+        height: isSmallScreen ? '17vh' : '30vh', 
         position: 'relative'
     }
     
     const leftImageContainer = {
         width: isSmallScreen ? '32vw' : isMediumScreen ? '24vw' : '18vw',
-        height: isSmallScreen ? '22vh' : '30vh', 
-        position: 'relative'
+        height: isSmallScreen ? '17vh' : '30vh', 
+        position: 'relative',
+        marginTop: isSmallScreen ? '3vh' : '0vh'
     }
 
     return (
@@ -104,7 +105,7 @@ function TextBlock({ text, title, image, isImageRight, index, isMediumScreen, is
                                 </div>
                             }
                         </div>
-                        <div style = {rightImageContainer}>
+                        <div style = {{...rightImageContainer, marginTop: index === 0 && '4vh'}}>
                             <Image src={image}    
                                 fill
                                 alt='image'
