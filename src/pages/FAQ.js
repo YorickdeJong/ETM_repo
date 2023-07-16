@@ -127,7 +127,7 @@ export default function FAQ() {
         },
         itemTitle: {
             width: isSmallScreen ? '70vw' : isMediumScreen ? '60vw' : '30vw', 
-            fontSize: isSmallScreen ? 18 : isMediumScreen ? 'calc(1.9vw : 1.9vh)' : 28, 
+            fontSize: isSmallScreen ? 'calc(1.1vw + 1.1vh)' : isMediumScreen ? 'calc(1.9vw : 1.9vh)' : 28, 
             color: '#8A8889', 
             lineHeight: '130%', 
             margin: 0, 
@@ -136,7 +136,7 @@ export default function FAQ() {
         },
         itemText: {
             width: isSmallScreen ? '70vw' : isMediumScreen ? '60vw' : '30vw', 
-            fontSize: isSmallScreen ? 14 : isMediumScreen ? '2.05vw' : 24, 
+            fontSize: isSmallScreen ? 'calc(0.85vw + 0.85vh)' : isMediumScreen ? '2.05vw' : 24, 
             color: '#8A8889', 
             lineHeight: '130%', 
             margin: 0, 

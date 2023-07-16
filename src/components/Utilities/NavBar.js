@@ -55,14 +55,14 @@ const NavBarButton = ({ pathnames, children, href, isMediumScreen, isSmallScreen
   );
 };
 
-const DropdownMenu = ({ links, pathnames, isSmallScreen, isMediumScreen }) => {
+const DropdownMenu = ({ links, pathnames, isSmallScreenHeight, isSmallScreen, isMediumScreen }) => {
   return (
     <div style={{
       position: 'absolute',
-      right: -18,
-      top: '4.5vh',
+      right: isSmallScreenHeight ? 0 : -18,
+      top: isSmallScreenHeight ? '7vh' : '4.5vh',
       backgroundColor: 'rgba(230, 235, 230, 1)',
-      width: '30vw',
+      width: isSmallScreenHeight ? '35vw' : '30vw',
       zIndex: 1000,
       borderRadius: 20,
       boxShadow: '0px 8px 16px 0px rgba(0,0,0,0.3)'
@@ -88,7 +88,8 @@ const NavBar = ({pathname}) => {
   const pathnames = pathname === '/'
   const isMediumScreen = useMediaQuery({ query: '(max-width: 1600px)' });
   const isSmallScreen = useMediaQuery({ maxWidth: 700 });
-
+  const isSmallScreenHeight = useMediaQuery({ maxHeight: 1000 });
+  
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const MenuIcon = () => (
@@ -137,6 +138,7 @@ const NavBar = ({pathname}) => {
             pathnames={pathnames}
             isSmallScreen={isSmallScreen}
             isMediumScreen={isMediumScreen}
+            isSmallScreenHeight = {isSmallScreenHeight}
           /> 
         </>
         ) : (

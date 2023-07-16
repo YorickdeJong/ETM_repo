@@ -15,7 +15,7 @@ export default function Tile({image, text, imageWidth}) {
 
     const paragraphStyle = {
         textAlign: !isSmallScreen && 'center', 
-        fontSize: isSmallScreen ? 15.5 : isMediumScreen ? 17 :  22,
+        fontSize: isSmallScreen ? '3vw' : isMediumScreen ? 17 :  22,
         color: 'black',
     }
 

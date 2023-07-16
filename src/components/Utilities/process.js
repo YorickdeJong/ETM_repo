@@ -49,34 +49,37 @@ function TextBlock({ text, title, image, isImageRight, index, isMediumScreen, is
     }
     
     const titleContainer = {  
-        width: isSmallScreen ? '31vw' : '25vw', 
-        height: '5.5vh', 
+        width: isSmallScreen ? '33vw' : '25vw', 
+        height: isSmallScreen ? '4vh' :  '5.5vh', 
         backgroundColor: 'rgba(0, 201,201,1)', 
-        borderRadius: 20, }
-    
-    const titleStyle = {
-        fontSize: isSmallScreen ? 14 : 'calc(0.9vw + 0.9vh)', 
-        textAlign: 'center', 
-        marginTop: '1vh'
+        borderRadius: 20, 
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center' // Added this
     }
     
     const paragraphContainer = { 
-        width: isSmallScreen ? '31vw' : '25vw',
-        height: '5.5vh', 
+        width: isSmallScreen ? '33vw' : '25vw',
+        height: isSmallScreen ? '4vh' : '5.5vh', 
         borderColor: 'rgba(0, 222,222,1)', 
         borderWidth: 2, 
         borderRadius: 20, 
         marginTop: 20,
+        display: 'flex', // Added this
+        justifyContent: 'center', // Added this
+        alignItems: 'center' // Added this
     }
-
+    
+    const titleStyle = {
+        fontSize: isSmallScreen ? 'calc(1.2vw + 1.2vw)' : 'calc(0.9vw + 0.9vh)', 
+        textAlign: 'center' 
+    }
     
     const paragraphTitle = {
-        fontSize: isSmallScreen ? 14 : 'calc(0.9vw + 0.9vh)', 
+        fontSize: isSmallScreen ? 'calc(1.2vw + 1.2vw)' : 'calc(0.9vw + 0.9vh)', 
         textAlign: 'center', 
-        marginTop: isSmallScreen ? '1.5vh' : '1vh', 
         color: 'rgba(0, 222,222,1)', 
-        fontWeight: '500'}
-    
+    }
     const rightImageContainer = {
         marginLeft: '19vw', 
         width: isSmallScreen ? '32vw' : isMediumScreen ? '24vw' : '18vw',
@@ -146,6 +149,7 @@ function TextBlock({ text, title, image, isImageRight, index, isMediumScreen, is
 export default function Process() {
     const isMediumScreen = useMediaQuery({ query: '(max-width: 1600px)' });
     const isSmallScreen = useMediaQuery({ maxWidth: 700 });
+    const isSmallScreenHeight = useMediaQuery({ maxHeight: 1000 });
     const [loadOtherComponents, setLoadOtherComponents] = useState(false);
 
     const scrollIndicator = {
@@ -259,6 +263,7 @@ export default function Process() {
                                 image={text.image}
                                 isSmallScreen={isSmallScreen}
                                 isMediumScreen={isMediumScreen}
+                                isSmallScreenHeight = {isSmallScreenHeight}
                                 isImageRight={i % 2 === 0} // Alternates the placement of the image
                                 index={i} 
                                 key={i}
