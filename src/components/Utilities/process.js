@@ -182,7 +182,7 @@ export default function Process() {
             const winHeight = window.innerHeight;
             const docHeight = getDocHeight()  - 4 * winHeight; // Adjusting for the 200vh offset where component starts
             const totalDocScrollLength = docHeight;
-            const maxScrollTop = 1.8 * docHeight 
+            const maxScrollTop = 2.1 * docHeight 
         
             if (scrollTop > maxScrollTop) {
                 // If the current scroll position is beyond the max, we do not update the scroll state
@@ -241,7 +241,14 @@ export default function Process() {
 
     return (
         (
-            <div style = {{height: isSmallScreen ? '200vh' : '250vh', width: '100vw', backgroundColor: 'white', position: 'relative', paddingTop: 200, backgroundColor: 'rgba(15, 28, 55, 1)'}}>
+            <div style = {{
+                width: '100vw',
+                backgroundColor: 'white',
+                position: 'relative',
+                paddingTop: 200,
+                paddingBottom: 100, // Add bottom padding for space at the bottom
+                backgroundColor: 'rgba(15, 28, 55, 1)'
+            }}>
                     <div class="custom-shape-divider-top-1687345889" style = {{top: '-1%'}}>
                         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                             <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" fill= '#080A11'></path>
