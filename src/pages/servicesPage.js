@@ -11,7 +11,7 @@ import { useMediaQuery } from 'react-responsive';
 
 function Services() {
     const isMediumScreen = useMediaQuery({ query: '(max-width: 1600px)' });
-    const isSmallScreen = useMediaQuery({ maxWidth: 1000 });
+    const isSmallScreen = useMediaQuery({ maxWidth: 800 });
 
 
     const main = {
@@ -26,14 +26,14 @@ function Services() {
 
     const header = {
         position: 'relative',
-        top: '14%',
+        top: isSmallScreen ? '10%' : '14%',
         width: '80%',
         marginLeft: '10%',
         textAlign: 'center',
         color: 'white',
         fontSize: isSmallScreen ? 'calc(2.3vw + 2.3vh)' : isMediumScreen ? 'calc(1.8vw + 1.8vh)' : 'calc(1.3vw + 1.3vh)',
         zIndex: 100,
-        lineHeight: '2.5vw',
+        lineHeight: isSmallScreen ? 1.5 : isMediumScreen ? 1.3 : '2.5vw',
     };
 
     const paragraph = {
@@ -45,8 +45,8 @@ function Services() {
         fontSize:  isSmallScreen ? 'calc(1.1vw + 1.1vh)' : isMediumScreen ? 'calc(1.3vw + 0.9vh)' : 'calc(0.73vw + 0.73vh)',
         zIndex: 100,
         position: 'absolute',
-        top: '33%',
-        lineHeight: isSmallScreen ? '2.5vw' : isMediumScreen ? '2vw' : '1.5vw',
+        top: isMediumScreen ? '29%' : '33%',
+        lineHeight: isSmallScreen ? 1.8 : isMediumScreen ? 1.5 : '1.5vw',
     };
 
     const buttonStyleFilled = {
@@ -69,7 +69,7 @@ function Services() {
         marginRight: 30,
         zIndex: 1000,
         position: 'absolute',
-        top: '78%',
+        top: isSmallScreen ? '78%' : isMediumScreen ? '75%' : '78%',
         marginLeft: '10%',
     };
 
@@ -79,8 +79,8 @@ function Services() {
         gridTemplateColumns: isSmallScreen ? '1fr' : isMediumScreen ? '1fr 1fr' : '1fr 1fr 1fr', 
         gridTemplateRows: isSmallScreen ? '1fr 1fr 1fr 1fr 1fr 1fr 1fr' : isMediumScreen ? '1fr 1fr 1fr 1fr' : '1fr 1fr', 
         height: isSmallScreen ? '200vh' : '90vh', 
-        width: isSmallScreen ? '75vw' : (isMediumScreen ? '85vw' : '80vw'),
-        marginLeft: isSmallScreen ? '15vw' : (isMediumScreen ? '4vw' : '8vw'),
+        width: isSmallScreen ? '90vw' : (isMediumScreen ? '85vw' : '80vw'),
+        marginLeft: isSmallScreen ? '7vw' : (isMediumScreen ? '4vw' : '8vw'),
         paddingTop: '14vh',
         gap: isSmallScreen && '1%'
     }
@@ -148,8 +148,8 @@ function Services() {
         gridTemplateColumns: isSmallScreen ? '1fr' : isMediumScreen ? '1fr 1fr' : '1fr 1fr 1fr', 
         gridTemplateRows: isMediumScreen ? 'auto auto auto' : 'auto auto',
         height: '90vh',
-        width: isSmallScreen ? '75vw' : (isMediumScreen ? '90vw' : '81.3vw'),
-        marginLeft: isSmallScreen ? '15vw' : (isMediumScreen ? '4vw' : '8vw'),
+        width: isSmallScreen ? '90vw' : (isMediumScreen ? '90vw' : '81.3vw'),
+        marginLeft: isSmallScreen ? '7vw' : (isMediumScreen ? '4vw' : '8vw'),
         paddingTop: '8vh',
         gap: isSmallScreen ? '3vh': '3vw'
     };
@@ -184,8 +184,8 @@ function Services() {
 
     const headerDiv = {
         marginTop: isSmallScreen ? '10vh' : isMediumScreen ? '40vh' : '17vh', 
-        marginLeft: isSmallScreen ? '15vw' : '8vw',
-        width: '100vw', 
+        marginLeft: isSmallScreen ? '7vw' : '8vw',
+        width: isSmallScreen ? '90vw' : '100vw', 
         zIndex: 2000,
     }
 
@@ -194,14 +194,7 @@ function Services() {
         color: '#084652',
         fontWeight: '600', 
     }
-    
-    const overlayStyle = {
-        width: '100%', 
-        height: '80.5vh', 
-        backgroundColor: '#0F1C37', 
-        position: 'absolute', 
-        opacity: 0.5
-    };
+
     
     const linkStyle = {
         display: 'block', 
@@ -211,15 +204,15 @@ function Services() {
     };
     
     const textStyle = {
-        fontSize: 'calc(0.88vw + 0.88vh)', 
+        fontSize: isSmallScreen ? 'calc(1.45vw + 1.45vh)' : isMediumScreen ? 'calc(1.1vw + 1.1vh)' : 'calc(0.88vw + 0.88vh)', 
         textAlign: 'center', 
-        marginTop: '1.6vh'
+        marginTop: isSmallScreen ? 'calc(1.2vw + 1.2vh)' : isMediumScreen ? '1.9vh' : '1.6vh'
     };
     
     const textStyleStroke = {
-        fontSize: 'calc(0.88vw + 0.88vh)', 
+        fontSize: isSmallScreen ? 'calc(1.45vw + 1.45vh)' : isMediumScreen ? 'calc(1.1vw + 1.1vh)' : 'calc(0.88vw + 0.88vh)', 
         textAlign: 'center', 
-        marginTop: '1.6vh', 
+        marginTop: isSmallScreen ? 'calc(1.2vw + 1.2vh)' : isMediumScreen ? '1.9vh' : '1.6vh',
         color: '#1A5D6A'
     };
 
@@ -299,7 +292,7 @@ function Services() {
                    <Tile 
                         image = '/services/lightbulb.png'
                         text = {['Business Strategie', 'Onderzoek', 'Data Analyse', 'Klant Onderzoek']}
-                        imageWidth = {'4vw'}
+                        imageWidth = {isSmallScreen ? '10vw' : '4vw'}
                    />
                 </div>
 
@@ -308,7 +301,7 @@ function Services() {
                     <Tile 
                         image = '/services/marketinh.png'
                         text = {['Business Strategie', 'Onderzoek', 'Data Analyse', 'Klant Onderzoek']}
-                        imageWidth = {'9vw'}
+                        imageWidth = {isSmallScreen ? '18vw' :'9vw'}
                    />
                     {/* Content of the second column second row goes here */}
                 </div>
@@ -317,14 +310,14 @@ function Services() {
                     <Tile 
                         image = '/services/development.png'
                         text = {['Business Strategie', 'Onderzoek', 'Data Analyse', 'Klant Onderzoek']}
-                        imageWidth = {'9vw'}
+                        imageWidth = {isSmallScreen ? '20vw' :'9vw'}
                    />
                 </div>
                 <div style={columnStyleThreeTwo}>
                     <Tile 
                         image = '/services/support.png'
                         text = {['Business Strategie', 'Onderzoek', 'Data Analyse', 'Klant Onderzoek']}
-                        imageWidth = {'10vw'}
+                        imageWidth = {isSmallScreen ? '20vw' :'10vw'}
                    />
                 </div>
             </div>

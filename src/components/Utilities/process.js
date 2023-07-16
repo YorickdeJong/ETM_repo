@@ -49,15 +49,19 @@ function TextBlock({ text, title, image, isImageRight, index, isMediumScreen, is
     }
     
     const titleContainer = {  
-        width: isSmallScreen ? '30vw' : '25vw', 
+        width: isSmallScreen ? '31vw' : '25vw', 
         height: '5.5vh', 
         backgroundColor: 'rgba(0, 201,201,1)', 
         borderRadius: 20, }
     
-    const titleStyle = {fontSize: 'calc(0.9vw + 0.9vh)', textAlign: 'center', marginTop: '1vh'}
+    const titleStyle = {
+        fontSize: isSmallScreen ? 14 : 'calc(0.9vw + 0.9vh)', 
+        textAlign: 'center', 
+        marginTop: '1vh'
+    }
     
     const paragraphContainer = { 
-        width: isSmallScreen ? '30vw' : '25vw',
+        width: isSmallScreen ? '31vw' : '25vw',
         height: '5.5vh', 
         borderColor: 'rgba(0, 222,222,1)', 
         borderWidth: 2, 
@@ -67,7 +71,7 @@ function TextBlock({ text, title, image, isImageRight, index, isMediumScreen, is
 
     
     const paragraphTitle = {
-        fontSize: 'calc(0.9vw + 0.9vh)', 
+        fontSize: isSmallScreen ? 14 : 'calc(0.9vw + 0.9vh)', 
         textAlign: 'center', 
         marginTop: isSmallScreen ? '1.5vh' : '1vh', 
         color: 'rgba(0, 222,222,1)', 

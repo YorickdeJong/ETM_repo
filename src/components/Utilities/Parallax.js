@@ -26,8 +26,8 @@ export default function  Parallax(){
         '/homepage/cityDay4-4.jpg',
         '/homepage/cityDay5.png',
         '/homepage/cityDay3-6.png',
-        '/homepage/city-background-4-4.png',
-        '/homepage/city-foreground-5.png',
+        '/homepage/city-background-4-5.png',
+        '/homepage/city-foreground-7.png',
         '/homepage/cityNight3-3.jpg',
         '/homepage/cityNightCloud.png',
         '/homepage/cityNightMoon.png',
@@ -40,8 +40,8 @@ export default function  Parallax(){
         '/homepage/cityDay4-4.jpg',
         '/homepage/cityDay5.png',
         '/homepage/medium/cityDay3-2-medium.png',
-        '/homepage/medium/cityDay2-5-medium.png',
-        '/homepage/medium/cityDay1-3-medium.png',
+        '/homepage/medium/city-background-medium-4-3.png',
+        '/homepage/medium/city-foreground-5-3.png',
         '/homepage/cityNight3-3.jpg',
         '/homepage/cityNightCloud.png',
         '/homepage/cityNightMoon.png',
@@ -53,10 +53,8 @@ export default function  Parallax(){
         '/homepage/cityDay4-4.jpg',
         '/homepage/cityDay5.png',
         '/homepage/small/cityDay3-4-small.png',
-        '/homepage/small/city-background3.png',
+        '/homepage/small/city-background-5.png',
         '/homepage/small/city-foreground3.png',
-        // '/homepage/small/cityDay2-8-small.png',
-        // '/homepage/small/cityDay1-3-small.png',
         '/homepage/cityNight3-3.jpg',
         '/homepage/cityNightCloud.png',
         '/homepage/cityNightMoon.png',
@@ -293,12 +291,12 @@ export default function  Parallax(){
       },
       {
         children: (
-          <div style={{...narrowContainerStyle, height: '46vh', top: '28.7vh', width: isSmallScreen ? '60vw' : '100vw'}}>
+          <div style={{...narrowContainerStyle, height: '46vh', top: '28.7vh', width: isSmallScreen ? '60vw' : isMediumScreen ? '60vw' : '100vw', marginLeft: isSmallScreen ? '0vw' : isMediumScreen ? '49vw' : '-0.1vw'}}>
               <Image 
               src={imageUrls[3]} 
               quality={isSmallScreen ? 100 : 10}
               fill
-              alt="cityDay2"  
+              alt="background"  
               priority={true}
               />
           </div>
@@ -313,7 +311,7 @@ export default function  Parallax(){
               <Image 
               src={imageUrls[4]} 
               fill
-              alt="cityDay1"
+              alt="foreground"
               priority={true}
               quality={isSmallScreen ? 100 : 80}
               />

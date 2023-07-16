@@ -24,7 +24,7 @@ function SkillsGrid() {
     const isSmallScreen = useMediaQuery({ maxWidth: 700 });
 
     return (
-        <div style={{ display: 'grid', gridTemplateColumns: isSmallScreen ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)', gridGap: '2vh', height: '50vh', marginTop: '28vh', width: '100vw' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: isSmallScreen ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)', gridGap: '4vh', height: '50vh', marginTop: '28vh', width: '100vw' }}>
             {skills.map((skill, index) => (
                 <SkillCard key={index} Icon={skill.Icon} isSmallScreen = {isSmallScreen} title={skill.title} text={skill.text} />
             ))}
