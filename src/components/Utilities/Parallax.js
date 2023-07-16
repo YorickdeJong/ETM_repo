@@ -344,7 +344,7 @@ export default function  Parallax(){
               </Link>
           </section>
           <section style={buttonStyleStroke}>    
-              <h6 style = {{fontSize: 28, textAlign: 'center', color: '#FF9449'}}>Maak de online Quiz</h6>
+              <h6 style = {{...headingStyle, color: '#FF9449'}}>Maak de online Quiz</h6>
           </section>      
       </section>
         ),
@@ -446,8 +446,11 @@ export default function  Parallax(){
             <section>
                 <div style = {video}>
                   <Image 
-                  fill
-                  alt="meeting"
+                    src={isMediumScreen ? '/homepage/medium/meeting-medium.png' : '/homepage/meeting.jpg'} 
+                    fill
+                    alt="meeting"
+                    quality={10}
+                    style = {{borderRadius: 20}}
                   />
                 </div>
               <section style={videoText}>
@@ -459,11 +462,11 @@ export default function  Parallax(){
                     <section style={endContainerStyle}>
                           <section style={buttonStyleFilled2}>
                               <Link href="/contact" style={buttonFilled2Link}>
-                                  <h2 style = {{fontSize: 25, textAlign: 'center'}}>Maak een gratis afspraak</h2>
+                                  <h2 style = {secondButtonText}>Maak een gratis afspraak</h2>
                               </Link>
                             </section>
                           <section style={buttonStyleStroke2}>    
-                              <h2 style = {{fontSize: 25, textAlign: 'center', color: '#FF9449'}}>Maak de online Quiz</h2>
+                              <h2 style = {{...secondButtonText, color: '#FF9449'}}>Maak de online Quiz</h2>
                           </section>     
                     </section>
               </section>
