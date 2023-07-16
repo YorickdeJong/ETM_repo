@@ -446,7 +446,6 @@ export default function  Parallax(){
             <section>
                 <div style = {video}>
                   <Image 
-                  src={'/homepage/meeting.png'} 
                   fill
                   alt="meeting"
                   />
