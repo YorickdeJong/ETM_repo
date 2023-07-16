@@ -182,7 +182,7 @@ export default function Process() {
             const winHeight = window.innerHeight;
             const docHeight = getDocHeight()  - 4 * winHeight; // Adjusting for the 200vh offset where component starts
             const totalDocScrollLength = docHeight;
-            const maxScrollTop = 2.1 * docHeight 
+            const maxScrollTop = isSmallScreenHeight ? 1.8 * docHeight : 2.1 * docHeight 
         
             if (scrollTop > maxScrollTop) {
                 // If the current scroll position is beyond the max, we do not update the scroll state
