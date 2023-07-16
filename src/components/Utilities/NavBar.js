@@ -116,7 +116,7 @@ const NavBar = ({pathname}) => {
         left: '6.5vw', 
         width: '85vw',
         top: '1vh',
-        zIndex: 100, 
+        zIndex: 100000, 
         display: 'flex',
         flexDirection: 'row'
       }} 
