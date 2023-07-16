@@ -71,7 +71,7 @@ export default function FAQ() {
     const styles = {
         main: {
             height: '100vh',
-            paddingBottom: '10vh',
+
             width: '100vw'
         },
         titleContainer: {
@@ -96,11 +96,11 @@ export default function FAQ() {
             display: 'grid',
             gridTemplateColumns: isMediumScreen ? 'repeat(1, 1fr)' : 'repeat(2, 1fr)', // Create two columns
             gridTemplateRows: 'repeat(5, 1fr)', // Create five rows
-            height: '70vh',
             width: '70vw',
             gap: '10px', // Optional gap between grid items
             marginTop: isMediumScreen ? '28vh' : '38vh',
             marginLeft: '5vw',
+            paddingBottom: '10vh',
         },
         item: {
             display: 'flex',

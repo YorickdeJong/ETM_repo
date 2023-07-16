@@ -15,7 +15,9 @@ function Services() {
 
 
     const main = {
-        height: '230vh',  position: 'relative',  backgroundColor: 'white'
+        height: '230vh',  
+        position: 'relative',  
+        backgroundColor: 'white',
     }
 
     const navbar = {
@@ -147,7 +149,6 @@ function Services() {
         display: 'grid',
         gridTemplateColumns: isSmallScreen ? '1fr' : isMediumScreen ? '1fr 1fr' : '1fr 1fr 1fr', 
         gridTemplateRows: isMediumScreen ? 'auto auto auto' : 'auto auto',
-        height: '90vh',
         width: isSmallScreen ? '90vw' : (isMediumScreen ? '90vw' : '81.3vw'),
         marginLeft: isSmallScreen ? '7vw' : (isMediumScreen ? '4vw' : '8vw'),
         paddingTop: '8vh',
@@ -178,7 +179,8 @@ function Services() {
         backgroundColor: '#FFFBF9', 
         width: isSmallScreen ? '90%' :'100%', 
         borderRadius: 12, 
-        boxShadow: '1px 5px 7px rgba(0, 0, 0, 0.3)'
+        boxShadow: '1px 5px 7px rgba(0, 0, 0, 0.3)',
+        marginBottom: '5vh'
     }
 
 
