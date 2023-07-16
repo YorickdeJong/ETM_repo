@@ -71,12 +71,13 @@ export default function FAQ() {
     const styles = {
         main: {
             height: '100vh',
-            paddingBottom: '10vh'
+            paddingBottom: '10vh',
+            width: '100vw'
         },
         titleContainer: {
             position: 'absolute',
             top: isMediumScreen ? '6vh' : '13vh',
-            width: '100vw',
+            width: '94vw',
             marginLeft: '6vw',
         },
         title: {
@@ -88,7 +89,7 @@ export default function FAQ() {
             marginTop: isMediumScreen ? '-1vhvh' : '-2vh', 
             fontSize: isMediumScreen ? 'calc(1.25vw + 1.25vh)' :  'calc(0.95vw + 0.95vh)',
             color: '#8A8889', 
-            width: isMediumScreen ? '90vw' : '60vw', 
+            width: isMediumScreen ? '80vw' : '60vw', 
             lineHeight: '130%',
         },
         grid: {
@@ -96,7 +97,7 @@ export default function FAQ() {
             gridTemplateColumns: isMediumScreen ? 'repeat(1, 1fr)' : 'repeat(2, 1fr)', // Create two columns
             gridTemplateRows: 'repeat(5, 1fr)', // Create five rows
             height: '70vh',
-            width: '88vw',
+            width: '70vw',
             gap: '10px', // Optional gap between grid items
             marginTop: isMediumScreen ? '28vh' : '38vh',
             marginLeft: '5vw',
@@ -125,7 +126,7 @@ export default function FAQ() {
             marginLeft: isSmallScreen ? '2vh' : '0vh'
         },
         itemTitle: {
-            width: isMediumScreen ? '60vw' : '30vw', 
+            width: isSmallScreen ? '70vw' : isMediumScreen ? '60vw' : '30vw', 
             fontSize: isSmallScreen ? 18 : isMediumScreen ? 'calc(1.9vw : 1.9vh)' : 28, 
             color: '#8A8889', 
             lineHeight: '130%', 
@@ -134,7 +135,7 @@ export default function FAQ() {
             marginLeft: '4vw',
         },
         itemText: {
-            width: isMediumScreen ? '60vw' : '30vw', 
+            width: isSmallScreen ? '70vw' : isMediumScreen ? '60vw' : '30vw', 
             fontSize: isSmallScreen ? 14 : isMediumScreen ? '2.05vw' : 24, 
             color: '#8A8889', 
             lineHeight: '130%', 
