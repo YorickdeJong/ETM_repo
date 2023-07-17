@@ -27,7 +27,7 @@ export default function  Parallax(){
         '/homepage/cityDay5.png',
         '/homepage/cityDay3-6.png',
         '/homepage/city-background-4-7.png',
-        '/homepage/city-foreground-5-6.png',
+        '/homepage/city-foreground-5-10.png',
         '/homepage/cityNight3-3.jpg',
         '/homepage/cityNightCloud.png',
         '/homepage/cityNightMoon.png',
@@ -229,6 +229,7 @@ export default function  Parallax(){
         height: isSmallScreen ? '30vh' : '43vh', 
         position: 'absolute', 
         left: '-45vw', 
+        boxShadow: '5px 5px 9px rgba(0, 0, 0, 0.7)',
         top: 0
     }
 
@@ -296,7 +297,7 @@ export default function  Parallax(){
               !isSmallScreen && 
               <Image 
                 src={imageUrls[3]} 
-                quality={isSmallScreen ? 100 : 10}
+                quality={isSmallScreen ? 100 : 30}
                 fill
                 alt="background"  
                 priority={true}
@@ -449,11 +450,11 @@ export default function  Parallax(){
             <section>
                 <div style = {video}>
                   <Image 
-                    src={isMediumScreen ? '/homepage/medium/meeting-medium.png' : '/homepage/meeting.jpg'} 
+                    src={isMediumScreen ? '/projects/cityBlueDark.jpg' : '/projects/cityBlueDark.jpg'} 
                     fill
                     alt="meeting"
                     quality={10}
-                    style = {{borderRadius: 20}}
+                    style = {{borderRadius: 0}}
                   />
                 </div>
               <section style={videoText}>
