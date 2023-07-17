@@ -5,8 +5,8 @@ import { useMediaQuery } from 'react-responsive';
 
 
 export default function FAQ() {
-    const isSmallScreen = useMediaQuery({ maxWidth: 1650 });
-
+    const isMediumScreen = useMediaQuery({ query: '(max-width: 1600px)' });
+    const isSmallScreen = useMediaQuery({ maxWidth: 900 });
 
     const iconStyle = {
         fontSize: isSmallScreen? '4.5vw' : '2.5vw', // change to the size you want
@@ -70,49 +70,51 @@ export default function FAQ() {
 
     const styles = {
         main: {
-            height: '90vh',
+            height: '100vh',
+
+            width: '100vw'
         },
         titleContainer: {
             position: 'absolute',
-            top: '13vh',
-            width: '100vw',
+            top: isMediumScreen ? '6vh' : '13vh',
+            width: '94vw',
             marginLeft: '6vw',
         },
         title: {
-            fontSize: isSmallScreen ? 'calc(2vw + 2vh)' : 'calc(1.65vw + 1.65vh)',
+            fontSize: isMediumScreen ? 'calc(2vw + 2vh)' : 'calc(1.65vw + 1.65vh)',
             color: '#0F1C37', 
             fontWeight: '500', 
         },
         subtitle: {
-            marginTop: isSmallScreen ? '0vh' : '-2vh', 
-            fontSize: isSmallScreen ? 'calc(1.25vw + 1.25vh)' :  'calc(0.95vw + 0.95vh)',
+            marginTop: isMediumScreen ? '-1vhvh' : '-2vh', 
+            fontSize: isMediumScreen ? 'calc(1.25vw + 1.25vh)' :  'calc(0.95vw + 0.95vh)',
             color: '#8A8889', 
-            width: '60vw', 
+            width: isMediumScreen ? '80vw' : '60vw', 
             lineHeight: '130%',
         },
         grid: {
             display: 'grid',
-            gridTemplateColumns: isSmallScreen ? 'repeat(1, 1fr)' : 'repeat(2, 1fr)', // Create two columns
+            gridTemplateColumns: isMediumScreen ? 'repeat(1, 1fr)' : 'repeat(2, 1fr)', // Create two columns
             gridTemplateRows: 'repeat(5, 1fr)', // Create five rows
-            height: '70vh',
-            width: '88vw',
+            width: '70vw',
             gap: '10px', // Optional gap between grid items
-            marginTop: '38vh',
+            marginTop: isMediumScreen ? '28vh' : '38vh',
             marginLeft: '5vw',
+            paddingBottom: '10vh',
         },
         item: {
             display: 'flex',
             flexDirection: 'row',
-            height: isSmallScreen ? '8vh' : '4vh',
-            marginBottom: isSmallScreen  && '2vh',
+            height: isMediumScreen ? '8vh' : '4vh',
+            marginBottom: isSmallScreen ? '4vh' : isMediumScreen  ? '6vh' : '12vh',
         },
         iconContainer: {
             position: 'relative', 
-            width: isSmallScreen ? '7vw' : '4vw', 
-            height: isSmallScreen ? '7vw' : '4vw', 
+            width: isMediumScreen ? '7vw' : '4vw', 
+            height: isMediumScreen ? '7vw' : '4vw', 
             backgroundColor: '#92CDC6', 
             borderRadius: 10, 
-            top: isSmallScreen ? '3vj' : '2.3vh', 
+            top: isMediumScreen ? '3vh' : '2.3vh', 
             left: '1vw', 
             justifyContent: 'center', 
             alignItems: 'center', 
@@ -120,11 +122,12 @@ export default function FAQ() {
         },
         contentContainer: {
             display: 'flex', 
-            flexDirection: 'column'
+            flexDirection: 'column',
+            marginLeft: isSmallScreen ? '2vh' : '0vh'
         },
         itemTitle: {
-            width: isSmallScreen ? '60vw' : '30vw', 
-            fontSize: isSmallScreen ? '2.35vw' : 28, 
+            width: isSmallScreen ? '70vw' : isMediumScreen ? '60vw' : '30vw', 
+            fontSize: isSmallScreen ? 'calc(1.1vw + 1.1vh)' : isMediumScreen ? 'calc(1.9vw : 1.9vh)' : 28, 
             color: '#8A8889', 
             lineHeight: '130%', 
             margin: 0, 
@@ -132,8 +135,8 @@ export default function FAQ() {
             marginLeft: '4vw',
         },
         itemText: {
-            width: isSmallScreen ? '60vw' : '30vw', 
-            fontSize: isSmallScreen ? '2.05vw' : 24, 
+            width: isSmallScreen ? '70vw' : isMediumScreen ? '60vw' : '30vw', 
+            fontSize: isSmallScreen ? 'calc(0.85vw + 0.85vh)' : isMediumScreen ? '2.05vw' : 24, 
             color: '#8A8889', 
             lineHeight: '130%', 
             margin: 0, 

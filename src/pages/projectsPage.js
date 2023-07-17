@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { useMediaQuery } from 'react-responsive';
 
 export default function ProjectPage() {
-    const isMediumScreen = useMediaQuery({ query: '(min-width: 1201px) and (max-width: 1800px)' });
-    const isSmallScreen = useMediaQuery({ maxWidth: 1200 });
+    const isMediumScreen = useMediaQuery({ query: '(min-width: 901px) and (max-width: 1800px)' });
+    const isSmallScreen = useMediaQuery({ maxWidth: 900 });
     
     const projects = [
             {
@@ -52,18 +52,18 @@ export default function ProjectPage() {
                 width: '100vw'
             },
             heading1: {
-                fontSize: 'calc(1.5vw + 1.5vh)',
+                fontSize: isSmallScreen ? 'calc(2vw + 2vh)' : 'calc(1.5vw + 1.5vh)',
                 color: '#0F1C37',
                 textAlign: 'center',
                 fontWeight: '500'
             },
             paragraph1: {
-                marginTop: '-2vh',
+                marginTop: isSmallScreen ? '2vh' : '-2vh',
                 textAlign: 'center',
-                fontSize: 'calc(1.05vw + 1.05vh)',
+                fontSize: isSmallScreen ? 'calc(1.5vw + 1.5vh)' : 'calc(1.05vw + 1.05vh)',
                 color: '#8A8889',
-                width: '60vw',
-                marginLeft: '20vw'
+                width: isSmallScreen ? '90vw' : '60vw',
+                marginLeft: isSmallScreen ? '5vw' : '20vw'
             },
             divBackground: {
                 backgroundColor: '#0F1C37',
@@ -100,26 +100,31 @@ export default function ProjectPage() {
                 width: isSmallScreen ? '83vw' : (isMediumScreen ? '40vw': '25vw'),
                 height: '10vh',
                 marginTop: '28.5vh',
-                backgroundColor: '#084652'
+                backgroundColor: '#084652',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+
             },
             header: {
                 margin: '0',
                 width: '80%',
                 marginLeft: '10%',
                 color: 'white',
-                fontSize: isSmallScreen ? 'calc(1.35vw + 1.35vh)' : (isMediumScreen ? 'calc(0.95vw + 0.95vh)' : 'calc(0.75vw + 0.75vh)'),  // use calc to combine vw and em for better scaling
+                fontSize: isSmallScreen ? 'calc(1.15vw + 1.15vh)' : (isMediumScreen ? 'calc(0.95vw + 0.95vh)' : 'calc(0.75vw + 0.75vh)'),  // use calc to combine vw and em for better scaling
                 zIndex: 100,
-                paddingTop: '2.5vh'
+                paddingTop: isSmallScreen ? '0vh' : '0vh' //removed padding
             },
             paragraph: {
                 margin: '0',
                 width: '80%',
                 marginLeft: '10%',
+                marginTop: '1.5vh',
                 color: 'rgba(244, 255, 255, 1)',
                 fontSize: isSmallScreen ? 'calc(1.25vw + 1.25vh)' : (isMediumScreen ? 'calc(1vw + 1vh)' : 'calc(0.65vw + 0.65vh)'),  // use calc to combine vw and em for better scaling
                 fontWeight: '400',
                 zIndex: 100,
-                paddingTop: isSmallScreen ? '0.8vh' : (isMediumScreen ? '1vh': '1.3vh')
+                paddingTop: isSmallScreen ? '0vh' : (isMediumScreen ? '0vh': '0vh') //removed padding
             },
         };
         

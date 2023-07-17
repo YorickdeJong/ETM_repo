@@ -49,41 +49,49 @@ function TextBlock({ text, title, image, isImageRight, index, isMediumScreen, is
     }
     
     const titleContainer = {  
-        width: isSmallScreen ? '30vw' : '23.5vw', 
-        height: '5.5vh', 
+        width: isSmallScreen ? '33vw' : '25vw', 
+        height: isSmallScreen ? '4vh' :  '5.5vh', 
         backgroundColor: 'rgba(0, 201,201,1)', 
-        borderRadius: 20, }
-    
-    const titleStyle = {fontSize: 'calc(0.9vw + 0.9vh)', textAlign: 'center', marginTop: '1vh'}
+        borderRadius: 20, 
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center' // Added this
+    }
     
     const paragraphContainer = { 
-        width: isSmallScreen ? '30vw' : '25vw',
-        height: '5.5vh', 
+        width: isSmallScreen ? '33vw' : '25vw',
+        height: isSmallScreen ? '4vh' : '5.5vh', 
         borderColor: 'rgba(0, 222,222,1)', 
         borderWidth: 2, 
         borderRadius: 20, 
         marginTop: 20,
+        display: 'flex', // Added this
+        justifyContent: 'center', // Added this
+        alignItems: 'center' // Added this
     }
-
+    
+    const titleStyle = {
+        fontSize: isSmallScreen ? 'calc(1.2vw + 1.2vw)' : 'calc(0.9vw + 0.9vh)', 
+        textAlign: 'center' 
+    }
     
     const paragraphTitle = {
-        fontSize: 'calc(0.9vw + 0.9vh)', 
+        fontSize: isSmallScreen ? 'calc(1.2vw + 1.2vw)' : 'calc(0.9vw + 0.9vh)', 
         textAlign: 'center', 
-        marginTop: isSmallScreen ? '1.5vh' : '1vh', 
         color: 'rgba(0, 222,222,1)', 
-        fontWeight: '500'}
-    
+    }
     const rightImageContainer = {
         marginLeft: '19vw', 
         width: isSmallScreen ? '32vw' : isMediumScreen ? '24vw' : '18vw',
-        height: isSmallScreen ? '22vh' : '30vh', 
+        height: isSmallScreen ? '17vh' : '30vh', 
         position: 'relative'
     }
     
     const leftImageContainer = {
         width: isSmallScreen ? '32vw' : isMediumScreen ? '24vw' : '18vw',
-        height: isSmallScreen ? '22vh' : '30vh', 
-        position: 'relative'
+        height: isSmallScreen ? '17vh' : '30vh', 
+        position: 'relative',
+        marginTop: isSmallScreen ? '3vh' : '0vh'
     }
 
     return (
@@ -104,7 +112,7 @@ function TextBlock({ text, title, image, isImageRight, index, isMediumScreen, is
                                 </div>
                             }
                         </div>
-                        <div style = {rightImageContainer}>
+                        <div style = {{...rightImageContainer, marginTop: index === 0 && '4vh'}}>
                             <Image src={image}    
                                 fill
                                 alt='image'
@@ -141,6 +149,7 @@ function TextBlock({ text, title, image, isImageRight, index, isMediumScreen, is
 export default function Process() {
     const isMediumScreen = useMediaQuery({ query: '(max-width: 1600px)' });
     const isSmallScreen = useMediaQuery({ maxWidth: 700 });
+    const isSmallScreenHeight = useMediaQuery({ maxHeight: 1000 });
     const [loadOtherComponents, setLoadOtherComponents] = useState(false);
 
     const scrollIndicator = {
@@ -173,7 +182,7 @@ export default function Process() {
             const winHeight = window.innerHeight;
             const docHeight = getDocHeight()  - 4 * winHeight; // Adjusting for the 200vh offset where component starts
             const totalDocScrollLength = docHeight;
-            const maxScrollTop = 1.8 * docHeight 
+            const maxScrollTop = isSmallScreenHeight ? 1.8 * docHeight : 2.1 * docHeight 
         
             if (scrollTop > maxScrollTop) {
                 // If the current scroll position is beyond the max, we do not update the scroll state
@@ -232,7 +241,14 @@ export default function Process() {
 
     return (
         (
-            <div style = {{height: isSmallScreen ? '200vh' : '250vh', width: '100vw', backgroundColor: 'white', position: 'relative', paddingTop: 200, backgroundColor: 'rgba(15, 28, 55, 1)'}}>
+            <div style = {{
+                width: '100vw',
+                backgroundColor: 'white',
+                position: 'relative',
+                paddingTop: 200,
+                paddingBottom: 100, // Add bottom padding for space at the bottom
+                backgroundColor: 'rgba(15, 28, 55, 1)'
+            }}>
                     <div class="custom-shape-divider-top-1687345889" style = {{top: '-1%'}}>
                         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                             <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" fill= '#080A11'></path>
@@ -254,6 +270,7 @@ export default function Process() {
                                 image={text.image}
                                 isSmallScreen={isSmallScreen}
                                 isMediumScreen={isMediumScreen}
+                                isSmallScreenHeight = {isSmallScreenHeight}
                                 isImageRight={i % 2 === 0} // Alternates the placement of the image
                                 index={i} 
                                 key={i}

@@ -25,9 +25,9 @@ export default function  Parallax(){
     const imageUrlsBig = [
         '/homepage/cityDay4-4.jpg',
         '/homepage/cityDay5.png',
-        '/homepage/cityDay3-2.png',
-        '/homepage/cityDay2-2.png',
-        '/homepage/cityDay1-2.png',
+        '/homepage/cityDay3-6.png',
+        '/homepage/city-background-4-5.png',
+        '/homepage/city-foreground-7.png',
         '/homepage/cityNight3-3.jpg',
         '/homepage/cityNightCloud.png',
         '/homepage/cityNightMoon.png',
@@ -40,8 +40,8 @@ export default function  Parallax(){
         '/homepage/cityDay4-4.jpg',
         '/homepage/cityDay5.png',
         '/homepage/medium/cityDay3-2-medium.png',
-        '/homepage/medium/cityDay2-5-medium.png',
-        '/homepage/medium/cityDay1-3-medium.png',
+        '/homepage/medium/city-background-medium-4-3.png',
+        '/homepage/medium/city-foreground-5-3.png',
         '/homepage/cityNight3-3.jpg',
         '/homepage/cityNightCloud.png',
         '/homepage/cityNightMoon.png',
@@ -53,8 +53,8 @@ export default function  Parallax(){
         '/homepage/cityDay4-4.jpg',
         '/homepage/cityDay5.png',
         '/homepage/small/cityDay3-4-small.png',
-        '/homepage/small/cityDay2-8-small.png',
-        '/homepage/small/cityDay1-3-small.png',
+        '/homepage/small/city-background-5.png',
+        '/homepage/small/city-foreground3.png',
         '/homepage/cityNight3-3.jpg',
         '/homepage/cityNightCloud.png',
         '/homepage/cityNightMoon.png',
@@ -133,7 +133,7 @@ export default function  Parallax(){
          position: 'absolute', 
          width: isSmallScreen ? '65vw' : isMediumScreen ? '40vw' : '30vw', 
          height: '104vh', 
-         left: '-1vw' 
+         left: isSmallScreen && isSmallScreenHeight ? '-5vw' : '-1vw' 
     };
 
     const headerStyle = {
@@ -249,7 +249,7 @@ export default function  Parallax(){
               src={imageUrls[0]} 
               fill
               alt="cityDay4"  
-              quality={40}
+              quality={isSmallScreen ? 100 : 40}
               priority={true}
               />
           </div>
@@ -275,12 +275,12 @@ export default function  Parallax(){
       },
       {
         children: (
-          <div style={{...narrowContainerStyle, right: '16vw', height: '80vh', top: '8vh', width: '85vw'}}>
+          <div style={{...narrowContainerStyle, right: !isSmallScreen && !isMediumScreen ? '19.6vw' : '16vw', height:  '80vh', top: !isSmallScreen && !isMediumScreen ? '4vh' : '8vh', width: !isSmallScreen && !isMediumScreen ? '50vw' : '85vw'}}>
               <Image 
               src={imageUrls[2]} 
               fill
                 alt="cityDay3" 
-                quality={60}    
+                quality={isSmallScreen ? 100 : 70}    
                 priority={true}  
               />
           </div>
@@ -291,12 +291,12 @@ export default function  Parallax(){
       },
       {
         children: (
-          <div style={{...narrowContainerStyle, height: '46vh', top: '28.7vh', width: isSmallScreen ? '60vw' : '100vw'}}>
+          <div style={{...narrowContainerStyle, height: '46vh', top: '28.7vh', width: isSmallScreen ? '60vw' : isMediumScreen ? '60vw' : '100vw', marginLeft: isSmallScreen ? '0vw' : isMediumScreen ? '49vw' : '-0.1vw'}}>
               <Image 
               src={imageUrls[3]} 
-              quality={4}
+              quality={isSmallScreen ? 100 : 10}
               fill
-              alt="cityDay2"  
+              alt="background"  
               priority={true}
               />
           </div>
@@ -311,9 +311,9 @@ export default function  Parallax(){
               <Image 
               src={imageUrls[4]} 
               fill
-              alt="cityDay1"
+              alt="foreground"
               priority={true}
-              quality={70}
+              quality={isSmallScreen ? 100 : 80}
               />
           </div>
         ),
@@ -344,7 +344,7 @@ export default function  Parallax(){
               </Link>
           </section>
           <section style={buttonStyleStroke}>    
-              <h6 style = {{fontSize: 28, textAlign: 'center', color: '#FF9449'}}>Maak de online Quiz</h6>
+              <h6 style = {{...headingStyle, color: '#FF9449'}}>Maak de online Quiz</h6>
           </section>      
       </section>
         ),
@@ -446,9 +446,11 @@ export default function  Parallax(){
             <section>
                 <div style = {video}>
                   <Image 
-                  src={'/homepage/meeting.png'} 
-                  fill
-                  alt="meeting"
+                    src={isMediumScreen ? '/homepage/medium/meeting-medium.png' : '/homepage/meeting.jpg'} 
+                    fill
+                    alt="meeting"
+                    quality={10}
+                    style = {{borderRadius: 20}}
                   />
                 </div>
               <section style={videoText}>
@@ -460,11 +462,11 @@ export default function  Parallax(){
                     <section style={endContainerStyle}>
                           <section style={buttonStyleFilled2}>
                               <Link href="/contact" style={buttonFilled2Link}>
-                                  <h2 style = {{fontSize: 25, textAlign: 'center'}}>Maak een gratis afspraak</h2>
+                                  <h2 style = {secondButtonText}>Maak een gratis afspraak</h2>
                               </Link>
                             </section>
                           <section style={buttonStyleStroke2}>    
-                              <h2 style = {{fontSize: 25, textAlign: 'center', color: '#FF9449'}}>Maak de online Quiz</h2>
+                              <h2 style = {{...secondButtonText, color: '#FF9449'}}>Maak de online Quiz</h2>
                           </section>     
                     </section>
               </section>

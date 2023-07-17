@@ -3,7 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 
 function ValueProp() {
     const isMediumScreen = useMediaQuery({ query: '(max-width: 1600px)' });
-    const isSmallScreen = useMediaQuery({ maxWidth: 700 });
+    const isSmallScreen = useMediaQuery({ maxWidth: 750 });
 
     const image = isSmallScreen ? '/ValueProp/underground-small.jpg' : isMediumScreen ? '/ValueProp/underground-medium.jpg' :'/ValueProp/underground.jpg'
 
@@ -106,7 +106,7 @@ function ValueProp() {
             </div>
 
             {cards.map((card, index) => (
-                <section key={index} style={{ ...cardStyle, left: card.left }}>
+                <section key={index} style={cardStyle}>
                     <section style={cardTitleContainerStyle}>
                         <h1 style={cardTitleStyle}>{card.title}</h1>
                     </section>
