@@ -53,12 +53,12 @@ export default function  Parallax(){
         '/homepage/cityDay4-4.jpg',
         '/homepage/cityDay5.png',
         '/homepage/small/cityDay3-4-small.png',
-        '/homepage/small/city-background-5.png',
-        '/homepage/small/city-foreground3.png',
+        '/homepage/small/city-background-4-3-small.png',
+        '/homepage/small/city-foreground-5-3-small.png',
         '/homepage/cityNight3-3.jpg',
         '/homepage/cityNightCloud.png',
         '/homepage/cityNightMoon.png',
-        '/homepage/small/cityNight2-2-3-small.png',
+        '/homepage/small/cityNight2-small-min-1.png',
         '/homepage/small/cityNight1-2-small.png'
     ];
 
@@ -205,10 +205,10 @@ export default function  Parallax(){
     const endContainerStyle = { 
         position: 'relative', 
         width: isSmallScreen ? '80vw' : isMediumScreen ? '40vw' : '35vw', 
-        height: '104vh',
+        height: '50vh',
         display: 'flex',
         flexDirection: isSmallScreen ? 'column' : 'row',
-        paddingTop: isSmallScreen && '33vh',
+        paddingTop: isSmallScreen && '23vh',
         marginTop: !isSmallScreen && '33vh',
     };
 
@@ -263,7 +263,7 @@ export default function  Parallax(){
           <div style={{position: 'absolute', width: isSmallScreen ? '14vw' : '8vw', height: isSmallScreen ? '14vw' : '8vw', top: '13vh', left: isSmallScreen ? '8vw' :'12vw'}}>
               <Image src={imageUrls[1]} 
               fill
-              alt="cityDay5"
+              alt="smallSun"
               quality={4}
               priority={true}
               />
@@ -275,11 +275,11 @@ export default function  Parallax(){
       },
       {
         children: (
-          <div style={{...narrowContainerStyle, right: !isSmallScreen && !isMediumScreen ? '19.6vw' : '16vw', height:  '80vh', top: !isSmallScreen && !isMediumScreen ? '4vh' : '8vh', width: !isSmallScreen && !isMediumScreen ? '50vw' : '85vw'}}>
+          <div style={{...narrowContainerStyle, right: !isSmallScreen && !isMediumScreen ? '19.6vw' : '16vw', height:  '80vh', top: !isSmallScreen && !isMediumScreen ? '4vh' : '8vh', width: isSmallScreen ? '110vw' : !isSmallScreen && !isMediumScreen ? '50vw' : '85vw'}}>
               <Image 
               src={imageUrls[2]} 
               fill
-                alt="cityDay3" 
+                alt="bigSun" 
                 quality={isSmallScreen ? 100 : 70}    
                 priority={true}  
               />
@@ -292,13 +292,16 @@ export default function  Parallax(){
       {
         children: (
           <div style={{...narrowContainerStyle, height: '46vh', top: '28.7vh', width: isSmallScreen ? '60vw' : isMediumScreen ? '60vw' : '100vw', marginLeft: isSmallScreen ? '0vw' : isMediumScreen ? '49vw' : '-0.1vw'}}>
+              {
+              !isSmallScreen && 
               <Image 
-              src={imageUrls[3]} 
-              quality={isSmallScreen ? 100 : 10}
-              fill
-              alt="background"  
-              priority={true}
+                src={imageUrls[3]} 
+                quality={isSmallScreen ? 100 : 10}
+                fill
+                alt="background"  
+                priority={true}
               />
+              }
           </div>
         ),
         translateY: [16.2, 130],
@@ -405,10 +408,10 @@ export default function  Parallax(){
       {
         children: (
             loadOtherComponents && (
-          <div style={{...blackContainerStyle, height: '90vh', top: '-1vh'}}>
+          <div style={{...blackContainerStyle, height: '90vh', top: isSmallScreen ? '5vh' : '-1vh'}}>
             <Image 
             src={imageUrls[8]} 
-            quality={1}
+            quality={20}
             loading="lazy"
             fill
             alt="cityNight2"
@@ -457,7 +460,7 @@ export default function  Parallax(){
                     <section>
                         <h4 style  = {secondHeaderStyle}>Wie zijn we en wat kunnen we voor jou betekenen?</h4>
                           <h5 style  = {secondParagraphStyle}>
-                         Een groep enthousiaste mensen die geloven in dat het maken van een aantrekekelijke website het verschil kunnen maken .</h5>
+                         Een groep enthousiaste mensen die geloven in dat het maken van een aantrekekelijke website het verschil kunnen maken.</h5>
                     </section>
                     <section style={endContainerStyle}>
                           <section style={buttonStyleFilled2}>
