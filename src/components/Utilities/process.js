@@ -261,7 +261,7 @@ export default function Process() {
                         fontWeight: 'bold', 
                         textAlign: 'center',
                         textShadow: '4px 4px 8px rgba(0, 0, 0, 0.1)'}}>
-                        Hoe ontwerpen wij jouw website?</h2>
+                        Hoe ontwerpen wij jouw website?</h1>
                     </div>
                         {texts.map((text, i) => (
                             <TextBlock 
