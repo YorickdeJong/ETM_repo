@@ -133,7 +133,7 @@ export default function  Parallax(){
          position: 'absolute', 
          width: isSmallScreen ? '65vw' : isMediumScreen ? '40vw' : '30vw', 
          height: '104vh', 
-         left: isSmallScreen && isSmallScreenHeight ? '-5vw' : '-1vw' 
+         left: isSmallScreen && isSmallScreenHeight ? '-5vw' : '0vw' 
     };
 
     const headerStyle = {
