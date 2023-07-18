@@ -430,7 +430,7 @@ export default function  Parallax(){
             src={imageUrls[9]} 
             fill
             alt="cityNight1"
-            quality={50}
+            quality={10}
             loading="lazy"
             />
           </div>
@@ -453,7 +453,7 @@ export default function  Parallax(){
                     src={isMediumScreen ? '/projects/cityBlueDark.jpg' : '/projects/cityBlueDark.jpg'} 
                     fill
                     alt="meeting"
-                    quality={10}
+                    quality={70}
                     style = {{borderRadius: 0}}
                   />
                 </div>
