@@ -430,7 +430,7 @@ export default function  Parallax(){
             src={imageUrls[9]} 
             fill
             alt="cityNight1"
-            quality={10}
+            quality={50}
             loading="lazy"
             />
           </div>
