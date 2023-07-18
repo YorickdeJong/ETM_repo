@@ -56,7 +56,7 @@ export default function Tile({image, text, imageWidth}) {
         gridColumn: '2 / span 1', 
         gridRow: '1 / span 1', // the same for all three
         backgroundColor: 'white', 
-        marginLeft:  (isSmallScreen || isMediumScreen) ? '0vw' : '1vw',
+        marginLeft:  (isSmallScreen || isMediumScreen) ? '1vw' : '1vw',
         borderRadius: 10, 
         height: '4vh', 
         paddingLeft: isSmallScreen ? '2vw' : '1vw', 
@@ -71,7 +71,7 @@ export default function Tile({image, text, imageWidth}) {
         gridColumn: '3 / span 1', 
         gridRow: '1 / span 1', // the same for all three
         backgroundColor: 'white', 
-        marginLeft:  (isSmallScreen || isMediumScreen) ? '0vw' : '2vw', 
+        marginLeft:  (isSmallScreen || isMediumScreen) ? '1vw' : '3.4vw', 
         borderRadius: 10, 
         height: '4vh', 
         paddingLeft: isSmallScreen ? '2vw' : '1vw', 
@@ -79,7 +79,7 @@ export default function Tile({image, text, imageWidth}) {
         display: 'flex',
         justifyContent: 'center', 
         alignItems: 'center',
-        marginTop: '1.5vh',
+        marginTop: '2.5vh',
         width: 'fit-content',  
     }
 

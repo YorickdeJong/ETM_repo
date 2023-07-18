@@ -78,7 +78,8 @@ export default function CostsCard({title, texts, marginTop, stars, starsMarginLe
             width: '100%',
             height: '7vh',
             position: 'absolute',
-            bottom: '3vh'
+            bottom: '3vh',
+            paddingBottom: (!isSmallScreen && !isMediumScreen ) ? '2vh' : '0vh',   
         },
         line: {
             width: '85%', 
