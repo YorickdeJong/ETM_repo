@@ -23,11 +23,11 @@ export default function  Parallax(){
     const [loadOtherComponents, setLoadOtherComponents] = useState(false);
 
     const imageUrlsBig = [
-        '/homepage/cityDay4-4.jpg',
+        '/homepage/sky-day-1.jpg',
         '/homepage/cityDay5.png',
         '/homepage/cityDay3-6.png',
-        '/homepage/city-background-4-7.png',
-        '/homepage/city-foreground-5-10.png',
+        '/homepage/city-background-5.png',
+        '/homepage/city-foreground-6.png',
         '/homepage/cityNight3-3.jpg',
         '/homepage/cityNightCloud.png',
         '/homepage/cityNightMoon.png',
@@ -37,11 +37,11 @@ export default function  Parallax(){
       
   
     const imageUrlsMedium = [
-        '/homepage/cityDay4-4.jpg',
+        '/homepage/sky-day-1.jpg',
         '/homepage/cityDay5.png',
         '/homepage/medium/cityDay3-2-medium.png',
-        '/homepage/medium/city-background-medium-4-3.png',
-        '/homepage/medium/city-foreground-5-3.png',
+        '/homepage/medium/city-background-medium-5.png',
+        '/homepage/medium/city-foreground-medium-6.png',
         '/homepage/cityNight3-3.jpg',
         '/homepage/cityNightCloud.png',
         '/homepage/cityNightMoon.png',
@@ -50,11 +50,11 @@ export default function  Parallax(){
     ];
 
     const imageUrlsSmall = [
-        '/homepage/cityDay4-4.jpg',
+        '/homepage/sky-day-1.jpg',
         '/homepage/cityDay5.png',
         '/homepage/small/cityDay3-4-small.png',
         '/homepage/small/city-background-4-3-small.png',
-        '/homepage/small/city-foreground-5-3-small.png',
+        '/homepage/small/city-foreground-6-small.png',
         '/homepage/cityNight3-3.jpg',
         '/homepage/cityNightCloud.png',
         '/homepage/cityNightMoon.png',
@@ -250,7 +250,7 @@ export default function  Parallax(){
               src={imageUrls[0]} 
               fill
               alt="cityDay4"  
-              quality={isSmallScreen ? 100 : 40}
+              quality={isSmallScreen ? 100 : 100}
               priority={true}
               />
           </div>
@@ -281,7 +281,7 @@ export default function  Parallax(){
               src={imageUrls[2]} 
               fill
                 alt="bigSun" 
-                quality={isSmallScreen ? 100 : 70}    
+                quality={isSmallScreen ? 100 : 100}    
                 priority={true}  
               />
           </div>
@@ -292,12 +292,12 @@ export default function  Parallax(){
       },
       {
         children: (
-          <div style={{...narrowContainerStyle, height: '46vh', top: '28.7vh', width: isSmallScreen ? '60vw' : isMediumScreen ? '60vw' : '100vw', marginLeft: isSmallScreen ? '0vw' : isMediumScreen ? '49vw' : '-0.1vw'}}>
+          <div style={{...narrowContainerStyle, height: '46vh', top: isMediumScreen ? '32vh' : '28.7vh', width: isSmallScreen ? '60vw' : isMediumScreen ? '60vw' : '100vw', marginLeft: isSmallScreen ? '0vw' : isMediumScreen ? '56vw' : '-0.1vw'}}>
               {
               !isSmallScreen && 
               <Image 
                 src={imageUrls[3]} 
-                quality={isSmallScreen ? 100 : 30}
+                quality={isSmallScreen ? 100 : 70}
                 fill
                 alt="background"  
                 priority={true}
@@ -317,7 +317,7 @@ export default function  Parallax(){
               fill
               alt="foreground"
               priority={true}
-              quality={isSmallScreen ? 100 : 80}
+              quality={isSmallScreen ? 100 : 100}
               />
           </div>
         ),
