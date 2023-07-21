@@ -182,7 +182,7 @@ export default function Process() {
             const winHeight = window.innerHeight;
             const docHeight = getDocHeight()  - 4 * winHeight; // Adjusting for the 200vh offset where component starts
             const totalDocScrollLength = docHeight;
-            const maxScrollTop = isSmallScreenHeight ? 1.8 * docHeight : 2.1 * docHeight 
+            const maxScrollTop = isSmallScreenHeight ? 1.8 * docHeight : 1.9 * docHeight 
         
             if (scrollTop > maxScrollTop) {
                 // If the current scroll position is beyond the max, we do not update the scroll state
@@ -261,7 +261,7 @@ export default function Process() {
                         fontWeight: 'bold', 
                         textAlign: 'center',
                         textShadow: '4px 4px 8px rgba(0, 0, 0, 0.1)'}}>
-                        Hoe ontwerpen wij jouw website?</h2>
+                        Hoe ontwerpen wij jouw website?</h1>
                     </div>
                         {texts.map((text, i) => (
                             <TextBlock 

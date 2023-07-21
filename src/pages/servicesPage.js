@@ -180,7 +180,7 @@ function Services() {
         width: isSmallScreen ? '90%' :'100%', 
         borderRadius: 12, 
         boxShadow: '1px 5px 7px rgba(0, 0, 0, 0.3)',
-        marginBottom: '5vh'
+        marginBottom: isSmallScreen ? '5vh' : '0vh'
     }
 
 

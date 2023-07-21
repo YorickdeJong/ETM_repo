@@ -105,16 +105,18 @@ function ValueProp() {
                 />
             </div>
 
-            {cards.map((card, index) => (
-                <section key={index} style={cardStyle}>
-                    <section style={cardTitleContainerStyle}>
-                        <h1 style={cardTitleStyle}>{card.title}</h1>
+            <section style={cardContainerStyle}>
+                {cards.map((card, index) => (
+                    <section key={index} style = {cardStyle}>
+                        <section style={cardTitleContainerStyle}>
+                            <h1 style={cardTitleStyle}>{card.title}</h1>
+                        </section>
+                        <section style={cardContentContainerStyle}>
+                            <p style={cardContentStyle}>{card.text}</p>
+                        </section>
                     </section>
-                    <section style={cardContentContainerStyle}>
-                        <p style={cardContentStyle}>{card.text}</p>
-                    </section>
-                </section>
-            ))}
+                ))}
+            </section>
         </section>
     );
 }
